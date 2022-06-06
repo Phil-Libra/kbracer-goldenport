@@ -152,7 +152,8 @@ footer {
 	text-align: center;
 }
 
-#tb_results .icon {
+#tb_results .icon,
+#tb_results_mod .icon {
 	width: 15px;
 	cursor: pointer;
 }
@@ -160,23 +161,29 @@ footer {
 #tb_results .ranking,
 #tb_results .limit,
 #tb_results .accelerate,
-#tb_results .speed {
+#tb_results .speed,
+#tb_results_mod .ranking,
+#tb_results_mod .limit,
+#tb_results_mod .accelerate,
+#tb_results_mod .speed {
 	min-width: 65px;
 }
 
-#tb_results .mods {
+/* #tb_results .mods{
 	min-width: 100px;
 }
 
 #tb_results .lv {
 	min-width: 50px;
-}
+} */
 
-#tb_results .temperature {
+#tb_results .temperature,
+#tb_results_mod .temperature {
 	min-width: 90px;
 }
 
-#tb_results .car {
+#tb_results .car,
+#tb_results_mod .car {
 	min-width: 135px;
 }
 
