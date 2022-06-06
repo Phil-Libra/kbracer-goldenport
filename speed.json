@@ -6,7 +6,7 @@
 		"hp_content": "340",
 		"Powertrain": "3.0T+8AT",
 		"speed": "69.57",
-		"tyre": "米其林PSS",
+		"tyre": "米其林 PSS",
 		"temperature": "28",
 		"accelerate": "4.70",
 		"limit": "177.95"
@@ -18,7 +18,7 @@
 		"hp_content": "340",
 		"Powertrain": "3.0T+8AT",
 		"speed": "70.52",
-		"tyre": "米其林PSS",
+		"tyre": "米其林 PSS",
 		"temperature": "30",
 		"accelerate": "4.74",
 		"limit": "174.90"
@@ -30,7 +30,7 @@
 		"hp_content": "182",
 		"Powertrain": "1.5T+CVT",
 		"speed": "78.62",
-		"tyre": "邓禄普SP 050",
+		"tyre": "邓禄普 SP 050",
 		"temperature": "27",
 		"accelerate": "8.46",
 		"limit": "147.32"
@@ -42,7 +42,7 @@
 		"hp_content": "182",
 		"Powertrain": "1.5T+CVT",
 		"speed": "80.20",
-		"tyre": "玛吉斯MA510",
+		"tyre": "玛吉斯 MA510",
 		"temperature": "27",
 		"accelerate": "8.27",
 		"limit": "147.42"
@@ -54,7 +54,7 @@
 		"hp_content": "131",
 		"Powertrain": "1.5L+CVT",
 		"speed": "81.71",
-		"tyre": "邓禄普ENASAVE",
+		"tyre": "邓禄普 ENASAVE",
 		"temperature": "28",
 		"accelerate": "9.95",
 		"limit": "136.53"
