@@ -5,7 +5,11 @@
     }
 
     #root {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         padding-top: 25px;
+        min-height: 100vh;
     }
 
     .ant-table-wrapper {
@@ -132,11 +136,10 @@
 // }
 
 // 其他样式
-
 .title {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     padding: 30px 30px;
     margin: 0 25px;
@@ -158,9 +161,8 @@
     }
 
     .search {
-        display: inline-block;
-        width: 300px;
         margin: 25px;
+        width: 250px;
     }
 
 }
@@ -169,6 +171,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 25px;
     width: 100%;
     background-image: linear-gradient(90deg, rgba(200, 200, 255, 0.2), rgba(255, 255, 255, 0.4));
@@ -182,10 +185,6 @@
     img {
         margin: 0 5px 0 0;
         height: 14px;
-    }
-
-    div:first-child {
-        margin-right: 10px;
     }
 }
 

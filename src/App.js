@@ -48,19 +48,20 @@ const App = () => {
 
   return (
     <>
-      <Title >
-        <Input
-          addonBefore="搜索："
-          placeholder="车型关键字"
-          onChange={(e) => {
-            const data = speedData.filter((item) => item.car.includes(e.target.value));
-            const dataMod = speedDataMod.filter((item) => item.car.includes(e.target.value));
-            setRankData(data);
-            setRankDataMod(dataMod);
-          }}
-          allowClear
-        />
-        {/* <span className={styles.searchTitle}>级别：</span>
+      <div>
+        <Title >
+          <Input
+            addonBefore="搜索："
+            placeholder="车型关键字"
+            onChange={(e) => {
+              const data = speedData.filter((item) => item.car.includes(e.target.value));
+              const dataMod = speedDataMod.filter((item) => item.car.includes(e.target.value));
+              setRankData(data);
+              setRankDataMod(dataMod);
+            }}
+            allowClear
+          />
+          {/* <span className={styles.searchTitle}>级别：</span>
         <Select
           className={styles.selectLv}
           defaultValue="all"
@@ -112,28 +113,29 @@ const App = () => {
           <Option value="0">原厂</Option>
           <Option value="1">改装</Option>
         </Select> */}
-      </Title>
+        </Title>
 
-      <Table rankData={rankData} title={<span>原厂榜</span>} />
+        <Table rankData={rankData} title={<span>原厂榜</span>} />
 
-      <Table rankData={rankDataMod} title={<span>改装榜</span>} />
+        <Table rankData={rankDataMod} title={<span>改装榜</span>} />
 
-      <div className={styles.buttonBox}>
-        <button
-          className={styles.descButton}
-          onClick={() => setDescStatus((prevState) => !prevState)}
-        >
-          <span>圈速榜说明书</span>
-        </button>
-        {/* <button
+        <div className={styles.buttonBox}>
+          <button
+            className={styles.descButton}
+            onClick={() => setDescStatus((prevState) => !prevState)}
+          >
+            <span>圈速榜说明书</span>
+          </button>
+          {/* <button
           className={styles.pagination}
           onClick={() => setPagination((prevState) => !prevState)}
         >
           <span>{pagination ? '关闭分页' : '开启分页'}</span>
         </button> */}
-      </div>
+        </div>
 
-      <Description descStatus={descStatus} setDescStatus={setDescStatus} />
+        <Description descStatus={descStatus} setDescStatus={setDescStatus} />
+      </div>
 
       <Footer />
     </>
@@ -204,7 +206,6 @@ const Table = (
                   : val.speed < 85
                     ? `${styles.kbracer} ${styles.kbracer5}`
                     : `${styles.kbracer} ${styles.kbracer6}`
-
         }
       }}
     >
@@ -295,7 +296,7 @@ const Title = (props) => {
 
 const Footer = () => {
   return (
-    <div className={styles.footer} /* style={position} */>
+    <div className={styles.footer}>
       <div className={styles.left}>
         <div>
           关注教主：

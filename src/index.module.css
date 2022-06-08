@@ -2,7 +2,11 @@
   background-image: linear-gradient(90deg, #485563, #29323c);
 }
 :global #root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding-top: 25px;
+  min-height: 100vh;
 }
 :global .ant-table-wrapper {
   margin: 50px 25px;
@@ -79,7 +83,7 @@
 .title {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   padding: 30px 30px;
   margin: 0 25px;
@@ -99,14 +103,14 @@
   color: #fff;
 }
 .title .search {
-  display: inline-block;
-  width: 300px;
   margin: 25px;
+  width: 250px;
 }
 .footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 25px;
   width: 100%;
   background-image: linear-gradient(90deg, rgba(200, 200, 255, 0.2), rgba(255, 255, 255, 0.4));
@@ -119,9 +123,6 @@
 .footer img {
   margin: 0 5px 0 0;
   height: 14px;
-}
-.footer div:first-child {
-  margin-right: 10px;
 }
 .buttonBox {
   text-align: center;
