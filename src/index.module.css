@@ -1,0 +1,172 @@
+:global body {
+  background-image: linear-gradient(90deg, #485563, #29323c);
+}
+:global #root {
+  padding-top: 25px;
+}
+:global .ant-table-wrapper {
+  margin: 50px 25px;
+}
+:global .ant-table-thead {
+  background-image: linear-gradient(90deg, #485563, #29323c);
+}
+:global .ant-table-thead > tr > th {
+  background: none;
+  background-color: rgba(229, 229, 229, 0.3);
+  color: #fff;
+  text-align: center;
+}
+:global .ant-table-tbody > tr.ant-table-row:hover > td,
+:global .ant-table-tbody > tr > td.ant-table-cell-row-hover {
+  background: unset;
+}
+:global .ant-table.ant-table-small {
+  font-size: 13px;
+}
+:global .ant-table-title {
+  background-image: linear-gradient(200deg, #2c3e50, #2980b9);
+  color: #fff;
+  font-size: 24px;
+}
+:global .ant-table-title span {
+  padding-left: 10px;
+}
+.kbracer {
+  color: #fff;
+}
+.kbracer a {
+  color: #fff;
+}
+.kbracer a:hover {
+  text-decoration: underline;
+}
+.kbracer1 {
+  background-image: linear-gradient(230deg, hsl(335, 58%, 48%), hsl(335, 47%, 60%));
+}
+.kbracer1:hover {
+  background-image: linear-gradient(230deg, hsl(335, 58%, 60%), hsl(335, 47%, 72%));
+}
+.kbracer2 {
+  background-image: linear-gradient(230deg, hsl(282, 38%, 28%), hsl(282, 27%, 56%));
+}
+.kbracer2:hover {
+  background-image: linear-gradient(230deg, hsl(282, 38%, 40%), hsl(282, 27%, 68%));
+}
+.kbracer3 {
+  background-image: linear-gradient(230deg, hsl(238, 38%, 28%), hsl(206, 53%, 56%));
+}
+.kbracer3:hover {
+  background-image: linear-gradient(230deg, hsl(238, 38%, 40%), hsl(206, 53%, 68%));
+}
+.kbracer4 {
+  background-image: linear-gradient(230deg, hsl(186, 38%, 28%), hsl(186, 27%, 56%));
+}
+.kbracer4:hover {
+  background-image: linear-gradient(230deg, hsl(186, 38%, 40%), hsl(186, 27%, 68%));
+}
+.kbracer5 {
+  background-image: linear-gradient(230deg, hsl(30, 83%, 38%), hsl(30, 49%, 56%));
+}
+.kbracer5:hover {
+  background-image: linear-gradient(230deg, hsl(30, 83%, 50%), hsl(30, 49%, 68%));
+}
+.kbracer6 {
+  background-image: linear-gradient(230deg, hsl(0, 54%, 38%), hsl(10, 49%, 56%));
+}
+.kbracer6:hover {
+  background-image: linear-gradient(230deg, hsl(0, 54%, 50%), hsl(10, 49%, 68%));
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 30px 30px;
+  margin: 0 25px;
+  border-radius: 10px;
+  background-image: linear-gradient(200deg, #2980b9, #2c3e50);
+  color: #fff;
+}
+.title .desc {
+  display: inline-block;
+  margin: 25px;
+  color: #fff;
+  vertical-align: middle;
+}
+.title .desc h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #fff;
+}
+.title .search {
+  display: inline-block;
+  width: 300px;
+  margin: 25px;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  padding: 0 30px;
+  height: 100px;
+  width: 100%;
+  background-image: linear-gradient(90deg, rgba(200, 200, 255, 0.2), rgba(255, 255, 255, 0.4));
+  font-size: 14px;
+  color: #fff;
+}
+.footer a {
+  color: #bbffff;
+}
+.footer img {
+  margin: 0 5px 0 0;
+  height: 14px;
+}
+.buttonBox {
+  text-align: center;
+}
+.buttonBox .descButton,
+.buttonBox .pagination {
+  overflow: hidden;
+  margin: 0 0 150px;
+  width: 360px;
+  height: 80px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: #337ab7;
+  color: white;
+  line-height: 20px;
+  cursor: pointer;
+}
+.buttonBox .descButton span,
+.buttonBox .pagination span {
+  font-size: 28px;
+  letter-spacing: 8px;
+}
+.buttonBox .descButton:hover,
+.buttonBox .pagination:hover {
+  background-color: #4405f7;
+}
+.description {
+  overflow: scroll;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  height: 75%;
+  width: 75%;
+  background-color: #000;
+  color: #fff;
+  z-index: 3;
+}
+.description h3 {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #fff;
+}
+.description h3:first-child {
+  margin-top: 0;
+}

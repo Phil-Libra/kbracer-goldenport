@@ -1,0 +1,242 @@
+// 修改默认样式
+:global {
+    body {
+        background-image: linear-gradient(90deg, #485563, #29323c);
+    }
+
+    #root {
+        padding-top: 25px;
+    }
+
+    .ant-table-wrapper {
+        margin: 50px 25px;
+    }
+
+    .ant-table-thead {
+        background-image: linear-gradient(90deg, #485563, #29323c);
+
+        &>tr>th {
+            background: none;
+            background-color: rgba(229, 229, 229, 0.3);
+            color: #fff;
+            text-align: center;
+        }
+    }
+
+    .ant-table-tbody>tr.ant-table-row:hover>td,
+    .ant-table-tbody>tr>td.ant-table-cell-row-hover {
+        background: unset;
+    }
+
+    .ant-table.ant-table-small {
+        font-size: 13px;
+    }
+
+    // .ant-pagination {
+
+    //     &>li>a,
+    //     svg {
+    //         color: #fff;
+    //     }
+
+    //     .ant-pagination-item-active>a {
+    //         color: #1890ff;
+    //     }
+
+    //     .ant-pagination-item-ellipsis {
+    //         color: #fff !important;
+    //     }
+    // }
+
+    // .ant-btn:focus,
+    // .ant-btn:hover {
+    //     color: initial;
+    //     border-color: initial;
+    // }
+
+    .ant-table-title {
+        background-image: linear-gradient(200deg, #2c3e50, #2980b9);
+        color: #fff;
+        font-size: 24px;
+
+        span {
+            padding-left: 10px;
+        }
+    }
+}
+
+// 表格样式
+.kbracer {
+    color: #fff;
+
+    a {
+        color: #fff;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.kbracer1 {
+    background-image: linear-gradient(230deg, hsl(335, 58%, 48%), hsl(335, 47%, 60%));
+
+    &:hover {
+        background-image: linear-gradient(230deg, hsl(335, 58%, 60%), hsl(335, 47%, 72%));
+    }
+
+}
+
+.kbracer2 {
+    background-image: linear-gradient(230deg, hsl(282, 38%, 28%), hsl(282, 27%, 56%));
+
+    &:hover {
+        background-image: linear-gradient(230deg, hsl(282, 38%, 40%), hsl(282, 27%, 68%));
+    }
+}
+
+.kbracer3 {
+    background-image: linear-gradient(230deg, hsl(238, 38%, 28%), hsl(206, 53%, 56%));
+
+    &:hover {
+        background-image: linear-gradient(230deg, hsl(238, 38%, 40%), hsl(206, 53%, 68%));
+    }
+}
+
+.kbracer4 {
+    background-image: linear-gradient(230deg, hsl(186, 38%, 28%), hsl(186, 27%, 56%));
+
+    &:hover {
+        background-image: linear-gradient(230deg, hsl(186, 38%, 40%), hsl(186, 27%, 68%));
+    }
+}
+
+.kbracer5 {
+    background-image: linear-gradient(230deg, hsl(30, 83%, 38%), hsl(30, 49%, 56%));
+
+    &:hover {
+        background-image: linear-gradient(230deg, hsl(30, 83%, 50%), hsl(30, 49%, 68%));
+    }
+}
+
+.kbracer6 {
+    background-image: linear-gradient(230deg, hsl(0, 54%, 38%), hsl(10, 49%, 56%));
+
+    &:hover {
+        background-image: linear-gradient(230deg, hsl(0, 54%, 50%), hsl(10, 49%, 68%));
+    }
+}
+
+// .black {
+//     background-color: rgba(0, 0, 0, 0.3);
+// }
+
+// 其他样式
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px 30px;
+    margin: 0 25px;
+    border-radius: 10px;
+    background-image: linear-gradient(200deg, #2980b9, #2c3e50);
+    color: #fff;
+
+    .desc {
+        display: inline-block;
+        margin: 25px;
+        color: #fff;
+        vertical-align: middle;
+
+        h1 {
+            margin: 0;
+            font-size: 32px;
+            color: #fff;
+        }
+    }
+
+    .search {
+        display: inline-block;
+        width: 300px;
+        margin: 25px;
+    }
+
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    padding: 0 30px;
+    height: 100px;
+    width: 100%;
+    background-image: linear-gradient(90deg, rgba(200, 200, 255, 0.2), rgba(255, 255, 255, 0.4));
+    font-size: 14px;
+    color: #fff;
+
+    a {
+        color: #bbffff;
+    }
+
+    img {
+        margin: 0 5px 0 0;
+        height: 14px;
+    }
+}
+
+.buttonBox {
+    text-align: center;
+
+    .descButton,
+    .pagination {
+        overflow: hidden;
+        margin: 0 0 150px;
+        width: 360px;
+        height: 80px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        background-color: #337ab7;
+        color: white;
+        line-height: 20px;
+        cursor: pointer;
+
+        span {
+            font-size: 28px;
+            letter-spacing: 8px;
+        }
+
+        &:hover {
+            background-color: #4405f7;
+        }
+    }
+}
+
+.description {
+    overflow: scroll;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    height: 75%;
+    width: 75%;
+    background-color: #000;
+    color: #fff;
+    z-index: 3;
+
+    h3 {
+        margin-top: 20px;
+        font-size: 24px;
+        color: #fff;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+}
