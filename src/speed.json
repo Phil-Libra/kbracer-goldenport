@@ -7,6 +7,8 @@
 		"Powertrain": "3.0T+8AT",
 		"speed": "69.57",
 		"tyre": "米其林 PSS",
+		"tyre_f":"255",
+		"tyre_r":"275",
 		"temperature": "28",
 		"accelerate": "4.70",
 		"limit": "177.95"
@@ -19,6 +21,8 @@
 		"Powertrain": "3.0T+8AT",
 		"speed": "70.52",
 		"tyre": "米其林 PSS",
+		"tyre_f":"255",
+		"tyre_r":"275",
 		"temperature": "30",
 		"accelerate": "4.74",
 		"limit": "174.90"
@@ -31,6 +35,8 @@
 		"Powertrain": "1.5T+CVT",
 		"speed": "78.62",
 		"tyre": "邓禄普 SP 050",
+		"tyre_f":"225",
+		"tyre_r":"225",
 		"temperature": "27",
 		"accelerate": "8.46",
 		"limit": "147.32"
@@ -43,6 +49,8 @@
 		"Powertrain": "1.5T+7DCT",
 		"speed": "79.77",
 		"tyre": "马牌 MC6",
+		"tyre_f":"235",
+		"tyre_r":"235",
 		"temperature": "25",
 		"accelerate": "7.01",
 		"limit": "142.15"
@@ -55,6 +63,8 @@
 		"Powertrain": "1.5T+CVT",
 		"speed": "80.20",
 		"tyre": "玛吉斯 MA510",
+		"tyre_f":"215",
+		"tyre_r":"215",
 		"temperature": "27",
 		"accelerate": "8.27",
 		"limit": "147.42"
@@ -67,6 +77,8 @@
 		"Powertrain": "1.5L+CVT",
 		"speed": "81.71",
 		"tyre": "邓禄普 ENASAVE",
+		"tyre_f":"185",
+		"tyre_r":"185",
 		"temperature": "28",
 		"accelerate": "9.95",
 		"limit": "136.53"

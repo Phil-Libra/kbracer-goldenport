@@ -12,6 +12,7 @@ import logo from './img/logo.png'
 import 'antd/dist/antd.min.css';
 
 import styles from './index.module.css'
+import ColumnGroup from 'antd/lib/table/ColumnGroup';
 
 const App = () => {
   // const { Option } = Select;
@@ -237,11 +238,25 @@ const Table = (
         dataIndex="Powertrain"
         key="Powertrain"
       />
-      <Column
-        title="轮胎"
-        dataIndex="tyre"
-        key="tyre"
-      />
+      <ColumnGroup title={() => '轮胎'}>
+        <Column
+          title="型号"
+          dataIndex="tyre"
+          key="tyre"
+        />
+        <Column
+          title="前宽"
+          dataIndex="tyre_f"
+          key="tyre_f"
+          align="center"
+        />
+        <Column
+          title="后宽"
+          dataIndex="tyre_r"
+          key="tyre_r"
+          align="center"
+        />
+      </ColumnGroup>
       <Column
         className={styles.black}
         title="气温 (℃)"
