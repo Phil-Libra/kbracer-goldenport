@@ -58,10 +58,13 @@ const App = () => {
             addonBefore="搜索："
             placeholder="车型关键字"
             onChange={(e) => {
-              const data = speedData.filter((item) => item.car.includes(e.target.value));
-              const dataMod = speedDataMod.filter((item) => item.car.includes(e.target.value));
-              setRankData(data);
-              setRankDataMod(dataMod);
+              const dataFilter = (data) => data.filter((item) => {
+                const reg = new RegExp(e.target.value, 'i');
+                return reg.test(item.car);
+              });
+
+              setRankData(dataFilter(speedData));
+              setRankDataMod(dataFilter(speedDataMod));
             }}
             allowClear
           />
@@ -155,14 +158,11 @@ const App = () => {
             )
         } */}
 
-        {rankData.length === 0
-          ? <></>
-          : <Table
-            rankData={rankData}
-            pagination={pagination}
-            title={<span>原厂榜</span>}
-          />
-        }
+        <Table
+          rankData={rankData}
+          pagination={pagination}
+          title={<span>原厂榜</span>}
+        />
 
         {rankDataMod.length === 0
           ? <></>
