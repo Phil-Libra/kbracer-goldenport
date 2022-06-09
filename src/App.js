@@ -355,7 +355,7 @@ const Table = (
 const Title = (props) => {
   return (
     <div className={styles.title}>
-      <div>
+      <div className={styles.header}>
         <img src={logo} alt="logo" />
         <div className={styles.desc}>
           <h1>键盘车神教易车金港圈速榜</h1>
