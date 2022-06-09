@@ -7,12 +7,11 @@ import speed_mod from './speed_mod.json';
 import bilibili from './img/bilibili.png';
 import weibo from './img/weibo.png';
 import github from './img/github.png';
-import logo from './img/logo.png'
+import logo from './img/logo.png';
 
 import 'antd/dist/antd.min.css';
 
-import styles from './index.module.css'
-import ColumnGroup from 'antd/lib/table/ColumnGroup';
+import styles from './index.module.css';
 
 const App = () => {
   // const { Option } = Select;
@@ -178,7 +177,7 @@ const App = () => {
             className={styles.descButton}
             onClick={() => setDescStatus((prevState) => !prevState)}
           >
-            <span>圈速榜说明书</span>
+            <span>圈 速 榜 说 明 书</span>
           </button>
         </div>
 
@@ -197,7 +196,7 @@ const Table = (
     title
   }
 ) => {
-  const { Column } = ATable;
+  const { Column, ColumnGroup } = ATable;
 
   // 处理圈速显示格式
   const handleSpeed = (speed) => {
@@ -236,8 +235,7 @@ const Table = (
       bordered={true}
       dataSource={rankData}
       size={'small'}
-      sticky={true}
-      tableLayout={'fixed'}
+      // sticky={true}
       scroll={{ x: 'max-content' }}
       pagination={pagination}
       onRow={(val) => {

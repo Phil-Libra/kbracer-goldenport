@@ -85,7 +85,7 @@
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
-  padding: 30px 30px;
+  padding: 30px;
   margin: 0 25px;
   border-radius: 10px;
   box-shadow: #333 1px 1px 10px;
@@ -140,7 +140,8 @@
 .buttonBox .descButton {
   overflow: hidden;
   margin: 0 0 50px;
-  width: 360px;
+  width: 300px;
+  max-width: 80%;
   height: 80px;
   border-radius: 10px;
   border: none;
@@ -153,7 +154,6 @@
 }
 .buttonBox .descButton span {
   font-size: 28px;
-  letter-spacing: 8px;
 }
 .buttonBox .descButton:hover {
   background-color: #4405f7;
