@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Table as ATable, Input,  /* Select */ } from 'antd';
+import { Table as ATable, Input, /*Button, Select */ } from 'antd';
 import { CloseCircleTwoTone } from '@ant-design/icons';
 
 import speed from './speed.json';
@@ -41,15 +41,18 @@ const App = () => {
 
   const [rankDataMod, setRankDataMod] = useState(speedDataMod);
 
+  // 展示哪个榜单的state
+  // const [isMod, setIsMod] = useState(false);
+
   // 说明书显示状态
   const [descStatus, setDescStatus] = useState(false);
 
   // 分页状态
-  // const [pagination, setPagination] = useState(false);
+  const [pagination, setPagination] = useState(false);
 
   return (
     <>
-      <div>
+      <div className={styles.main}>
         <Title >
           <Input
             addonBefore="搜索："
@@ -62,63 +65,113 @@ const App = () => {
             }}
             allowClear
           />
+
           {/* <span className={styles.searchTitle}>级别：</span>
-        <Select
-          className={styles.selectLv}
-          defaultValue="all"
-          style={{ width: '10%' }}
-          onChange={(val) => {
-            const data = speedData.filter((item) => {
-              if (val === 'all') {
-                return item;
-              } else {
-                return item.lv === val;
+          <Select
+            className={styles.selectLv}
+            defaultValue="all"
+            style={{ width: '10%' }}
+            onChange={(val) => {
+              const data = speedData.filter((item) => {
+                if (val === 'all') {
+                  return item;
+                } else {
+                  return item.lv === val;
+                }
+              });
+              setRankData(data);
+            }}
+          >
+            <Option value="all">所有</Option>
+            <Option value="A00">A00</Option>
+            <Option value="A0">A0</Option>
+            <Option value="A">A</Option>
+            <Option value="B">B</Option>
+            <Option value="C">C</Option>
+            <Option value="S">S</Option>
+          </Select>
+          <span className={styles.searchTitle}>原厂/改装：</span>
+          <Select
+            className={styles.selectMod}
+            defaultValue="all"
+            style={{ width: '10%' }}
+            onChange={(val) => {
+              let data = '';
+              switch (val) {
+                case "all":
+                  setRankData(speedData);
+                  break;
+                case "0":
+                  data = speedData.filter((item) => item.mods <= 0);
+                  setRankData(data);
+                  break;
+                case "1":
+                  data = speedData.filter((item) => item.mods > 0);
+                  setRankData(data);
+                  break;
+                default:
+                  break;
               }
-            });
-            setRankData(data);
-          }}
-        >
-          <Option value="all">所有</Option>
-          <Option value="A00">A00</Option>
-          <Option value="A0">A0</Option>
-          <Option value="A">A</Option>
-          <Option value="B">B</Option>
-          <Option value="C">C</Option>
-          <Option value="S">S</Option>
-        </Select>
-        <span className={styles.searchTitle}>原厂/改装：</span>
-        <Select
-          className={styles.selectMod}
-          defaultValue="all"
-          style={{ width: '10%' }}
-          onChange={(val) => {
-            let data = '';
-            switch (val) {
-              case "all":
-                setRankData(speedData);
-                break;
-              case "0":
-                data = speedData.filter((item) => item.mods <= 0);
-                setRankData(data);
-                break;
-              case "1":
-                data = speedData.filter((item) => item.mods > 0);
-                setRankData(data);
-                break;
-              default:
-                break;
-            }
-          }}
-        >
-          <Option value="all">所有</Option>
-          <Option value="0">原厂</Option>
-          <Option value="1">改装</Option>
-        </Select> */}
+            }}
+          >
+            <Option value="all">所有</Option>
+            <Option value="0">原厂</Option>
+            <Option value="1">改装</Option>
+          </Select> */}
+
         </Title>
 
-        <Table rankData={rankData} title={<span>原厂榜</span>} />
+        {/* <div className={styles.switchBox}>
+          <Button
+            className={styles.switch}
+            onClick={() => setIsMod((prevState) => !prevState)}
+          >
+            {isMod ? '切换到原厂榜' : '切换到改装榜'}
+          </Button>
 
-        <Table rankData={rankDataMod} title={<span>改装榜</span>} />
+          <Button
+            className={styles.pagination}
+            onClick={() => setPagination((prevState) => !prevState)}
+          >
+            <span>{pagination ? '关闭分页' : '开启分页'}</span>
+          </Button>
+        </div> */}
+
+        {/* {
+          isMod
+            ? (
+              <Table
+                rankData={rankDataMod}
+                pagination={pagination}
+                title={<span>改装榜</span>}
+              />
+            )
+            : (
+              <Table
+                rankData={rankData}
+                pagination={pagination}
+                title={<span>原厂榜</span>}
+              />
+            )
+        } */}
+
+        {rankData.length === 0
+          ? <></>
+          : <Table
+            rankData={rankData}
+            pagination={pagination}
+            title={<span>原厂榜</span>}
+          />
+        }
+
+        {rankDataMod.length === 0
+          ? <></>
+          : <Table
+            rankData={rankDataMod}
+            pagination={pagination}
+            title={<span>改装榜</span>}
+          />
+        }
 
         <div className={styles.buttonBox}>
           <button
@@ -127,12 +180,6 @@ const App = () => {
           >
             <span>圈速榜说明书</span>
           </button>
-          {/* <button
-          className={styles.pagination}
-          onClick={() => setPagination((prevState) => !prevState)}
-        >
-          <span>{pagination ? '关闭分页' : '开启分页'}</span>
-        </button> */}
         </div>
 
         <Description descStatus={descStatus} setDescStatus={setDescStatus} />
@@ -143,11 +190,10 @@ const App = () => {
   );
 };
 
-
-
 const Table = (
   {
     rankData,
+    pagination,
     title
   }
 ) => {
@@ -177,7 +223,7 @@ const Table = (
       speed % 1 === 0
         ? time = `2:${Math.round((speed - 120) * 100) / 100}:00`
         : time = `2:${Math.round((speed - 120) * 100) / 100}`;
-    } else if (time >= 180) {
+    } else {
       time = '太菜了以至于无法显示';
     }
 
@@ -193,7 +239,7 @@ const Table = (
       sticky={true}
       tableLayout={'fixed'}
       scroll={{ x: 'max-content' }}
-      pagination={false}
+      pagination={pagination}
       onRow={(val) => {
         return {
           className: val.speed < 70
@@ -249,12 +295,26 @@ const Table = (
           dataIndex="tyre_f"
           key="tyre_f"
           align="center"
+          onCell={(res) => {
+            if (res.tyre_f === res.tyre_r) {
+              return {
+                colSpan: 2,
+              }
+            }
+          }}
         />
         <Column
           title="后宽"
           dataIndex="tyre_r"
           key="tyre_r"
           align="center"
+          onCell={(res) => {
+            if (res.tyre_f === res.tyre_r) {
+              return {
+                colSpan: 0,
+              }
+            }
+          }}
         />
       </ColumnGroup>
       <Column
@@ -374,8 +434,8 @@ const Description = (
             display: descStatus ? 'block' : 'none',
             overflow: 'visible',
             position: 'fixed',
-            top: '12%',
-            left: '12%',
+            top: '14.5%',
+            left: '14.5%',
             fontSize: 20,
             zIndex: 4
           }
