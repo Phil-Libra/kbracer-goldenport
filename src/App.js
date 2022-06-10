@@ -14,8 +14,6 @@ import 'antd/dist/antd.min.css';
 import styles from './index.module.css';
 
 const App = () => {
-  // const { Option } = Select;
-
   // 处理圈速数据
   const handleData = (data) => {
     return data.map((item, index) => {
@@ -67,59 +65,6 @@ const App = () => {
             }}
             allowClear
           />
-
-          {/* <span className={styles.searchTitle}>级别：</span>
-          <Select
-            className={styles.selectLv}
-            defaultValue="all"
-            style={{ width: '10%' }}
-            onChange={(val) => {
-              const data = speedData.filter((item) => {
-                if (val === 'all') {
-                  return item;
-                } else {
-                  return item.lv === val;
-                }
-              });
-              setRankData(data);
-            }}
-          >
-            <Option value="all">所有</Option>
-            <Option value="A00">A00</Option>
-            <Option value="A0">A0</Option>
-            <Option value="A">A</Option>
-            <Option value="B">B</Option>
-            <Option value="C">C</Option>
-            <Option value="S">S</Option>
-          </Select>
-          <span className={styles.searchTitle}>原厂/改装：</span>
-          <Select
-            className={styles.selectMod}
-            defaultValue="all"
-            style={{ width: '10%' }}
-            onChange={(val) => {
-              let data = '';
-              switch (val) {
-                case "all":
-                  setRankData(speedData);
-                  break;
-                case "0":
-                  data = speedData.filter((item) => item.mods <= 0);
-                  setRankData(data);
-                  break;
-                case "1":
-                  data = speedData.filter((item) => item.mods > 0);
-                  setRankData(data);
-                  break;
-                default:
-                  break;
-              }
-            }}
-          >
-            <Option value="all">所有</Option>
-            <Option value="0">原厂</Option>
-            <Option value="1">改装</Option>
-          </Select> */}
 
         </Title>
 
@@ -449,7 +394,7 @@ const Description = (
         <p>最出圈速的气温是轮胎能够起温，且进气温度低。我会尽量选在10-25℃进行测试。</p>
         <p>气温过高：空气密度低。马力小于200ps的自然吸气引擎，或者高温衰减严重的涡轮买菜车，圈速会变慢。30℃以上区间会非常明显，相比10℃，这些车圈速在锐思会有0.X秒的差距。甚至有些极端车型有超过1s的差距，请大家自行脑补修正。</p>
         <p>气温过低：如果使用热熔胎在低温环境中测试，会因为轮胎无法进入工作温度而大幅影响圈速。而普通运动轮胎普遍可以在0℃的情况下正常工作。</p>
-        <p>相对而言，散热较好且马力较大的宝马S55车型，保时捷911车型，受到高温影响较小。而搭载四驱的高性能车，如奥迪RS系列，对轮胎起温的要求较低，受到低温影响较小，0℃以下依然能发挥威力。</p>
+        <p>相对而言，散热较好且马力较大的宝马S55车型、保时捷911车型，受到高温影响较小；而搭载四驱的高性能车，如奥迪RS系列，对轮胎起温的要求较低、受到低温影响较小，0℃以下依然能发挥威力。</p>
 
 
         <h3>2.轮胎磨损</h3>
@@ -462,7 +407,7 @@ const Description = (
         <h3>4.为什么我要动态起步</h3>
         <p>Hot lap，一般被称为飞行圈或者飞驰圈（我喜欢叫飞行圈，因为比较中二）。指得是非静止起步的全力最快圈，也是大家约定俗称进行圈速测试的方式。</p>
         <p>有人可能会有疑问，因为每台车起始速度不同，但这由车辆性能差异导致，本就应该对圈速产生影响。</p>
-        <p>而静态起步圈速测试和驱动形式关系较大，意义不大，一般并采用。</p>
+        <p>而静态起步圈速测试和驱动形式关系较大，意义不大，一般不采用。</p>
       </div>
     </>
   )
