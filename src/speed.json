@@ -28,6 +28,34 @@
 		"limit": "174.90"
 	},
 	{
+		"car": "BRZ（22",
+		"BID": "BV1nZ4y1q79U",
+		"Btitle": "烂仔逆袭，新老BRZ同胎大战！",
+		"hp_content": "234",
+		"Powertrain": "2.0L+6MT",
+		"speed": "73.07",
+		"tyre": "米其林 PS4",
+		"tyre_f":"215",
+		"tyre_r":"215",
+		"temperature": "25",
+		"accelerate": "6.35",
+		"limit": "160.03"
+	},
+	{
+		"car": "BRZ（13",
+		"BID": "BV1nZ4y1q79U",
+		"Btitle": "烂仔逆袭，新老BRZ同胎大战！",
+		"hp_content": "200",
+		"Powertrain": "2.0L+6MT",
+		"speed": "73.72",
+		"tyre": "米其林 PS4",
+		"tyre_f":"215",
+		"tyre_r":"215",
+		"temperature": "25",
+		"accelerate": "7.77",
+		"limit": "153.99"
+	},
+	{
 		"car": "型格（22",
 		"BID": "BV1AY4y1x7kS",
 		"Btitle": "本田内战，型格和思域性能PK～",
