@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Table as ATable, Input, /*Button, Select */ } from 'antd';
+import { Table as ATable, Input, /*Button*/ } from 'antd';
 import { CloseCircleTwoTone } from '@ant-design/icons';
 
 import speed from './speed.json';
@@ -14,7 +14,7 @@ import 'antd/dist/antd.min.css';
 import styles from './index.module.css';
 
 const App = () => {
-  // 处理圈速数据
+  // 兼容原榜单数据，处理圈速数据
   const handleData = (data) => {
     return data.map((item, index) => {
       // 添加key值，直接+1并设置为排名
@@ -30,12 +30,12 @@ const App = () => {
       return item;
     });
   };
+
   const speedData = handleData(speed);
   const speedDataMod = handleData(speed_mod);
 
   // 展示数据源state
   const [rankData, setRankData] = useState(speedData);
-
   const [rankDataMod, setRankDataMod] = useState(speedDataMod);
 
   // 展示哪个榜单的state
@@ -145,30 +145,20 @@ const Table = (
 
   // 处理圈速显示格式
   const handleSpeed = (speed) => {
-    let time = 0;
+    let time = '';
+    let minute = Math.floor(speed / 60);
+    let second = Math.round((speed - minute * 60) * 100) / 100;
 
-    if (speed < 60) {
+    if (speed < 180) {
       speed % 1 === 0
-        ? time = `0:${Math.round((speed) * 100) / 100}:00`
-        : time = `0:${Math.round((speed) * 100) / 100}`;
-    } else if (speed >= 60 && speed < 70) {
-      speed % 1 === 0
-        ? time = `1:0${Math.round((speed - 60) * 100) / 100}:00`
-        : time = `1:0${Math.round((speed - 60) * 100) / 100}`;
-    } else if (speed >= 70 && speed < 120) {
-      speed % 1 === 0
-        ? time = `1:${Math.round((speed - 60) * 100) / 100}:00`
-        : time = `1:${Math.round((speed - 60) * 100) / 100}`;
-    } else if (speed >= 120 && speed < 130) {
-      speed % 1 === 0
-        ? time = `2:0${Math.round((speed - 120) * 100) / 100}:00`
-        : time = `2:0${Math.round((speed - 120) * 100) / 100}`;
-    } else if (speed >= 130 && speed < 180) {
-      speed % 1 === 0
-        ? time = `2:${Math.round((speed - 120) * 100) / 100}:00`
-        : time = `2:${Math.round((speed - 120) * 100) / 100}`;
+        ? second < 10
+          ? time = `${minute}:0${second}.00`
+          : time = `${minute}:${second}.00`
+        : second < 10
+          ? time = `${minute}:0${second}`
+          : time = `${minute}:${second}`;
     } else {
-      time = '太菜了以至于无法显示';
+      time = '太菜了，不显示!';
     }
 
     return time;
@@ -211,10 +201,32 @@ const Table = (
         key="car"
       />
       <Column
+        className={styles.highlight}
         title="圈速"
         dataIndex="speed"
         key="speed"
         render={(text) => handleSpeed(text)}
+      />
+      <Column
+        className={styles.highlight}
+        title="尾速（km/h）"
+        dataIndex="limit"
+        align="center"
+        key="limit"
+      />
+      <Column
+        title="0-100（s）"
+        dataIndex="accelerate"
+        key="accelerate"
+        align="center"
+        width="75px"
+      />
+      <Column
+        title="气温 (℃)"
+        dataIndex="temperature"
+        key="temperature"
+        align="center"
+        width="50px"
       />
       <Column
         title="马力 (Ps)"
@@ -229,17 +241,36 @@ const Table = (
       />
       <ColumnGroup title={() => '轮胎'}>
         <Column
-          title="型号"
-          dataIndex="tyre"
-          key="tyre"
+          title="前轮"
+          dataIndex="tyre_type_f"
+          key="tyre_type_f"
+          onCell={(res) => {
+            if (res.tyre_type_f === res.tyre_type_r) {
+              return {
+                colSpan: 2,
+              }
+            }
+          }}
+        />
+        <Column
+          title="后轮"
+          dataIndex="tyre_type_r"
+          key="tyre_type_r"
+          onCell={(res) => {
+            if (res.tyre_type_f === res.tyre_type_r) {
+              return {
+                colSpan: 0,
+              }
+            }
+          }}
         />
         <Column
           title="前宽"
-          dataIndex="tyre_f"
-          key="tyre_f"
+          dataIndex="tyre_width_f"
+          key="tyre_width_f"
           align="center"
           onCell={(res) => {
-            if (res.tyre_f === res.tyre_r) {
+            if (res.tyre_width_f === res.tyre_width_r) {
               return {
                 colSpan: 2,
               }
@@ -248,11 +279,11 @@ const Table = (
         />
         <Column
           title="后宽"
-          dataIndex="tyre_r"
-          key="tyre_r"
+          dataIndex="tyre_width_r"
+          key="tyre_width_r"
           align="center"
           onCell={(res) => {
-            if (res.tyre_f === res.tyre_r) {
+            if (res.tyre_width_f === res.tyre_width_r) {
               return {
                 colSpan: 0,
               }
@@ -261,35 +292,12 @@ const Table = (
         />
       </ColumnGroup>
       <Column
-        className={styles.black}
-        title="气温 (℃)"
-        dataIndex="temperature"
-        key="temperature"
-        align="center"
-        width="50px"
-      />
-      <Column
-        className={styles.black}
-        title="尾速（km/h）"
-        dataIndex="limit"
-        align="center"
-        key="limit"
-      />
-      <Column
-        className={styles.black}
-        title="0-100（s）"
-        dataIndex="accelerate"
-        key="accelerate"
-        align="center"
-        width="75px"
-      />
-      <Column
         title="圈速视频"
         dataIndex="Btitle"
         key="Btitle"
         render={(text, record) => record.BURL
           ? <a href={record.BURL}>{text}</a>
-          : <p>{text}</p>}
+          : <span>{text}</span>}
       />
     </ATable>
   )
