@@ -155,8 +155,12 @@ const Table = (
           ? time = `${minute}:0${second}.00`
           : time = `${minute}:${second}.00`
         : second < 10
-          ? time = `${minute}:0${second}`
-          : time = `${minute}:${second}`;
+          ? second * 100 % 10 === 0
+            ? time = `${minute}:0${second}0`
+            : time = `${minute}:0${second}`
+          : second * 100 % 10 === 0
+            ? time = `${minute}:${second}0`
+            : time = `${minute}:${second}`;
     } else {
       time = '太菜了，不显示!';
     }
@@ -194,56 +198,64 @@ const Table = (
         dataIndex="key"
         key="key"
         align="center"
+        width="3%"
       />
       <Column
         title="车型"
         dataIndex="car"
         key="car"
+        width="10%"
       />
       <Column
         className={styles.highlight}
         title="圈速"
         dataIndex="speed"
         key="speed"
+        align="center"
+        width="8%"
         render={(text) => handleSpeed(text)}
       />
       <Column
         className={styles.highlight}
         title="尾速（km/h）"
         dataIndex="limit"
-        align="center"
         key="limit"
+        align="center"
+        width="5%"
       />
       <Column
         title="0-100（s）"
         dataIndex="accelerate"
         key="accelerate"
         align="center"
-        width="75px"
+        width="5%"
       />
       <Column
         title="气温 (℃)"
         dataIndex="temperature"
         key="temperature"
         align="center"
-        width="50px"
+        width="5%"
       />
       <Column
         title="马力 (Ps)"
         dataIndex="hp_content"
         key="hp_content"
         align="center"
+        width="5%"
       />
       <Column
         title="动力总成"
         dataIndex="Powertrain"
         key="Powertrain"
+        width="10%"
       />
       <ColumnGroup title={() => '轮胎'}>
         <Column
           title="前轮"
           dataIndex="tyre_type_f"
           key="tyre_type_f"
+          width="6%"
           onCell={(res) => {
             if (res.tyre_type_f === res.tyre_type_r) {
               return {
@@ -256,6 +268,7 @@ const Table = (
           title="后轮"
           dataIndex="tyre_type_r"
           key="tyre_type_r"
+          width="6%"
           onCell={(res) => {
             if (res.tyre_type_f === res.tyre_type_r) {
               return {
@@ -269,6 +282,7 @@ const Table = (
           dataIndex="tyre_width_f"
           key="tyre_width_f"
           align="center"
+          width="5%"
           onCell={(res) => {
             if (res.tyre_width_f === res.tyre_width_r) {
               return {
@@ -282,6 +296,7 @@ const Table = (
           dataIndex="tyre_width_r"
           key="tyre_width_r"
           align="center"
+          width="5%"
           onCell={(res) => {
             if (res.tyre_width_f === res.tyre_width_r) {
               return {
@@ -295,6 +310,7 @@ const Table = (
         title="圈速视频"
         dataIndex="Btitle"
         key="Btitle"
+        // width="27%"
         render={(text, record) => record.BURL
           ? <a href={record.BURL}>{text}</a>
           : <span>{text}</span>}
