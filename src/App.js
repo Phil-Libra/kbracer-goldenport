@@ -310,7 +310,6 @@ const Table = (
         title="圈速视频"
         dataIndex="Btitle"
         key="Btitle"
-        // width="27%"
         render={(text, record) => record.BURL
           ? <a href={record.BURL}>{text}</a>
           : <span>{text}</span>}

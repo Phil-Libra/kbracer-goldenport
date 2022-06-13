@@ -5,11 +5,25 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 25px;
   min-height: 100vh;
 }
+@media (max-width: 767px) {
+  :global .ant-table-wrapper {
+    margin: 0px 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1920px) {
+  :global .ant-table-wrapper {
+    margin: 0px 50px;
+  }
+}
+@media (min-width: 1821px) {
+  :global .ant-table-wrapper {
+    margin: 0px auto;
+  }
+}
 :global .ant-table-wrapper {
-  margin: 25px 25px;
+  max-width: 1820px;
 }
 :global .ant-table-thead {
   background-image: linear-gradient(90deg, #485563, #29323c);
@@ -26,6 +40,21 @@
 }
 :global .ant-table.ant-table-small {
   font-size: 13px;
+}
+:global .ant-pagination > li > a,
+:global .ant-pagination svg {
+  color: #fff;
+}
+:global .ant-pagination .ant-pagination-item-active > a {
+  color: #1890ff;
+}
+:global .ant-pagination .ant-pagination-item-ellipsis {
+  color: #fff !important;
+}
+:global .ant-btn:focus,
+:global .ant-btn:hover {
+  color: initial;
+  border-color: initial;
 }
 :global .ant-table-title {
   background-image: linear-gradient(200deg, #2c3e50, #2980b9);
@@ -80,13 +109,98 @@
 .kbracer6:hover {
   background-image: linear-gradient(230deg, hsl(0, 54%, 50%), hsl(10, 49%, 68%));
 }
+@media (max-width: 767px) {
+  .title {
+    margin: 20px 20px;
+    padding: 20px;
+  }
+  .switchBox {
+    margin: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1920px) {
+  .title {
+    margin: 50px;
+    padding: 30px;
+  }
+  .switchBox {
+    margin: 50px;
+  }
+}
+@media (min-width: 1921px) {
+  .title {
+    margin: 50px auto;
+    padding: 30px;
+  }
+  .switchBox {
+    margin: 50px auto;
+  }
+}
+@media (max-width: 1071px) {
+  .title {
+    flex-direction: column;
+  }
+  .title .search {
+    margin: 20px;
+  }
+}
+@media (min-width: 1072px) {
+  .title {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .title .search {
+    margin: 0 50px;
+  }
+}
+@media (max-width: 449px) {
+  .switchBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .pagination {
+    margin-top: 25px;
+  }
+}
+@media (min-width: 450px) {
+  .switchBox {
+    display: flex;
+    justify-content: center;
+  }
+  .switchBox .pagination {
+    margin-left: 150px;
+  }
+}
+@media (max-width: 832px) {
+  .footer {
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+  .footer .left,
+  .footer .right {
+    margin: 10px 0;
+  }
+}
+@media (min-width: 833px) {
+  .footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer .left,
+  .footer .right {
+    margin: 10px 10px;
+  }
+}
 .title {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   flex-wrap: wrap;
-  padding: 30px;
-  margin: 0 25px;
+  align-content: center;
+  max-width: 1820px;
   border-radius: 10px;
   box-shadow: #333 1px 1px 10px;
   background-image: linear-gradient(200deg, #2980b9, #2c3e50);
@@ -108,13 +222,15 @@
   color: #fff;
 }
 .title .search {
-  margin: 25px;
-  width: 250px;
+  max-width: 250px;
+}
+.switchBox .switch,
+.switchBox .pagination {
+  width: 150px;
+  height: 32px;
 }
 .footer {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   flex-wrap: wrap;
   padding: 10px 25px;
   width: 100%;
@@ -122,10 +238,6 @@
   background-image: linear-gradient(90deg, rgba(200, 200, 255, 0.2), rgba(255, 255, 255, 0.4));
   font-size: 14px;
   color: #fff;
-}
-.footer .left,
-.footer .right {
-  margin: 10px 0;
 }
 .footer a {
   color: #bbffff;
@@ -139,7 +251,7 @@
 }
 .buttonBox .descButton {
   overflow: hidden;
-  margin: 0 0 50px;
+  margin: 50px 0 50px;
   width: 300px;
   max-width: 80vw;
   height: 80px;
