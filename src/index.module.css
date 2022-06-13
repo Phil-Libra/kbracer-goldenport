@@ -17,7 +17,7 @@
     margin: 0px 50px;
   }
 }
-@media (min-width: 1821px) {
+@media (min-width: 1921px) {
   :global .ant-table-wrapper {
     margin: 0px auto;
   }
