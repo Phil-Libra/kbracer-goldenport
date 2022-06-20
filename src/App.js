@@ -149,7 +149,7 @@ const Table = (
     let minute = Math.floor(speed / 60);
     let second = Math.round((speed - minute * 60) * 100) / 100;
 
-    if (speed < 180) {
+    if (speed < 120) {
       speed % 1 === 0
         ? second < 10
           ? time = `${minute}:0${second}.00`
@@ -162,7 +162,7 @@ const Table = (
             ? time = `${minute}:${second}0`
             : time = `${minute}:${second}`;
     } else {
-      time = '太菜了，不显示!';
+      time = '时间太长，教主身体不行了!';
     }
 
     return time;
