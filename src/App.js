@@ -11,7 +11,7 @@ import logo from './img/logo.png';
 
 import 'antd/dist/antd.min.css';
 
-import styles from './index.module.css';
+import styles from './App.module.css';
 
 const App = () => {
   // 兼容原榜单数据，处理圈速数据
