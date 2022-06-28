@@ -9,17 +9,17 @@
 }
 @media (max-width: 767px) {
   :global .ant-table-wrapper {
-    margin: 0px 20px;
+    margin: 20px 20px;
   }
 }
 @media (min-width: 768px) and (max-width: 1920px) {
   :global .ant-table-wrapper {
-    margin: 0px 50px;
+    margin: 50px 50px;
   }
 }
 @media (min-width: 1921px) {
   :global .ant-table-wrapper {
-    margin: 0px auto;
+    margin: 50px auto;
   }
 }
 :global .ant-table-wrapper {
@@ -111,7 +111,7 @@
 }
 @media (max-width: 767px) {
   .title {
-    margin: 20px 20px;
+    margin: 20px 20px 0;
     padding: 20px;
   }
   .switchBox {
@@ -120,7 +120,7 @@
 }
 @media (min-width: 768px) and (max-width: 1920px) {
   .title {
-    margin: 50px;
+    margin: 50px 50px 0;
     padding: 30px;
   }
   .switchBox {
@@ -129,7 +129,7 @@
 }
 @media (min-width: 1921px) {
   .title {
-    margin: 50px auto;
+    margin: 50px auto 0;
     padding: 30px;
   }
   .switchBox {

@@ -102,11 +102,14 @@ const App = () => {
             )
         } */}
 
-        <Table
-          rankData={rankData}
-          pagination={pagination}
-          title={<span>原厂榜</span>}
-        />
+        {rankData.length === 0
+          ? <></>
+          : <Table
+            rankData={rankData}
+            pagination={pagination}
+            title={<span>原厂榜</span>}
+          />
+        }
 
         {rankDataMod.length === 0
           ? <></>
@@ -126,7 +129,10 @@ const App = () => {
           </button>
         </div>
 
-        <Description descStatus={descStatus} setDescStatus={setDescStatus} />
+        <Description
+          descStatus={descStatus}
+          setDescStatus={setDescStatus}
+        />
       </div>
 
       <Footer />
