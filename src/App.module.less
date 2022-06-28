@@ -165,6 +165,10 @@
     .switchBox {
         margin: 20px;
     }
+
+    .descButton {
+        margin-bottom: 20px;
+    }
 }
 
 @media (min-width: 768px)and (max-width:1920px) {
@@ -176,6 +180,10 @@
     .switchBox {
         margin: 50px;
     }
+
+    .descButton {
+        margin-bottom: 50px;
+    }
 }
 
 @media (min-width: 1921px) {
@@ -186,6 +194,10 @@
 
     .switchBox {
         margin: 50px auto;
+    }
+
+    .descButton {
+        margin-bottom: 50px;
     }
 }
 
@@ -335,7 +347,6 @@
 
     .descButton {
         overflow: hidden;
-        margin: 50px 0 50px;
         width: 300px;
         max-width: 80vw;
         height: 80px;
@@ -359,14 +370,15 @@
 }
 
 .description {
-    overflow: scroll;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
-    height: 70vh;
-    width: 70vw;
+    height: 75vh;
+    max-height: 750px;
+    width: 75vw;
+    max-width: 750px;
     background-color: #000;
     color: #fff;
     z-index: 3;
@@ -379,6 +391,12 @@
         &:first-child {
             margin-top: 0;
         }
+    }
+
+    .manual {
+        overflow: auto;
+        width: 100%;
+        height: 100%;
     }
 
 }

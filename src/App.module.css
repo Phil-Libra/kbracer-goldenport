@@ -117,6 +117,9 @@
   .switchBox {
     margin: 20px;
   }
+  .descButton {
+    margin-bottom: 20px;
+  }
 }
 @media (min-width: 768px) and (max-width: 1920px) {
   .title {
@@ -126,6 +129,9 @@
   .switchBox {
     margin: 50px;
   }
+  .descButton {
+    margin-bottom: 50px;
+  }
 }
 @media (min-width: 1921px) {
   .title {
@@ -134,6 +140,9 @@
   }
   .switchBox {
     margin: 50px auto;
+  }
+  .descButton {
+    margin-bottom: 50px;
   }
 }
 @media (max-width: 971px) {
@@ -251,7 +260,6 @@
 }
 .buttonBox .descButton {
   overflow: hidden;
-  margin: 50px 0 50px;
   width: 300px;
   max-width: 80vw;
   height: 80px;
@@ -271,14 +279,15 @@
   background-color: #4405f7;
 }
 .description {
-  overflow: scroll;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
-  height: 70vh;
-  width: 70vw;
+  height: 75vh;
+  max-height: 750px;
+  width: 75vw;
+  max-width: 750px;
   background-color: #000;
   color: #fff;
   z-index: 3;
@@ -290,4 +299,9 @@
 }
 .description h3:first-child {
   margin-top: 0;
+}
+.description .manual {
+  overflow: auto;
+  width: 100%;
+  height: 100%;
 }

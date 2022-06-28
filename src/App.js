@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Table as ATable, Input, /*Button*/ } from 'antd';
+import { Table as ATable, Input, /* Button */ } from 'antd';
 import { CloseCircleTwoTone } from '@ant-design/icons';
 
 import speed from './speed.json';
@@ -82,9 +82,9 @@ const App = () => {
           >
             <span>{pagination ? '关闭分页' : '开启分页'}</span>
           </Button>
-        </div> */}
+        </div>
 
-        {/* {
+        {
           isMod
             ? (
               <Table
@@ -97,28 +97,23 @@ const App = () => {
               <Table
                 rankData={rankData}
                 pagination={pagination}
+                showSizeChanger={false}
                 title={<span>原厂榜</span>}
               />
             )
         } */}
 
-        {rankData.length === 0
-          ? <></>
-          : <Table
-            rankData={rankData}
-            pagination={pagination}
-            title={<span>原厂榜</span>}
-          />
-        }
+        <Table
+          rankData={rankData}
+          pagination={pagination}
+          title={<span>原厂榜</span>}
+        />
 
-        {rankDataMod.length === 0
-          ? <></>
-          : <Table
-            rankData={rankDataMod}
-            pagination={pagination}
-            title={<span>改装榜</span>}
-          />
-        }
+        <Table
+          rankData={rankDataMod}
+          pagination={pagination}
+          title={<span>改装榜</span>}
+        />
 
         <div className={styles.buttonBox}>
           <button
@@ -400,43 +395,46 @@ const Description = (
 ) => {
   return (
     <>
-      <CloseCircleTwoTone
-        style={
-          {
-            display: descStatus ? 'block' : 'none',
-            overflow: 'visible',
-            position: 'fixed',
-            top: '14.5%',
-            left: '14.5%',
-            fontSize: 20,
-            zIndex: 4
-          }
-        }
-        twoToneColor="#aaa"
-        onClick={() => setDescStatus((prevState) => !prevState)}
-      />
+
       <div
         className={styles.description}
         style={{ display: descStatus ? 'block' : 'none' }}
       >
-        <h3>1.气温</h3>
-        <p>最出圈速的气温是轮胎能够起温，且进气温度低。我会尽量选在10-25℃进行测试。</p>
-        <p>气温过高：空气密度低。马力小于200ps的自然吸气引擎，或者高温衰减严重的涡轮买菜车，圈速会变慢。30℃以上区间会非常明显，相比10℃，这些车圈速在锐思会有0.X秒的差距。甚至有些极端车型有超过1s的差距，请大家自行脑补修正。</p>
-        <p>气温过低：如果使用热熔胎在低温环境中测试，会因为轮胎无法进入工作温度而大幅影响圈速。而普通运动轮胎普遍可以在0℃的情况下正常工作。</p>
-        <p>相对而言，散热较好且马力较大的宝马S55车型、保时捷911车型，受到高温影响较小；而搭载四驱的高性能车，如奥迪RS系列，对轮胎起温的要求较低、受到低温影响较小，0℃以下依然能发挥威力。</p>
+        <CloseCircleTwoTone
+          style={
+            {
+              overflow: 'visible',
+              position: 'fixed',
+              top: '-5px',
+              left: '-5px',
+              fontSize: 16
+            }
+          }
+          twoToneColor="#aaa"
+          onClick={() => setDescStatus((prevState) => !prevState)}
+        />
+        <div className={styles.manual}>
+          <h3>1.改装</h3>
+          <p>不同于锐思榜单，易车金港榜单中，单独轮胎的改装仍然计入原厂榜单。</p>
 
+          <h3>2.气温</h3>
+          <p>最出圈速的气温是轮胎能够起温，且进气温度低。我会尽量选在10-25℃进行测试。</p>
+          <p>气温过高：空气密度低。马力小于200ps的自然吸气引擎，或者高温衰减严重的涡轮买菜车，圈速会变慢。30℃以上区间会非常明显，相比10℃，这些车圈速在锐思会有0.X秒的差距。甚至有些极端车型有超过1s的差距，请大家自行脑补修正。</p>
+          <p>气温过低：如果使用热熔胎在低温环境中测试，会因为轮胎无法进入工作温度而大幅影响圈速。而普通运动轮胎普遍可以在0℃的情况下正常工作。</p>
+          <p>相对而言，散热较好且马力较大的宝马S55车型、保时捷911车型，受到高温影响较小；而搭载四驱的高性能车，如奥迪RS系列，对轮胎起温的要求较低、受到低温影响较小，0℃以下依然能发挥威力。</p>
 
-        <h3>2.轮胎磨损</h3>
-        <p>我的测试车辆大多数来自白嫖。有的车借来时轮胎已经有严重磨损或者年份过久，会影响圈速，我都会在节目中说明（如S3轮胎已经石化）。</p>
+          <h3>3.轮胎磨损</h3>
+          <p>我的测试车辆大多数来自白嫖。有的车借来时轮胎已经有严重磨损或者年份过久，会影响圈速，我都会在节目中说明（如S3轮胎已经石化）。</p>
 
-        <h3>3.尾速</h3>
-        <p>赛道尾速是指一条赛道中能达到的最高速度，一般在赛道最长的直线中诞生。尾速和01加速一样是动力水准的重要指标，但又有所不同。</p>
-        <p>01加速不仅是对动力的检验，还需要考虑起步时的驱动效率，以及弹射程序的聪明与否。影响尾速的最大因素的仍然是动力水准，如我100ps的原厂菱帅只有112的尾速。但是450ps的911s（992）则是163的尾速。第二影响因素是弯道性能，也就是操控，因为直线上一个弯道出的快不快，直接影响直线部分的起始速度。</p>
+          <h3>4.尾速</h3>
+          <p>赛道尾速是指一条赛道中能达到的最高速度，一般在赛道最长的直线中诞生。尾速和01加速一样是动力水准的重要指标，但又有所不同。</p>
+          <p>01加速不仅是对动力的检验，还需要考虑起步时的驱动效率，以及弹射程序的聪明与否。影响尾速的最大因素的仍然是动力水准，如我100ps的原厂菱帅只有112的尾速。但是450ps的911s（992）则是163的尾速。第二影响因素是弯道性能，也就是操控，因为直线上一个弯道出的快不快，直接影响直线部分的起始速度。</p>
 
-        <h3>4.为什么我要动态起步</h3>
-        <p>Hot lap，一般被称为飞行圈或者飞驰圈（我喜欢叫飞行圈，因为比较中二）。指得是非静止起步的全力最快圈，也是大家约定俗称进行圈速测试的方式。</p>
-        <p>有人可能会有疑问，因为每台车起始速度不同，但这由车辆性能差异导致，本就应该对圈速产生影响。</p>
-        <p>而静态起步圈速测试和驱动形式关系较大，意义不大，一般不采用。</p>
+          <h3>5.为什么我要动态起步</h3>
+          <p>Hot lap，一般被称为飞行圈或者飞驰圈（我喜欢叫飞行圈，因为比较中二）。指得是非静止起步的全力最快圈，也是大家约定俗称进行圈速测试的方式。</p>
+          <p>有人可能会有疑问，因为每台车起始速度不同，但这由车辆性能差异导致，本就应该对圈速产生影响。</p>
+          <p>而静态起步圈速测试和驱动形式关系较大，意义不大，一般不采用。</p>
+        </div>
       </div>
     </>
   )
