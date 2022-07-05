@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Table as ATable, Input, /* Button */ } from 'antd';
+import { Table as ATable, Input } from 'antd';
 import { CloseCircleTwoTone } from '@ant-design/icons';
 
 import speed from './speed.json';
@@ -39,7 +39,7 @@ const App = () => {
   const [rankDataMod, setRankDataMod] = useState(speedDataMod);
 
   // 展示哪个榜单的state
-  // const [isMod, setIsMod] = useState(false);
+  const [isMod, setIsMod] = useState(false);
 
   // 说明书显示状态
   const [descStatus, setDescStatus] = useState(false);
@@ -69,19 +69,19 @@ const App = () => {
         </Title>
 
         {/* <div className={styles.switchBox}>
-          <Button
+          <button
             className={styles.switch}
             onClick={() => setIsMod((prevState) => !prevState)}
           >
             {isMod ? '切换到原厂榜' : '切换到改装榜'}
-          </Button>
+          </button>
 
-          <Button
+          <button
             className={styles.pagination}
             onClick={() => setPagination((prevState) => !prevState)}
           >
             <span>{pagination ? '关闭分页' : '开启分页'}</span>
-          </Button>
+          </button>
         </div>
 
         {
@@ -144,6 +144,8 @@ const Table = (
 ) => {
   const { Column, ColumnGroup } = ATable;
 
+  const [pageSize, setPageSize] = useState(50);
+
   // 处理圈速显示格式
   const handleSpeed = (speed) => {
     let time = '';
@@ -163,7 +165,7 @@ const Table = (
             ? time = `${minute}:${second}0`
             : time = `${minute}:${second}`;
     } else {
-      time = '时间太长，教主身体不行了!';
+      time = '时间太长，教主的身体吃不消了!';
     }
 
     return time;
@@ -177,18 +179,26 @@ const Table = (
       size={'small'}
       // sticky={true}
       scroll={{ x: 'max-content' }}
-      pagination={pagination}
+      pagination={pagination
+        ? {
+          position: ['topRight'],
+          pageSize: pageSize,
+          pageSizeOptions: [10, 20, 25, 50, 100],
+          onChange: (page, pageSize) => setPageSize(pageSize)
+        }
+        : false
+      }
       onRow={(val) => {
         return {
           className: val.speed < 70
             ? `${styles.kbracer} ${styles.kbracer1}`
-            : val.speed < 74
+            : val.speed < 73
               ? `${styles.kbracer} ${styles.kbracer2}`
-              : val.speed < 78
+              : val.speed < 76
                 ? `${styles.kbracer} ${styles.kbracer3}`
-                : val.speed < 80
+                : val.speed < 79
                   ? `${styles.kbracer} ${styles.kbracer4}`
-                  : val.speed < 85
+                  : val.speed < 82
                     ? `${styles.kbracer} ${styles.kbracer5}`
                     : `${styles.kbracer} ${styles.kbracer6}`
         }
@@ -217,6 +227,13 @@ const Table = (
         render={(text) => handleSpeed(text)}
       />
       <Column
+        title="气温 (℃)"
+        dataIndex="temperature"
+        key="temperature"
+        align="center"
+        width="5%"
+      />
+      <Column
         className={styles.highlight}
         title="尾速（km/h）"
         dataIndex="limit"
@@ -228,13 +245,6 @@ const Table = (
         title="0-100（s）"
         dataIndex="accelerate"
         key="accelerate"
-        align="center"
-        width="5%"
-      />
-      <Column
-        title="气温 (℃)"
-        dataIndex="temperature"
-        key="temperature"
         align="center"
         width="5%"
       />

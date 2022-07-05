@@ -127,7 +127,7 @@
     padding: 30px;
   }
   .switchBox {
-    margin: 50px;
+    margin: 40px;
   }
   .descButton {
     margin-bottom: 50px;
@@ -139,7 +139,7 @@
     padding: 30px;
   }
   .switchBox {
-    margin: 50px auto;
+    margin: 40px auto;
   }
   .descButton {
     margin-bottom: 50px;
@@ -170,7 +170,7 @@
     justify-content: center;
   }
   .pagination {
-    margin-top: 25px;
+    margin-top: 20px;
   }
 }
 @media (min-width: 450px) {
@@ -179,7 +179,7 @@
     justify-content: center;
   }
   .switchBox .pagination {
-    margin-left: 150px;
+    margin-left: 300px;
   }
 }
 @media (max-width: 832px) {
@@ -236,7 +236,20 @@
 .switchBox .switch,
 .switchBox .pagination {
   width: 150px;
-  height: 32px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  box-shadow: #23527c 0px -2px 0px inset;
+  background-color: #337ab7;
+  color: white;
+  line-height: 20px;
+  cursor: pointer;
+}
+.switchBox .switch:hover,
+.switchBox .pagination:hover {
+  background-color: #4405f7;
 }
 .footer {
   display: flex;
