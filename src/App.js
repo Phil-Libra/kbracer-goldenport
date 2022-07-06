@@ -115,15 +115,6 @@ const App = () => {
           title={<span>改装榜</span>}
         />
 
-        <div className={styles.buttonBox}>
-          <button
-            className={styles.descButton}
-            onClick={() => setDescStatus((prevState) => !prevState)}
-          >
-            <span>圈 速 榜 说 明 书</span>
-          </button>
-        </div>
-
         <Description
           descStatus={descStatus}
           setDescStatus={setDescStatus}
@@ -358,6 +349,12 @@ const Footer = () => {
           </a>
           &nbsp;
           &nbsp;
+          <a href="https://space.bilibili.com/1772592840">
+            <img src={bilibili} alt="bilibili" />
+            @易车圈速榜
+          </a>
+          &nbsp;
+          &nbsp;
           <a href="https://www.weibo.com/u/5934299797">
             <img src={weibo} alt="weibo" />
             @键盘车神教教主
@@ -405,6 +402,14 @@ const Description = (
 ) => {
   return (
     <>
+      <div className={styles.buttonBox}>
+        <button
+          className={styles.descButton}
+          onClick={() => setDescStatus((prevState) => !prevState)}
+        >
+          <span>圈 速 榜 说 明 书</span>
+        </button>
+      </div>
 
       <div
         className={styles.description}
@@ -425,7 +430,7 @@ const Description = (
         />
         <div className={styles.manual}>
           <h3>1.改装</h3>
-          <p>不同于锐思榜单，易车金港榜单中，单独轮胎的改装仍然计入原厂榜单。</p>
+          <p>不同于锐思榜单，易车金港榜单中，单独轮胎的改装仍然计入原厂榜单（尽量选择改装街胎车型）。</p>
 
           <h3>2.气温</h3>
           <p>最出圈速的气温是轮胎能够起温，且进气温度低。我会尽量选在10-25℃进行测试。</p>
