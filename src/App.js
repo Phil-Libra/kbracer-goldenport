@@ -226,14 +226,14 @@ const Table = (
       />
       <Column
         className={styles.highlight}
-        title="尾速（km/h）"
+        title="尾速(km/h)"
         dataIndex="limit"
         key="limit"
         align="center"
         width="5%"
       />
       <Column
-        title="0-100（s）"
+        title="0-100(s)"
         dataIndex="accelerate"
         key="accelerate"
         align="center"
@@ -371,16 +371,19 @@ const Footer = () => {
       </div>
 
       <div className={styles.right}>
-        本页面模仿教主原锐思榜单样式，基于
-        &nbsp;<a href="https://github.com/facebook/react/">React</a>&nbsp;
-        和
-        &nbsp;<a href="https://github.com/ant-design/ant-design/">Ant-Design</a>&nbsp;
-        实现。
+        <div>
+          本页面模仿教主原锐思榜单样式，基于
+          &nbsp;<a href="https://github.com/facebook/react/">React</a>&nbsp;
+          和
+          &nbsp;<a href="https://github.com/ant-design/ant-design/">Ant-Design</a>&nbsp;
+          实现。
+        </div>
         <div>
           作者：
-          <a href="https://github.com/Phil-Libra">
-            Phil_Libra
-          </a>
+          <a href="https://github.com/Phil-Libra">Phil_Libra</a>
+          &nbsp;
+          JSON生成：
+          <a href="https://phil-libra.github.io/excel-to-json/">Excel to JSON</a>
           &nbsp;
           源代码：
           <a href="https://github.com/Phil-Libra/kbracer-goldenport">
