@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Table as ATable, Input } from 'antd';
-import { CloseCircleTwoTone } from '@ant-design/icons';
+import { CloseCircleTwoTone, CheckOutlined, CloseOutlined } from '@ant-design/icons';
 
 import speed from './speed.json';
 import speed_mod from './speed_mod.json';
@@ -15,28 +15,44 @@ import styles from './App.module.css';
 
 const App = () => {
   // 兼容原榜单数据，处理圈速数据
-  const handleData = (data) => {
-    return data.map((item, index) => {
-      // 添加key值，直接+1并设置为排名
-      if (!item.key) {
-        item.key = index + 1;
-      }
+  const handleData = (data, modStatus) => {
+    return data
+      // 排序，防止源数据顺序错误
+      .sort((a, b) => a.speed * 100 - b.speed * 100)
+      .map((item, index) => {
+        // 添加key值，直接+1并设置为排名
+        if (!item.key) {
+          item.key = index + 1;
+        }
 
-      // 添加B站链接
-      if (item.BID) {
-        item.BURL = `https://www.bilibili.com/video/${item.BID}`;
-      }
+        // 添加B站链接
+        if (item.BID) {
+          item.BURL = `https://www.bilibili.com/video/${item.BID}`;
+        }
 
-      return item;
-    });
+        // 根据参数添加改装信息
+        item.mod = modStatus;
+
+        return item;
+      });
   };
 
-  const speedData = handleData(speed);
-  const speedDataMod = handleData(speed_mod);
+  const speedData = handleData(speed, false);
+  const speedDataMod = handleData(speed_mod, true);
+
+  // const totalSpeedData = speedData.concat(speedDataMod)
+  //   .sort((a, b) => a.speed * 100 - b.speed * 100)
+  //   .map((item, index) => (
+  //     {
+  //       ...item,
+  //       key: index + 1
+  //     }
+  //   ));
 
   // 展示数据源state
   const [rankData, setRankData] = useState(speedData);
   const [rankDataMod, setRankDataMod] = useState(speedDataMod);
+  // const [totalData, setTotalData] = useState(totalSpeedData);
 
   // 展示哪个榜单的state
   const [isMod, setIsMod] = useState(false);
@@ -59,9 +75,9 @@ const App = () => {
                 const reg = new RegExp(e.target.value, 'i');
                 return reg.test(item.car);
               });
-
               setRankData(dataFilter(speedData));
               setRankDataMod(dataFilter(speedDataMod));
+              // setTotalData(dataFilter(totalSpeedData));
             }}
             allowClear
           />
@@ -107,13 +123,22 @@ const App = () => {
           rankData={rankData}
           pagination={pagination}
           title={<span>原厂榜</span>}
+          mod={false}
         />
 
         <Table
           rankData={rankDataMod}
           pagination={pagination}
           title={<span>改装榜</span>}
+          mod={false}
         />
+
+        {/* <Table
+          rankData={totalData}
+          pagination={pagination}
+          title={<span>总榜</span>}
+          mod={true}
+        /> */}
 
         <Description
           descStatus={descStatus}
@@ -130,7 +155,8 @@ const Table = (
   {
     rankData,
     pagination,
-    title
+    title,
+    mod
   }
 ) => {
   const { Column, ColumnGroup } = ATable;
@@ -217,6 +243,17 @@ const Table = (
         width="8%"
         render={(text) => handleSpeed(text)}
       />
+      {
+        mod &&
+        <Column
+          title="改装"
+          dataIndex="mod"
+          key="mod"
+          align="center"
+          width="5%"
+          render={(text) => text ? <CheckOutlined /> : <CloseOutlined />}
+        />
+      }
       <Column
         title="气温 (℃)"
         dataIndex="temperature"
