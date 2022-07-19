@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Table as ATable, Input } from 'antd';
-import { CloseCircleTwoTone, CheckOutlined, CloseOutlined } from '@ant-design/icons';
+import { Table as ATable, Input, Select } from 'antd';
+import { CloseCircleTwoTone } from '@ant-design/icons';
 
 import speed from './speed.json';
 import speed_mod from './speed_mod.json';
@@ -14,6 +14,8 @@ import 'antd/dist/antd.min.css';
 import styles from './App.module.css';
 
 const App = () => {
+  const { Option } = Select;
+
   // 兼容原榜单数据，处理圈速数据
   const handleData = (data, modStatus) => {
     return data
@@ -30,29 +32,16 @@ const App = () => {
           item.BURL = `https://www.bilibili.com/video/${item.BID}`;
         }
 
-        // 根据参数添加改装信息
-        item.mod = modStatus;
-
         return item;
       });
   };
 
-  const speedData = handleData(speed, false);
-  const speedDataMod = handleData(speed_mod, true);
-
-  // const totalSpeedData = speedData.concat(speedDataMod)
-  //   .sort((a, b) => a.speed * 100 - b.speed * 100)
-  //   .map((item, index) => (
-  //     {
-  //       ...item,
-  //       key: index + 1
-  //     }
-  //   ));
+  const speedData = handleData(speed);
+  const speedDataMod = handleData(speed_mod);
 
   // 展示数据源state
   const [rankData, setRankData] = useState(speedData);
   const [rankDataMod, setRankDataMod] = useState(speedDataMod);
-  // const [totalData, setTotalData] = useState(totalSpeedData);
 
   // 展示哪个榜单的state
   const [isMod, setIsMod] = useState(false);
@@ -63,6 +52,30 @@ const App = () => {
   // 分页状态
   const [pagination, setPagination] = useState(false);
 
+  // 搜索车型函数
+  const handleSearch = (e) => {
+    const dataFilter = (data) => data.filter((item) => {
+      const reg = new RegExp(e.target.value, 'i');
+      return reg.test(item.car);
+    });
+    setRankData(dataFilter(speedData));
+    setRankDataMod(dataFilter(speedDataMod));
+  };
+
+  // 过滤车型函数
+  const handleFilter = (val) => {
+    const dataFilter = (data, key) => data.filter((item) => {
+      if (key === 'all') {
+        return item;
+      }
+
+      return item[key] === 'true';
+    });
+
+    setRankData(dataFilter(speedData, val));
+    setRankDataMod(dataFilter(speedDataMod, val));
+  };
+
   return (
     <>
       <div className={styles.main}>
@@ -70,18 +83,20 @@ const App = () => {
           <Input
             addonBefore="搜索："
             placeholder="车型关键字"
-            onChange={(e) => {
-              const dataFilter = (data) => data.filter((item) => {
-                const reg = new RegExp(e.target.value, 'i');
-                return reg.test(item.car);
-              });
-              setRankData(dataFilter(speedData));
-              setRankDataMod(dataFilter(speedDataMod));
-              // setTotalData(dataFilter(totalSpeedData));
-            }}
+            onChange={handleSearch}
             allowClear
           />
-
+          <Select
+            defaultValue="all"
+            style={{
+              width: 120,
+            }}
+            onChange={handleFilter}
+          >
+            <Option value="all">全部车型</Option>
+            <Option value="suv">只看SUV</Option>
+            <Option value="ev">只看电车</Option>
+          </Select>
         </Title>
 
         {/* <div className={styles.switchBox}>
@@ -118,13 +133,6 @@ const App = () => {
               />
             )
         } */}
-
-        {/* <Table
-          rankData={totalData}
-          pagination={pagination}
-          title={<span>总榜</span>}
-          mod={true}
-        /> */}
 
         <Table
           rankData={rankData}
@@ -243,17 +251,6 @@ const Table = (
         width="8%"
         render={(text) => handleSpeed(text)}
       />
-      {
-        mod &&
-        <Column
-          title="改装"
-          dataIndex="mod"
-          key="mod"
-          align="center"
-          width="5%"
-          render={(text) => text ? <CheckOutlined /> : <CloseOutlined />}
-        />
-      }
       <Column
         title="气温 (℃)"
         dataIndex="temperature"
@@ -285,9 +282,16 @@ const Table = (
       />
       <Column
         title="动力总成"
-        dataIndex="Powertrain"
-        key="Powertrain"
+        dataIndex="powertrain"
+        key="powertrain"
         width="10%"
+      />
+      <Column
+        title="驱动"
+        dataIndex="drive"
+        key="drive"
+        align="center"
+        width="5%"
       />
       <ColumnGroup title={() => '轮胎'}>
         <Column
@@ -467,20 +471,23 @@ const Description = (
         <h3>1.改装</h3>
         <p>不同于锐思榜单，易车金港榜单中，单独轮胎的改装仍然计入原厂榜单（尽量选择改装街胎车型）。</p>
 
-        <h3>2.气温</h3>
+        <h3>2.驱动形式</h3>
+        <p>"F"=前驱，"R"=后驱，"4"=四驱。</p>
+
+        <h3>3.气温</h3>
         <p>最出圈速的气温是轮胎能够起温，且进气温度低。我会尽量选在10-25℃进行测试。</p>
         <p>气温过高：空气密度低。马力小于200ps的自然吸气引擎，或者高温衰减严重的涡轮买菜车，圈速会变慢。30℃以上区间会非常明显，相比10℃，这些车圈速在锐思会有0.X秒的差距。甚至有些极端车型有超过1s的差距，请大家自行脑补修正。</p>
         <p>气温过低：如果使用热熔胎在低温环境中测试，会因为轮胎无法进入工作温度而大幅影响圈速。而普通运动轮胎普遍可以在0℃的情况下正常工作。</p>
         <p>相对而言，散热较好且马力较大的宝马S55车型、保时捷911车型，受到高温影响较小；而搭载四驱的高性能车，如奥迪RS系列，对轮胎起温的要求较低、受到低温影响较小，0℃以下依然能发挥威力。</p>
 
-        <h3>3.轮胎磨损</h3>
+        <h3>4.轮胎磨损</h3>
         <p>我的测试车辆大多数来自白嫖。有的车借来时轮胎已经有严重磨损或者年份过久，会影响圈速，我都会在节目中说明（如S3轮胎已经石化）。</p>
 
-        <h3>4.尾速</h3>
+        <h3>5.尾速</h3>
         <p>赛道尾速是指一条赛道中能达到的最高速度，一般在赛道最长的直线中诞生。尾速和01加速一样是动力水准的重要指标，但又有所不同。</p>
         <p>01加速不仅是对动力的检验，还需要考虑起步时的驱动效率，以及弹射程序的聪明与否。影响尾速的最大因素的仍然是动力水准，如我100ps的原厂菱帅只有112的尾速。但是450ps的911s（992）则是163的尾速。第二影响因素是弯道性能，也就是操控，因为直线上一个弯道出的快不快，直接影响直线部分的起始速度。</p>
 
-        <h3>5.为什么我要动态起步</h3>
+        <h3>6.为什么我要动态起步</h3>
         <p>Hot lap，一般被称为飞行圈或者飞驰圈（我喜欢叫飞行圈，因为比较中二）。指得是非静止起步的全力最快圈，也是大家约定俗称进行圈速测试的方式。</p>
         <p>有人可能会有疑问，因为每台车起始速度不同，但这由车辆性能差异导致，本就应该对圈速产生影响。</p>
         <p>而静态起步圈速测试和驱动形式关系较大，意义不大，一般不采用。</p>

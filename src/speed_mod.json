@@ -4,7 +4,7 @@
     "BID": "BV1W94y1X7JY",
     "Btitle": "GT3 RS刷新易车金港赛道纪录？",
     "hp_content": "570",
-    "Powertrain": "4.0L+7DCT",
+    "powertrain": "4.0L+7DCT",
     "speed": "62.90",
     "tyre_type_f": "米其林 Cup2 R",
     "tyre_type_r": "米其林 Cup2 R",
@@ -12,14 +12,17 @@
     "tyre_width_r": "325",
     "temperature": "18",
     "accelerate": "3.29",
-    "limit": "201.34"
+    "limit": "201.34",
+    "drive": "R",
+    "suv": "false",
+    "ev": "false"
   },
   {
     "car": "911 Carrera 4S（21",
     "BID": "BV1Sa411X7gx",
     "Btitle": "911有必要四驱么？-- 满配992 4S圈速测试",
     "hp_content": "530",
-    "Powertrain": "3.0T-8DCT",
+    "powertrain": "3.0T-8DCT",
     "speed": "66.38",
     "tyre_type_f": "倍耐力 P0",
     "tyre_type_r": "倍耐力 P0",
@@ -27,14 +30,17 @@
     "tyre_width_r": "305",
     "temperature": "28",
     "accelerate": "3.05",
-    "limit": "197.19"
+    "limit": "197.19",
+    "drive": "4",
+    "suv": "false",
+    "ev": "false"
   },
   {
     "car": "718（18",
     "BID": "BV14S4y1p74Y",
     "Btitle": "100W内天花板？",
     "hp_content": "370",
-    "Powertrain": "2.0T+7DCT",
+    "powertrain": "2.0T+7DCT",
     "speed": "69.83",
     "tyre_type_f": "倍耐力 P0",
     "tyre_type_r": "倍耐力 P0",
@@ -42,6 +48,9 @@
     "tyre_width_r": "265",
     "temperature": "33",
     "accelerate": "4.50",
-    "limit": "176.81"
+    "limit": "176.81",
+    "drive": "R",
+    "suv": "false",
+    "ev": "false"
   }
 ]
