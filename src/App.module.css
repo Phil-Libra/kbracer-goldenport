@@ -145,15 +145,15 @@
     margin-bottom: 50px;
   }
 }
-@media (max-width: 1021px) {
+@media (max-width: 1046px) {
   .title {
     flex-direction: column;
   }
   .title .search {
-    margin: 0 20px 20px;
+    margin: 20px;
   }
 }
-@media (min-width: 1022px) {
+@media (min-width: 1047px) {
   .title {
     flex-direction: row;
     justify-content: space-between;

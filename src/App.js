@@ -1,6 +1,9 @@
-import { useState } from 'react';
-import { Table as ATable, Input, Select } from 'antd';
+import { useState, useEffect } from 'react';
+import { Input, Select } from 'antd';
 import { CloseCircleTwoTone } from '@ant-design/icons';
+
+
+import Table from './components/Table';
 
 import speed from './speed.json';
 import speed_mod from './speed_mod.json';
@@ -14,10 +17,8 @@ import 'antd/dist/antd.min.css';
 import styles from './App.module.css';
 
 const App = () => {
-  const { Option } = Select;
-
   // 兼容原榜单数据，处理圈速数据
-  const handleData = (data, modStatus) => {
+  const handleData = (data) => {
     return data
       // 排序，防止源数据顺序错误
       .sort((a, b) => a.speed * 100 - b.speed * 100)
@@ -39,9 +40,13 @@ const App = () => {
   const speedData = handleData(speed);
   const speedDataMod = handleData(speed_mod);
 
+  const defaultData = {
+    speed: speedData,
+    speedMod: speedDataMod
+  };
+
   // 展示数据源state
-  const [rankData, setRankData] = useState(speedData);
-  const [rankDataMod, setRankDataMod] = useState(speedDataMod);
+  const [rankData, setRankData] = useState(defaultData);
 
   // 展示哪个榜单的state
   const [isMod, setIsMod] = useState(false);
@@ -52,51 +57,14 @@ const App = () => {
   // 分页状态
   const [pagination, setPagination] = useState(false);
 
-  // 搜索车型函数
-  const handleSearch = (e) => {
-    const dataFilter = (data) => data.filter((item) => {
-      const reg = new RegExp(e.target.value, 'i');
-      return reg.test(item.car);
-    });
-    setRankData(dataFilter(speedData));
-    setRankDataMod(dataFilter(speedDataMod));
-  };
-
-  // 过滤车型函数
-  const handleFilter = (val) => {
-    const dataFilter = (data, key) => data.filter((item) => {
-      if (key === 'all') {
-        return item;
-      }
-
-      return item[key] === 'true';
-    });
-
-    setRankData(dataFilter(speedData, val));
-    setRankDataMod(dataFilter(speedDataMod, val));
-  };
-
   return (
     <>
       <div className={styles.main}>
         <Title >
-          <Input
-            addonBefore="搜索："
-            placeholder="车型关键字"
-            onChange={handleSearch}
-            allowClear
+          <Search
+            setRankData={setRankData}
+            defaultData={defaultData}
           />
-          <Select
-            defaultValue="all"
-            style={{
-              width: 120,
-            }}
-            onChange={handleFilter}
-          >
-            <Option value="all">全部车型</Option>
-            <Option value="suv">只看SUV</Option>
-            <Option value="ev">只看电车</Option>
-          </Select>
         </Title>
 
         {/* <div className={styles.switchBox}>
@@ -135,14 +103,16 @@ const App = () => {
         } */}
 
         <Table
-          rankData={rankData}
+          styles={styles}
+          rankData={rankData.speed}
           pagination={pagination}
           title={<span>原厂榜</span>}
           mod={false}
         />
 
         <Table
-          rankData={rankDataMod}
+          styles={styles}
+          rankData={rankData.speedMod}
           pagination={pagination}
           title={<span>改装榜</span>}
           mod={false}
@@ -159,206 +129,88 @@ const App = () => {
   );
 };
 
-const Table = (
+const Search = (
   {
-    rankData,
-    pagination,
-    title,
-    mod
+    setRankData,
+    defaultData
   }
 ) => {
-  const { Column, ColumnGroup } = ATable;
+  const { Option } = Select;
 
-  const [pageSize, setPageSize] = useState(50);
+  // 数据过滤条件
+  const [filter, setFilter] = useState({
+    name: '',
+    key: 'all'
+  });
 
-  // 处理圈速显示格式
-  const handleSpeed = (speed) => {
-    let time = '';
-    let minute = Math.floor(speed / 60);
-    let second = Math.round((speed - minute * 60) * 100) / 100;
+  useEffect(() => {
+    const nameFilter = (data) => {
+      let tempData = {};
+      for (let k in data) {
+        tempData[k] = data[k].filter((item) => {
+          const reg = new RegExp(filter.name, 'i');
+          return reg.test(item.car);
+        })
+      }
 
-    if (speed < 120) {
-      speed % 1 === 0
-        ? second < 10
-          ? time = `${minute}:0${second}.00`
-          : time = `${minute}:${second}.00`
-        : second < 10
-          ? second * 100 % 10 === 0
-            ? time = `${minute}:0${second}0`
-            : time = `${minute}:0${second}`
-          : second * 100 % 10 === 0
-            ? time = `${minute}:${second}0`
-            : time = `${minute}:${second}`;
-    } else {
-      time = '时间太长，教主的身体吃不消了!';
+      return tempData;
+    };
+
+    const typeFilter = (data) => {
+      let tempData = {};
+      for (let k in data) {
+        tempData[k] = data[k].filter((item) => {
+          if (filter.key === 'all') {
+            return item;
+          }
+
+          return item[filter.key] === 'true';
+        })
+      }
+
+      return tempData;
     }
 
-    return time;
-  };
+    setRankData(typeFilter(nameFilter(defaultData)));
+
+  }, [filter, defaultData, setRankData]);
+
 
   return (
-    <ATable
-      title={() => title}
-      bordered={true}
-      dataSource={rankData}
-      size={'small'}
-      // sticky={true}
-      scroll={{ x: 'max-content' }}
-      pagination={pagination
-        ? {
-          position: ['topRight'],
-          pageSize: pageSize,
-          pageSizeOptions: [10, 20, 25, 50, 100],
-          onChange: (page, pageSize) => setPageSize(pageSize)
-        }
-        : false
-      }
-      onRow={(val) => {
-        return {
-          className: val.speed < 70
-            ? `${styles.kbracer} ${styles.kbracer1}`
-            : val.speed < 73
-              ? `${styles.kbracer} ${styles.kbracer2}`
-              : val.speed < 76
-                ? `${styles.kbracer} ${styles.kbracer3}`
-                : val.speed < 79
-                  ? `${styles.kbracer} ${styles.kbracer4}`
-                  : val.speed < 82
-                    ? `${styles.kbracer} ${styles.kbracer5}`
-                    : `${styles.kbracer} ${styles.kbracer6}`
-        }
-      }}
-    >
-      <Column
-        title="排名"
-        dataIndex="key"
-        key="key"
-        align="center"
-        width="3%"
+    <div className={styles.search}>
+      <Input
+        addonBefore="搜索："
+        placeholder="车型关键字"
+        style={{
+          width: '200px'
+        }}
+        onChange={(e) => setFilter(() => (
+          {
+            ...filter,
+            name: e.target.value
+          }
+        ))}
+        allowClear
       />
-      <Column
-        title="车型"
-        dataIndex="car"
-        key="car"
-        width="10%"
-      />
-      <Column
-        className={styles.highlight}
-        title="圈速"
-        dataIndex="speed"
-        key="speed"
-        align="center"
-        width="8%"
-        render={(text) => handleSpeed(text)}
-      />
-      <Column
-        title="气温 (℃)"
-        dataIndex="temperature"
-        key="temperature"
-        align="center"
-        width="5%"
-      />
-      <Column
-        className={styles.highlight}
-        title="尾速(km/h)"
-        dataIndex="limit"
-        key="limit"
-        align="center"
-        width="5%"
-      />
-      <Column
-        title="0-100(s)"
-        dataIndex="accelerate"
-        key="accelerate"
-        align="center"
-        width="5%"
-      />
-      <Column
-        title="马力 (Ps)"
-        dataIndex="hp_content"
-        key="hp_content"
-        align="center"
-        width="5%"
-      />
-      <Column
-        title="动力总成"
-        dataIndex="powertrain"
-        key="powertrain"
-        width="10%"
-      />
-      <Column
-        title="驱动"
-        dataIndex="drive"
-        key="drive"
-        align="center"
-        width="5%"
-      />
-      <ColumnGroup title={() => '轮胎'}>
-        <Column
-          title="前轮"
-          dataIndex="tyre_type_f"
-          key="tyre_type_f"
-          width="6%"
-          onCell={(res) => {
-            if (res.tyre_type_f === res.tyre_type_r) {
-              return {
-                colSpan: 2,
-              }
-            }
-          }}
-        />
-        <Column
-          title="后轮"
-          dataIndex="tyre_type_r"
-          key="tyre_type_r"
-          width="6%"
-          onCell={(res) => {
-            if (res.tyre_type_f === res.tyre_type_r) {
-              return {
-                colSpan: 0,
-              }
-            }
-          }}
-        />
-        <Column
-          title="前宽"
-          dataIndex="tyre_width_f"
-          key="tyre_width_f"
-          align="center"
-          width="5%"
-          onCell={(res) => {
-            if (res.tyre_width_f === res.tyre_width_r) {
-              return {
-                colSpan: 2,
-              }
-            }
-          }}
-        />
-        <Column
-          title="后宽"
-          dataIndex="tyre_width_r"
-          key="tyre_width_r"
-          align="center"
-          width="5%"
-          onCell={(res) => {
-            if (res.tyre_width_f === res.tyre_width_r) {
-              return {
-                colSpan: 0,
-              }
-            }
-          }}
-        />
-      </ColumnGroup>
-      <Column
-        title="圈速视频"
-        dataIndex="Btitle"
-        key="Btitle"
-        render={(text, record) => record.BURL
-          ? <a href={record.BURL}>{text}</a>
-          : <span>{text}</span>}
-      />
-    </ATable>
-  );
+      <Select
+        defaultValue={'all'}
+        style={{
+          paddingLeft: '10px',
+          width: '125px'
+        }}
+        onChange={(val) => setFilter(() => (
+          {
+            ...filter,
+            key: val
+          }
+        ))}
+      >
+        <Option value="all">全部车型</Option>
+        <Option value="suv">只看SUV</Option>
+        <Option value="ev">只看电车</Option>
+      </Select>
+    </div>
+  )
 };
 
 const Title = (props) => (
@@ -370,9 +222,7 @@ const Title = (props) => (
         <p>传说中的偶像派车评人教主的真实圈速榜单</p>
       </div>
     </div>
-    <div className={styles.search}>
-      {props.children}
-    </div>
+    {props.children}
   </div>
 );
 
