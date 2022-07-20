@@ -144,34 +144,26 @@ const Search = (
   });
 
   useEffect(() => {
-    const nameFilter = (data) => {
-      let tempData = {};
+    let tempData = {};
+
+    const dataFilter = (data) => {
       for (let k in data) {
         tempData[k] = data[k].filter((item) => {
           const reg = new RegExp(filter.name, 'i');
           return reg.test(item.car);
-        })
-      }
-
-      return tempData;
-    };
-
-    const typeFilter = (data) => {
-      let tempData = {};
-      for (let k in data) {
-        tempData[k] = data[k].filter((item) => {
+        }).filter((item) => {
           if (filter.key === 'all') {
             return item;
           }
 
           return item[filter.key] === 'true';
-        })
+        });
       }
 
       return tempData;
-    }
+    };
 
-    setRankData(typeFilter(nameFilter(defaultData)));
+    setRankData(dataFilter(defaultData));
 
   }, [filter, defaultData, setRankData]);
 
@@ -182,7 +174,7 @@ const Search = (
         addonBefore="搜索："
         placeholder="车型关键字"
         style={{
-          width: '200px'
+          minWidth: '175px'
         }}
         onChange={(e) => setFilter(() => (
           {
@@ -196,7 +188,7 @@ const Search = (
         defaultValue={'all'}
         style={{
           paddingLeft: '10px',
-          width: '125px'
+          minWidth: '115px'
         }}
         onChange={(val) => setFilter(() => (
           {

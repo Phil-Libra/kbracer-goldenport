@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Table as ATable } from 'antd';
-import { CheckOutlined, CloseOutlined } from '@ant-design/icons';
 import PropTypes from 'prop-types';
 
 import 'antd/dist/antd.min.css';
@@ -49,7 +48,7 @@ const Table = (
             bordered={true}
             dataSource={rankData}
             size={'small'}
-            sticky={true}
+            // sticky={true}
             scroll={{ x: 'max-content' }}
             pagination={pagination
                 ? {
@@ -99,17 +98,6 @@ const Table = (
                 width="8%"
                 render={(text) => handleSpeed(text)}
             />
-            {
-                mod &&
-                <Column
-                    title="改装"
-                    dataIndex="mod"
-                    key="mod"
-                    align="center"
-                    width="5%"
-                    render={(text) => text ? <CheckOutlined /> : <CloseOutlined />}
-                />
-            }
             <Column
                 title="气温 (℃)"
                 dataIndex="temperature"
