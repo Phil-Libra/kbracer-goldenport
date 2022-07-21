@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Input, Select } from 'antd';
 import { CloseCircleTwoTone } from '@ant-design/icons';
 
@@ -16,37 +16,71 @@ import 'antd/dist/antd.min.css';
 
 import styles from './App.module.css';
 
+// 兼容原榜单数据，处理圈速数据
+const handleData = (data) => {
+  return data
+    // 排序，防止源数据顺序错误
+    .sort((a, b) => a.speed * 100 - b.speed * 100)
+    .map((item, index) => {
+      // 添加key值，直接+1并设置为排名
+      if (!item.key) {
+        item.key = index + 1;
+      }
+
+      // 添加B站链接
+      if (item.BID) {
+        item.BURL = `https://www.bilibili.com/video/${item.BID}`;
+      }
+
+      return item;
+    });
+};
+
+const speedData = handleData(speed);
+const speedDataMod = handleData(speed_mod);
+
 const App = () => {
-  // 兼容原榜单数据，处理圈速数据
-  const handleData = (data) => {
-    return data
-      // 排序，防止源数据顺序错误
-      .sort((a, b) => a.speed * 100 - b.speed * 100)
-      .map((item, index) => {
-        // 添加key值，直接+1并设置为排名
-        if (!item.key) {
-          item.key = index + 1;
-        }
 
-        // 添加B站链接
-        if (item.BID) {
-          item.BURL = `https://www.bilibili.com/video/${item.BID}`;
-        }
-
-        return item;
-      });
-  };
-
-  const speedData = handleData(speed);
-  const speedDataMod = handleData(speed_mod);
-
-  const defaultData = {
-    speed: speedData,
-    speedMod: speedDataMod
-  };
+  const defaultData = useMemo(() => (
+    {
+      speed: speedData,
+      speedMod: speedDataMod
+    }
+  ), []);
 
   // 展示数据源state
   const [rankData, setRankData] = useState(defaultData);
+
+  // 数据筛选条件
+  const [filter, setFilter] = useState({
+    name: '',
+    key: 'all'
+  });
+
+  useEffect(() => {
+    let tempData = {};
+
+    // 筛选数据函数
+    const dataFilter = (data) => {
+      for (let k in data) {
+        tempData[k] = data[k].filter((item) => {
+          const reg = new RegExp(filter.name, 'i');
+          return reg.test(item.car);
+        }).filter((item) => {
+          if (filter.key === 'all') {
+            return item;
+          }
+
+          return item[filter.key] === 'true';
+        });
+      }
+
+      return tempData;
+    };
+
+    setRankData(dataFilter(defaultData));
+
+  }, [defaultData, filter]);
 
   // 展示哪个榜单的state
   const [isMod, setIsMod] = useState(false);
@@ -62,8 +96,8 @@ const App = () => {
       <div className={styles.main}>
         <Title >
           <Search
-            setRankData={setRankData}
-            defaultData={defaultData}
+            filter={filter}
+            setFilter={setFilter}
           />
         </Title>
 
@@ -131,42 +165,11 @@ const App = () => {
 
 const Search = (
   {
-    setRankData,
-    defaultData
+    filter,
+    setFilter
   }
 ) => {
   const { Option } = Select;
-
-  // 数据过滤条件
-  const [filter, setFilter] = useState({
-    name: '',
-    key: 'all'
-  });
-
-  useEffect(() => {
-    let tempData = {};
-
-    const dataFilter = (data) => {
-      for (let k in data) {
-        tempData[k] = data[k].filter((item) => {
-          const reg = new RegExp(filter.name, 'i');
-          return reg.test(item.car);
-        }).filter((item) => {
-          if (filter.key === 'all') {
-            return item;
-          }
-
-          return item[filter.key] === 'true';
-        });
-      }
-
-      return tempData;
-    };
-
-    setRankData(dataFilter(defaultData));
-
-  }, [filter, defaultData, setRankData]);
-
 
   return (
     <div className={styles.search}>
