@@ -162,6 +162,24 @@
     "ev": "false"
   },
   {
+    "car": "S3（19",
+    "BID": "BV1Ua411K767",
+    "Btitle": "奥迪S3+卫途轮胎的圈速测试..",
+    "hp_content": "290",
+    "powertrain": "2.0T+7DCT",
+    "speed": "75.56",
+    "tyre_type_f": "卫途 02",
+    "tyre_type_r": "卫途 02",
+    "tyre_width_f": "245",
+    "tyre_width_r": "245",
+    "temperature": "38",
+    "accelerate": "5.42",
+    "limit": "162.36",
+    "drive": "4",
+    "suv": "false",
+    "ev": "false"
+  },
+  {
     "car": "ET7（22",
     "BID": "BV1zZ4y1Y7Lm",
     "Btitle": "易车圈速榜马力最大的车，蔚来ET7",

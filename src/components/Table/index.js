@@ -62,15 +62,15 @@ const Table = (
             onRow={(val) => {
                 return {
                     className:
-                        val.speed < 70
+                        val.speed <= 71
                             ? `${styles.kbracer} ${styles.kbracer1}`
-                            : val.speed < 73
+                            : val.speed <= 74
                                 ? `${styles.kbracer} ${styles.kbracer2}`
-                                : val.speed < 76
+                                : val.speed <= 77
                                     ? `${styles.kbracer} ${styles.kbracer3}`
-                                    : val.speed < 79
+                                    : val.speed <= 80
                                         ? `${styles.kbracer} ${styles.kbracer4}`
-                                        : val.speed < 82
+                                        : val.speed <= 82
                                             ? `${styles.kbracer} ${styles.kbracer5}`
                                             : `${styles.kbracer} ${styles.kbracer6}`
                 }
