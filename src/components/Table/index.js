@@ -23,7 +23,7 @@ const Table = (
         let minute = Math.floor(speed / 60);
         let second = Math.round((speed - minute * 60) * 100) / 100;
 
-        if (speed < 120) {
+        if (speed < 100) {
             speed % 1 === 0
                 ? second < 10
                     ? time = `${minute}:0${second}.00`

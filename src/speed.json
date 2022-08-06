@@ -1,5 +1,23 @@
 [
   {
+    "car": "M2C（19",
+    "BID": "BV14S4y1p74Y",
+    "Btitle": "100W内天花板？",
+    "hp_content": "411",
+    "powertrain": "3.0T+7DCT",
+    "speed": "69.00",
+    "tyre_type_f": "米其林 PS4S",
+    "tyre_type_r": "米其林 PS4S",
+    "tyre_width_f": "255",
+    "tyre_width_r": "275",
+    "temperature": "33",
+    "accelerate": "4.54",
+    "limit": "183.59",
+    "drive": "R",
+    "suv": "false",
+    "ev": "false"
+  },
+  {
     "car": "Supra（22",
     "BID": "BV1wW4y1C7Zn",
     "Btitle": "丰田SUPRA和宝马Z4，性能差距有多大？",
@@ -13,6 +31,24 @@
     "temperature": 28,
     "accelerate": "4.70",
     "limit": 177.95,
+    "drive": "R",
+    "suv": "false",
+    "ev": "false"
+  },
+  {
+    "car": "Giulia QV （22",
+    "BID": "BV1or4y1V7rX",
+    "Btitle": "100W的Giulia四叶草，虚假的赛道机器？",
+    "hp_content": "510",
+    "powertrain": "2.9T+8AT",
+    "speed": "69.98",
+    "tyre_type_f": "米其林 Cup2C",
+    "tyre_type_r": "米其林 Cup2C",
+    "tyre_width_f": "255",
+    "tyre_width_r": "295",
+    "temperature": "35",
+    "accelerate": "4.33",
+    "limit": "187.35",
     "drive": "R",
     "suv": "false",
     "ev": "false"
@@ -342,6 +378,24 @@
     "ev": "false"
   },
   {
+    "car": "奇骏 （21",
+    "BID": "BV1Rg411C7CH",
+    "Btitle": "三缸奇骏真的好玩！",
+    "hp_content": "204",
+    "powertrain": "1.5T+CVT",
+    "speed": "81.53",
+    "tyre_type_f": "邓禄普 SP 050+",
+    "tyre_type_r": "邓禄普 SP 050+",
+    "tyre_width_f": "235",
+    "tyre_width_r": "235",
+    "temperature": "38",
+    "accelerate": "9.75",
+    "limit": "138.49",
+    "drive": "4",
+    "suv": "true",
+    "ev": "false"
+  },
+  {
     "car": "飞度（21",
     "BID": "BV1UF411V7Gb",
     "Btitle": "飞度GR9，还是“超跑”么？",
@@ -358,5 +412,23 @@
     "drive": "F",
     "suv": "false",
     "ev": "false"
+  },
+  {
+    "car": "海豚 （21",
+    "BID": "BV1bg41117k1",
+    "Btitle": "海豚下赛道能比飞度快？",
+    "hp_content": "95",
+    "powertrain": "E",
+    "speed": "86.83",
+    "tyre_type_f": "朝阳 RRP76",
+    "tyre_type_r": "朝阳 RRP76",
+    "tyre_width_f": "195",
+    "tyre_width_r": "195",
+    "temperature": "31",
+    "accelerate": "11.29",
+    "limit": "124.93",
+    "drive": "F",
+    "suv": "false",
+    "ev": "true"
   }
 ]
