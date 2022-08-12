@@ -14,8 +14,24 @@
     "accelerate": "3.29",
     "limit": "201.34",
     "drive": "R",
-    "suv": "false",
-    "ev": "false"
+    "suv": "false"
+  },
+  {
+    "car": "M4（17",
+    "BID": "BV1HN4y157tk",
+    "Btitle": "国产魔王最后一战？",
+    "hp_content": "521",
+    "powertrain": "3.0T+7DCT",
+    "speed": "64.81",
+    "tyre_type_f": "韩泰 F200",
+    "tyre_type_r": "韩泰 F200",
+    "tyre_width_f": "285",
+    "tyre_width_r": "305",
+    "temperature": "14",
+    "accelerate": "--",
+    "limit": "196.34",
+    "drive": "R",
+    "suv": "false"
   },
   {
     "car": "911 Carrera 4S（21",
@@ -32,8 +48,7 @@
     "accelerate": "3.05",
     "limit": "197.19",
     "drive": "4",
-    "suv": "false",
-    "ev": "false"
+    "suv": "false"
   },
   {
     "car": "718（18",
@@ -50,7 +65,6 @@
     "accelerate": "4.50",
     "limit": "176.81",
     "drive": "R",
-    "suv": "false",
-    "ev": "false"
+    "suv": "false"
   }
 ]

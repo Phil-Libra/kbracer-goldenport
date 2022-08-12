@@ -14,8 +14,7 @@
     "accelerate": "4.54",
     "limit": "183.59",
     "drive": "R",
-    "suv": "false",
-    "ev": "false"
+    "suv": "false"
   },
   {
     "car": "Supra（22",
@@ -32,8 +31,7 @@
     "accelerate": "4.70",
     "limit": 177.95,
     "drive": "R",
-    "suv": "false",
-    "ev": "false"
+    "suv": "false"
   },
   {
     "car": "Giulia QV （22",
@@ -50,8 +48,7 @@
     "accelerate": "4.33",
     "limit": "187.35",
     "drive": "R",
-    "suv": "false",
-    "ev": "false"
+    "suv": "false"
   },
   {
     "car": "TT RS（17",
@@ -68,8 +65,7 @@
     "accelerate": "3.94",
     "limit": "181.65",
     "drive": "4",
-    "suv": "false",
-    "ev": "false"
+    "suv": "false"
   },
   {
     "car": "Z4（22",
@@ -86,8 +82,7 @@
     "accelerate": "4.74",
     "limit": "174.90",
     "drive": "R",
-    "suv": "false",
-    "ev": "false"
+    "suv": "false"
   },
   {
     "car": "Panamera 4S（18",
@@ -104,8 +99,7 @@
     "accelerate": "4.09",
     "limit": "175.32",
     "drive": "4",
-    "suv": "false",
-    "ev": "false"
+    "suv": "false"
   },
   {
     "car": "360 Modena（03",
@@ -122,8 +116,7 @@
     "accelerate": "5.25",
     "limit": "176.26",
     "drive": "R",
-    "suv": "false",
-    "ev": "false"
+    "suv": "false"
   },
   {
     "car": "X4M（21",
@@ -140,8 +133,7 @@
     "accelerate": "4.41",
     "limit": "180.30",
     "drive": "4",
-    "suv": "true",
-    "ev": "false"
+    "suv": "true"
   },
   {
     "car": "Macan GTS（20",
@@ -158,8 +150,7 @@
     "accelerate": "4.68",
     "limit": "169.55",
     "drive": "4",
-    "suv": "true",
-    "ev": "false"
+    "suv": "true"
   },
   {
     "car": "BRZ（22",
@@ -176,8 +167,7 @@
     "accelerate": "6.35",
     "limit": "160.03",
     "drive": "R",
-    "suv": "false",
-    "ev": "false"
+    "suv": "false"
   },
   {
     "car": "BRZ（13",
@@ -194,8 +184,24 @@
     "accelerate": "7.77",
     "limit": "153.99",
     "drive": "R",
-    "suv": "false",
-    "ev": "false"
+    "suv": "false"
+  },
+  {
+    "car": "极氪 001（22",
+    "BID": "BV1zF411c7Qd",
+    "Btitle": "谁是国产之王？极氪 001挑战蔚来ET7榜首！",
+    "hp_content": "544",
+    "powertrain": "E",
+    "speed": "74.61",
+    "tyre_type_f": "马牌 PC6",
+    "tyre_type_r": "马牌 PC6",
+    "tyre_width_f": "255",
+    "tyre_width_r": "255",
+    "temperature": "34",
+    "accelerate": "3.88",
+    "limit": "181.07",
+    "drive": "4",
+    "suv": "false"
   },
   {
     "car": "S3（19",
@@ -212,8 +218,7 @@
     "accelerate": "5.42",
     "limit": "162.36",
     "drive": "4",
-    "suv": "false",
-    "ev": "false"
+    "suv": "false"
   },
   {
     "car": "ET7（22",
@@ -230,8 +235,7 @@
     "accelerate": "3.75",
     "limit": "175.76",
     "drive": "4",
-    "suv": "false",
-    "ev": "true"
+    "suv": "false"
   },
   {
     "car": "05+（22",
@@ -248,8 +252,7 @@
     "accelerate": "7.07",
     "limit": "143.99",
     "drive": "4",
-    "suv": "true",
-    "ev": "false"
+    "suv": "true"
   },
   {
     "car": "型格（22",
@@ -266,8 +269,7 @@
     "accelerate": "8.46",
     "limit": "147.32",
     "drive": "F",
-    "suv": "false",
-    "ev": "false"
+    "suv": "false"
   },
   {
     "car": "UNI-V（22",
@@ -284,8 +286,7 @@
     "accelerate": "7.01",
     "limit": "142.15",
     "drive": "F",
-    "suv": "false",
-    "ev": "false"
+    "suv": "false"
   },
   {
     "car": "MG5天蝎座（22",
@@ -302,8 +303,7 @@
     "accelerate": "9.13",
     "limit": "145.22",
     "drive": "F",
-    "suv": "false",
-    "ev": "false"
+    "suv": "false"
   },
   {
     "car": "思域（22",
@@ -320,8 +320,7 @@
     "accelerate": "8.27",
     "limit": "147.42",
     "drive": "F",
-    "suv": "false",
-    "ev": "false"
+    "suv": "false"
   },
   {
     "car": "凌云S（22",
@@ -338,8 +337,7 @@
     "accelerate": "7.46",
     "limit": "146.99",
     "drive": "4",
-    "suv": "true",
-    "ev": "false"
+    "suv": "true"
   },
   {
     "car": "星骋（12",
@@ -356,8 +354,7 @@
     "accelerate": "9.54",
     "limit": "137.70",
     "drive": "F",
-    "suv": "false",
-    "ev": "false"
+    "suv": "false"
   },
   {
     "car": "昂克塞拉（21",
@@ -374,8 +371,7 @@
     "accelerate": "9.53",
     "limit": "138.60",
     "drive": "F",
-    "suv": "false",
-    "ev": "false"
+    "suv": "false"
   },
   {
     "car": "奇骏 （21",
@@ -392,8 +388,7 @@
     "accelerate": "9.75",
     "limit": "138.49",
     "drive": "4",
-    "suv": "true",
-    "ev": "false"
+    "suv": "true"
   },
   {
     "car": "飞度（21",
@@ -410,8 +405,7 @@
     "accelerate": "9.95",
     "limit": "136.53",
     "drive": "F",
-    "suv": "false",
-    "ev": "false"
+    "suv": "false"
   },
   {
     "car": "海豚 （21",
@@ -428,7 +422,6 @@
     "accelerate": "11.29",
     "limit": "124.93",
     "drive": "F",
-    "suv": "false",
-    "ev": "true"
+    "suv": "false"
   }
 ]

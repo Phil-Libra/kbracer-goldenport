@@ -48,8 +48,8 @@ const Table = (
             bordered={true}
             dataSource={rankData}
             size={'small'}
-            // sticky={true}
-            scroll={{ x: 'max-content' }}
+            sticky={true}
+            scroll={{ x: true }}
             pagination={pagination
                 ? {
                     position: ['topRight'],
