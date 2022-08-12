@@ -141,25 +141,32 @@ const App = () => {
         } */}
 
         {
-          rankData.speed.length &&
-          <Table
-            styles={styles}
-            rankData={rankData.speed}
-            pagination={pagination}
-            title={<span>原厂榜</span>}
-            mod={false}
-          />
+          rankData.speed.length
+            ? (
+              <Table
+                styles={styles}
+                rankData={rankData.speed}
+                pagination={pagination}
+                title={<span>原厂榜</span>}
+                mod={false}
+              />
+            )
+            : <></>
         }
 
         {
-          rankData.speedMod.length &&
-          <Table
-            styles={styles}
-            rankData={rankData.speedMod}
-            pagination={pagination}
-            title={<span>改装榜</span>}
-            mod={false}
-          />
+          rankData.speedMod.length
+            ? (
+              <Table
+                styles={styles}
+                rankData={rankData.speedMod}
+                pagination={pagination}
+                title={<span>改装榜</span>}
+                mod={false}
+              />
+            )
+            : <></>
+
         }
 
         <Description
