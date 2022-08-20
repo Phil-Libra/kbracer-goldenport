@@ -10,7 +10,7 @@ const Table = (
         rankData,
         pagination,
         title,
-        mod
+        driver
     }
 ) => {
     const { Column, ColumnGroup } = ATable;
@@ -98,6 +98,16 @@ const Table = (
                 width="8%"
                 render={(text) => handleSpeed(text)}
             />
+            {
+                driver &&
+                <Column
+                    title="车手"
+                    dataIndex="driver"
+                    key="driver"
+                    align="center"
+                    width="5%"
+                />
+            }
             <Column
                 title="气温 (℃)"
                 dataIndex="temperature"

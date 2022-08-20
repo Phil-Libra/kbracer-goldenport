@@ -7,6 +7,8 @@ import Table from './components/Table';
 
 import speed from './speed.json';
 import speed_mod from './speed_mod.json';
+import speed_v from './speed_v.json';
+
 import bilibili from './img/bilibili.png';
 import weibo from './img/weibo.png';
 import github from './img/github.png';
@@ -39,13 +41,15 @@ const App = () => {
 
   const speedData = useMemo(() => handleData(speed), []);
   const speedDataMod = useMemo(() => handleData(speed_mod), []);
+  const speedDataV = useMemo(() => handleData(speed_v), []);
 
   const defaultData = useMemo(() => (
     {
       speed: speedData,
-      speedMod: speedDataMod
+      speedMod: speedDataMod,
+      speedV: speedDataV
     }
-  ), [speedData, speedDataMod]);
+  ), [speedData, speedDataMod, speedDataV]);
 
   // 展示数据源state
   const [rankData, setRankData] = useState(defaultData);
@@ -148,10 +152,25 @@ const App = () => {
                 rankData={rankData.speed}
                 pagination={pagination}
                 title={<span>原厂榜</span>}
-                mod={false}
+                driver={false}
               />
             )
             : <></>
+        }
+
+        {
+          rankData.speedV.length
+            ? (
+              <Table
+                styles={styles}
+                rankData={rankData.speedV}
+                pagination={pagination}
+                title={<span>大V榜</span>}
+                driver={true}
+              />
+            )
+            : <></>
+
         }
 
         {
@@ -162,7 +181,7 @@ const App = () => {
                 rankData={rankData.speedMod}
                 pagination={pagination}
                 title={<span>改装榜</span>}
-                mod={false}
+                driver={false}
               />
             )
             : <></>
