@@ -19,7 +19,7 @@ import 'antd/dist/antd.min.css';
 import styles from './App.module.css';
 
 const App = () => {
-  // 兼容原榜单数据，处理圈速数据
+  // 兼容原榜单数据格式，处理圈速数据
   const handleData = (data) => {
     return data
       // 排序，防止源数据顺序错误
@@ -91,7 +91,7 @@ const App = () => {
   }, [defaultData, filter]);
 
   // 展示哪个榜单的state
-  const [isMod, setIsMod] = useState(false);
+  const [table, setTable] = useState('original');
 
   // 说明书显示状态
   const [descStatus, setDescStatus] = useState(false);
@@ -109,72 +109,22 @@ const App = () => {
           />
         </Title>
 
-        {/* <div className={styles.switchBox}>
-          <button
-            className={styles.switch}
-            onClick={() => setIsMod((prevState) => !prevState)}
-          >
-            {isMod ? '切换到原厂榜' : '切换到改装榜'}
-          </button>
-
-          <button
-            className={styles.pagination}
-            onClick={() => setPagination((prevState) => !prevState)}
-          >
-            <span>{pagination ? '关闭分页' : '开启分页'}</span>
-          </button>
-        </div>
-
-        {
-          isMod
-            ? (
-              <Table
-                rankData={rankDataMod}
-                pagination={pagination}
-                title={<span>改装榜</span>}
+        {table === 'original'
+          ? (
+            <Table
+              styles={styles}
+              rankData={rankData.speed}
+              pagination={pagination}
+              title={<span>原厂榜</span>}
+              driver={false}
+            >
+              <SwitchBox
+                table={table}
+                setTable={setTable}
               />
-            )
-            : (
-              <Table
-                rankData={rankData}
-                pagination={pagination}
-                showSizeChanger={false}
-                title={<span>原厂榜</span>}
-              />
-            )
-        } */}
-
-        {
-          rankData.speed.length
-            ? (
-              <Table
-                styles={styles}
-                rankData={rankData.speed}
-                pagination={pagination}
-                title={<span>原厂榜</span>}
-                driver={false}
-              />
-            )
-            : <></>
-        }
-
-        {
-          rankData.speedV.length
-            ? (
-              <Table
-                styles={styles}
-                rankData={rankData.speedV}
-                pagination={pagination}
-                title={<span>大V榜</span>}
-                driver={true}
-              />
-            )
-            : <></>
-
-        }
-
-        {
-          rankData.speedMod.length
+            </Table>
+          )
+          : table === 'mod'
             ? (
               <Table
                 styles={styles}
@@ -182,11 +132,29 @@ const App = () => {
                 pagination={pagination}
                 title={<span>改装榜</span>}
                 driver={false}
-              />
+              >
+                <SwitchBox
+                  table={table}
+                  setTable={setTable}
+                />
+              </Table>
             )
-            : <></>
-
-        }
+            : table === 'vip'
+              ? (
+                <Table
+                  styles={styles}
+                  rankData={rankData.speedV}
+                  pagination={pagination}
+                  title={<span>大V榜</span>}
+                  driver={true}
+                >
+                  <SwitchBox
+                    table={table}
+                    setTable={setTable}
+                  />
+                </Table>
+              )
+              : <></>}
 
         <Description
           descStatus={descStatus}
@@ -244,7 +212,62 @@ const Search = (
   )
 };
 
-const Title = (props) => (
+const SwitchBox = (
+  {
+    table,
+    setTable
+  }
+) => {
+  return (
+    <div className={styles.switchBox}>
+      {
+        table !== 'original' && (
+          <button
+            className={styles.switch}
+            onClick={() => setTable('original')}
+          >
+            原厂榜
+          </button>
+        )
+      }
+
+      {
+        table !== 'mod' && (
+          <button
+            className={styles.switch}
+            onClick={() => setTable('mod')}
+          >
+            改装榜
+          </button>
+        )
+      }
+
+      {
+        table !== 'vip' && (
+          <button
+            className={styles.switch}
+            onClick={() => setTable('vip')}
+          >
+            大V榜
+          </button>
+        )
+      }
+
+      {/* <button
+        className={styles.pagination}
+        onClick={() => setPagination((prevState) => !prevState)}
+      >
+        <span>{pagination ? '关闭分页' : '开启分页'}</span>
+      </button> */}
+    </div>
+  )
+}
+
+const Title = (
+  {
+    children
+  }
+) => (
   <div className={styles.title}>
     <div className={styles.header}>
       <img src={logo} alt="logo" />
@@ -253,7 +276,7 @@ const Title = (props) => (
         <p>传说中的偶像派车评人教主的真实圈速榜单</p>
       </div>
     </div>
-    {props.children}
+    {children}
   </div>
 );
 
@@ -341,7 +364,7 @@ const Description = (
             overflow: 'visible',
             position: 'fixed',
             top: '-5px',
-            left: '-5px',
+            right: '-5px',
             fontSize: 16
           }
         }

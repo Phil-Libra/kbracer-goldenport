@@ -78,11 +78,15 @@
     }
 
     .ant-table-title {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
         background-image: linear-gradient(200deg, #2c3e50, #2980b9);
         color: #fff;
         font-size: 24px;
 
         span {
+            text-align: center;
             padding-left: 10px;
         }
     }
@@ -149,10 +153,6 @@
     }
 }
 
-// .highlight {
-//     background-color: rgba(0, 0, 0, 0.2);
-// }
-
 // 其他样式
 
 //标题、按钮区域响应式边距
@@ -160,10 +160,6 @@
     .title {
         margin: 20px 20px 0;
         padding: 20px;
-    }
-
-    .switchBox {
-        margin: 20px;
     }
 
     .descButton {
@@ -177,10 +173,6 @@
         padding: 30px;
     }
 
-    .switchBox {
-        margin: 40px;
-    }
-
     .descButton {
         margin-bottom: 50px;
     }
@@ -190,10 +182,6 @@
     .title {
         margin: 50px auto 0;
         padding: 30px;
-    }
-
-    .switchBox {
-        margin: 40px auto;
     }
 
     .descButton {
@@ -224,28 +212,40 @@
 }
 
 // 按钮区域响应式布局
-@media (max-width:449px) {
-    .switchBox {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+@media (max-width:399px) {
+    :global {
+        .ant-table-title {
+            justify-content: space-around;
+
+            span {
+                width: 105px;
+                padding: 0;
+            }
+        }
     }
 
+    .switchBox {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
 
-    .pagination {
-        margin-top: 20px;
+        .switch {
+            &:first-child {
+                margin: 0 0 10px 0
+            }
+        }
     }
 }
 
-@media (min-width:450px) {
-    .switchBox {
-        display: flex;
-        justify-content: center;
-
-        .pagination {
-            margin-left: 300px;
+@media (min-width:400px) {
+    :global {
+        .ant-table-title {
+            justify-content: flex-start;
         }
+    }
+
+    .switchBox {
+        margin-left: 25px;
     }
 }
 
@@ -312,24 +312,32 @@
 }
 
 .switchBox {
+    display: flex;
 
     .switch,
     .pagination {
-        width: 150px;
-        height: 40px;
-
-        overflow: hidden;
-        border-radius: 5px;
-        border: none;
-        outline: none;
-        box-shadow: #23527c 0px -2px 0px inset;
-        background-color: #337ab7;
-        color: white;
-        line-height: 20px;
+        width: 105px;
+        height: 32px;
+        // background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(217, 217, 217, 0.25);
+        border-radius: 2px;
+        font-size: 14px;
+        color: #000;
+        text-align: center;
         cursor: pointer;
 
+        span {
+            padding: 0;
+        }
+
         &:hover {
-            background-color: #4405f7;
+            border: 1px solid #1890ff;
+        }
+    }
+
+    .switch {
+        &:first-child {
+            margin-right: 25px;
         }
     }
 }

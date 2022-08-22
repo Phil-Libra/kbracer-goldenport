@@ -10,9 +10,11 @@ const Table = (
         rankData,
         pagination,
         title,
-        driver
+        driver,
+        children
     }
 ) => {
+
     const { Column, ColumnGroup } = ATable;
 
     const [pageSize, setPageSize] = useState(50);
@@ -44,20 +46,25 @@ const Table = (
 
     return (
         <ATable
-            title={() => title}
+            title={() => (
+                <>
+                    {title}{children}
+                </>
+            )}
             bordered={true}
             dataSource={rankData}
             size={'small'}
             sticky={true}
             scroll={{ x: true }}
-            pagination={pagination
-                ? {
-                    position: ['topRight'],
-                    pageSize: pageSize,
-                    pageSizeOptions: [10, 20, 25, 50, 100],
-                    onChange: (page, pageSize) => setPageSize(pageSize)
-                }
-                : false
+            pagination={
+                pagination
+                    ? {
+                        position: ['topRight'],
+                        pageSize: pageSize,
+                        pageSizeOptions: [10, 20, 25, 50, 100],
+                        onChange: (page, pageSize) => setPageSize(pageSize)
+                    }
+                    : false
             }
             onRow={(val) => {
                 return {
@@ -90,7 +97,6 @@ const Table = (
                 width="10%"
             />
             <Column
-                className={styles.highlight}
                 title="圈速"
                 dataIndex="speed"
                 key="speed"
@@ -116,7 +122,6 @@ const Table = (
                 width="5%"
             />
             <Column
-                className={styles.highlight}
                 title="尾速(km/h)"
                 dataIndex="limit"
                 key="limit"
@@ -214,7 +219,7 @@ const Table = (
                     ? <a href={record.BURL}>{text}</a>
                     : <span>{text}</span>}
             />
-        </ATable>
+        </ATable >
     );
 };
 

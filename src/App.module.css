@@ -57,11 +57,15 @@
   border-color: initial;
 }
 :global .ant-table-title {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
   background-image: linear-gradient(200deg, #2c3e50, #2980b9);
   color: #fff;
   font-size: 24px;
 }
 :global .ant-table-title span {
+  text-align: center;
   padding-left: 10px;
 }
 .kbracer {
@@ -114,9 +118,6 @@
     margin: 20px 20px 0;
     padding: 20px;
   }
-  .switchBox {
-    margin: 20px;
-  }
   .descButton {
     margin-bottom: 20px;
   }
@@ -126,9 +127,6 @@
     margin: 50px 50px 0;
     padding: 30px;
   }
-  .switchBox {
-    margin: 40px;
-  }
   .descButton {
     margin-bottom: 50px;
   }
@@ -137,9 +135,6 @@
   .title {
     margin: 50px auto 0;
     padding: 30px;
-  }
-  .switchBox {
-    margin: 40px auto;
   }
   .descButton {
     margin-bottom: 50px;
@@ -162,24 +157,29 @@
     margin: 50px 0;
   }
 }
-@media (max-width: 449px) {
+@media (max-width: 399px) {
+  :global .ant-table-title {
+    justify-content: space-around;
+  }
+  :global .ant-table-title span {
+    width: 105px;
+    padding: 0;
+  }
   .switchBox {
-    display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
   }
-  .pagination {
-    margin-top: 20px;
+  .switchBox .switch:first-child {
+    margin: 0 0 10px 0;
   }
 }
-@media (min-width: 450px) {
-  .switchBox {
-    display: flex;
-    justify-content: center;
+@media (min-width: 400px) {
+  :global .ant-table-title {
+    justify-content: flex-start;
   }
-  .switchBox .pagination {
-    margin-left: 300px;
+  .switchBox {
+    margin-left: 25px;
   }
 }
 @media (max-width: 832px) {
@@ -233,23 +233,30 @@
 .title .search {
   display: flex;
 }
+.switchBox {
+  display: flex;
+}
 .switchBox .switch,
 .switchBox .pagination {
-  width: 150px;
-  height: 40px;
-  overflow: hidden;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  box-shadow: #23527c 0px -2px 0px inset;
-  background-color: #337ab7;
-  color: white;
-  line-height: 20px;
+  width: 105px;
+  height: 32px;
+  border: 1px solid rgba(217, 217, 217, 0.25);
+  border-radius: 2px;
+  font-size: 14px;
+  color: #000;
+  text-align: center;
   cursor: pointer;
+}
+.switchBox .switch span,
+.switchBox .pagination span {
+  padding: 0;
 }
 .switchBox .switch:hover,
 .switchBox .pagination:hover {
-  background-color: #4405f7;
+  border: 1px solid #1890ff;
+}
+.switchBox .switch:first-child {
+  margin-right: 25px;
 }
 .footer {
   display: flex;
