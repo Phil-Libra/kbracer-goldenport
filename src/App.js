@@ -115,13 +115,18 @@ const App = () => {
               styles={styles}
               rankData={rankData.speed}
               pagination={pagination}
-              title={<span>原厂榜</span>}
+              title={
+                <>
+                  <span>原厂榜</span>
+                  <SwitchBox
+                    table={table}
+                    setTable={setTable}
+                  />
+                </>
+              }
               driver={false}
             >
-              <SwitchBox
-                table={table}
-                setTable={setTable}
-              />
+
             </Table>
           )
           : table === 'mod'
@@ -130,13 +135,19 @@ const App = () => {
                 styles={styles}
                 rankData={rankData.speedMod}
                 pagination={pagination}
-                title={<span>改装榜</span>}
+                title={
+                  <>
+                    <SwitchBox
+                      table={table}
+                      setTable={setTable}
+                    >
+                      <span>改装榜</span>
+                    </SwitchBox>
+                  </>
+                }
                 driver={false}
               >
-                <SwitchBox
-                  table={table}
-                  setTable={setTable}
-                />
+
               </Table>
             )
             : table === 'vip'
@@ -145,13 +156,18 @@ const App = () => {
                   styles={styles}
                   rankData={rankData.speedV}
                   pagination={pagination}
-                  title={<span>大V榜</span>}
+                  title={
+                    <>
+                      <SwitchBox
+                        table={table}
+                        setTable={setTable}
+                      />
+                      <span>大V榜</span>
+                    </>
+                  }
                   driver={true}
                 >
-                  <SwitchBox
-                    table={table}
-                    setTable={setTable}
-                  />
+
                 </Table>
               )
               : <></>}
@@ -215,41 +231,44 @@ const Search = (
 const SwitchBox = (
   {
     table,
-    setTable
+    setTable,
+    children
   }
 ) => {
   return (
     <div className={styles.switchBox}>
       {
         table !== 'original' && (
-          <button
+          <div
             className={styles.switch}
             onClick={() => setTable('original')}
           >
-            原厂榜
-          </button>
+            <span>原厂榜</span>
+          </div>
         )
       }
 
       {
         table !== 'mod' && (
-          <button
+          <div
             className={styles.switch}
             onClick={() => setTable('mod')}
           >
-            改装榜
-          </button>
+            <span>改装榜</span>
+          </div>
         )
       }
 
+      {children ? children : <></>}
+
       {
         table !== 'vip' && (
-          <button
+          <div
             className={styles.switch}
             onClick={() => setTable('vip')}
           >
-            大V榜
-          </button>
+            <span>大V榜</span>
+          </div>
         )
       }
 

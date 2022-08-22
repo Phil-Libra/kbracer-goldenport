@@ -33,6 +33,7 @@
 
     .ant-table-wrapper {
         max-width: 1820px;
+        min-width: 317px;
     }
 
     .ant-table-thead {
@@ -81,13 +82,17 @@
         display: flex;
         align-items: center;
         flex-wrap: nowrap;
+        padding: 0 !important;
+        min-width: 305px;
         background-image: linear-gradient(200deg, #2c3e50, #2980b9);
         color: #fff;
-        font-size: 24px;
+        font-size: 22px;
 
         span {
+            padding: 8px 18px;
+            width: 105px;
+            height: 54px;
             text-align: center;
-            padding-left: 10px;
         }
     }
 }
@@ -211,44 +216,6 @@
     }
 }
 
-// 按钮区域响应式布局
-@media (max-width:399px) {
-    :global {
-        .ant-table-title {
-            justify-content: space-around;
-
-            span {
-                width: 105px;
-                padding: 0;
-            }
-        }
-    }
-
-    .switchBox {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-
-        .switch {
-            &:first-child {
-                margin: 0 0 10px 0
-            }
-        }
-    }
-}
-
-@media (min-width:400px) {
-    :global {
-        .ant-table-title {
-            justify-content: flex-start;
-        }
-    }
-
-    .switchBox {
-        margin-left: 25px;
-    }
-}
-
 // 底栏响应式布局
 @media (max-width:832px) {
     .footer {
@@ -313,31 +280,22 @@
 
 .switchBox {
     display: flex;
+    height: 54px;
 
     .switch,
     .pagination {
         width: 105px;
-        height: 32px;
-        // background-color: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(217, 217, 217, 0.25);
-        border-radius: 2px;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
         font-size: 14px;
-        color: #000;
+        color: #fff;
         text-align: center;
+        line-height: 53px;
         cursor: pointer;
 
-        span {
-            padding: 0;
-        }
-
         &:hover {
-            border: 1px solid #1890ff;
-        }
-    }
-
-    .switch {
-        &:first-child {
-            margin-right: 25px;
+            font-size: 18px;
+            transition: all 0.1s;
         }
     }
 }

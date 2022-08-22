@@ -46,11 +46,7 @@ const Table = (
 
     return (
         <ATable
-            title={() => (
-                <>
-                    {title}{children}
-                </>
-            )}
+            title={() => title}
             bordered={true}
             dataSource={rankData}
             size={'small'}
