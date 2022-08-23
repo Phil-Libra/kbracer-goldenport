@@ -74,7 +74,7 @@ const App = () => {
             case 'all':
               return item;
             case 'suv':
-              return item[filter.key] === 'true';
+              return item[filter.key] === true;
             case 'ev':
               return item.powertrain === 'E';
             default:
@@ -121,6 +121,8 @@ const App = () => {
                   <SwitchBox
                     table={table}
                     setTable={setTable}
+                    pagination={pagination}
+                    setPagination={setPagination}
                   />
                 </>
               }
@@ -140,6 +142,8 @@ const App = () => {
                     <SwitchBox
                       table={table}
                       setTable={setTable}
+                      pagination={pagination}
+                      setPagination={setPagination}
                     >
                       <span>改装榜</span>
                     </SwitchBox>
@@ -161,6 +165,8 @@ const App = () => {
                       <SwitchBox
                         table={table}
                         setTable={setTable}
+                        pagination={pagination}
+                        setPagination={setPagination}
                       />
                       <span>大V榜</span>
                     </>
@@ -232,52 +238,56 @@ const SwitchBox = (
   {
     table,
     setTable,
+    pagination,
+    setPagination,
     children
   }
 ) => {
   return (
     <div className={styles.switchBox}>
-      {
-        table !== 'original' && (
-          <div
-            className={styles.switch}
-            onClick={() => setTable('original')}
-          >
-            <span>原厂榜</span>
-          </div>
-        )
-      }
+      <div className={styles.switchButtons}>
+        {
+          table !== 'original' && (
+            <div
+              className={styles.switch}
+              onClick={() => setTable('original')}
+            >
+              <span>原厂榜</span>
+            </div>
+          )
+        }
 
-      {
-        table !== 'mod' && (
-          <div
-            className={styles.switch}
-            onClick={() => setTable('mod')}
-          >
-            <span>改装榜</span>
-          </div>
-        )
-      }
+        {
+          table !== 'mod' && (
+            <div
+              className={styles.switch}
+              onClick={() => setTable('mod')}
+            >
+              <span>改装榜</span>
+            </div>
+          )
+        }
 
-      {children ? children : <></>}
+        {children ? children : <></>}
 
-      {
-        table !== 'vip' && (
-          <div
-            className={styles.switch}
-            onClick={() => setTable('vip')}
-          >
-            <span>大V榜</span>
-          </div>
-        )
-      }
+        {
+          table !== 'vip' && (
+            <div
+              className={styles.switch}
+              onClick={() => setTable('vip')}
+            >
+              <span>大V榜</span>
+            </div>
+          )
+        }
+      </div>
 
-      {/* <button
+      {/* <div
         className={styles.pagination}
         onClick={() => setPagination((prevState) => !prevState)}
       >
         <span>{pagination ? '关闭分页' : '开启分页'}</span>
-      </button> */}
+      </div> */}
     </div>
   )
 }

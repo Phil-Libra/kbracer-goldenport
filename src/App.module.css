@@ -162,6 +162,16 @@
     margin: 50px 0;
   }
 }
+@media (max-width: 479px) {
+  :global .ant-table-title {
+    justify-content: center;
+  }
+}
+@media (min-width: 480px) {
+  :global .ant-table-title {
+    justify-content: flex-start;
+  }
+}
 @media (max-width: 832px) {
   .footer {
     flex-direction: column;
@@ -213,7 +223,7 @@
 .title .search {
   display: flex;
 }
-.switchBox {
+.switchBox .switchButtons {
   display: flex;
   height: 54px;
 }
@@ -223,7 +233,7 @@
   background-color: rgba(0, 0, 0, 0);
   border: none;
   font-size: 14px;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.75);
   text-align: center;
   line-height: 53px;
   cursor: pointer;
@@ -231,6 +241,7 @@
 .switchBox .switch:hover,
 .switchBox .pagination:hover {
   font-size: 18px;
+  color: #ffffff;
   transition: all 0.1s;
 }
 .footer {
@@ -272,6 +283,7 @@
 }
 .buttonBox .descButton:hover {
   background-color: #4405f7;
+  transition: all 0.5s;
 }
 .description {
   position: fixed;

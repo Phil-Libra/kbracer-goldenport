@@ -216,6 +216,23 @@
     }
 }
 
+// 按钮区域响应式布局
+@media (max-width:479px) {
+    :global {
+        .ant-table-title {
+            justify-content: center;
+        }
+    }
+}
+
+@media (min-width:480px) {
+    :global {
+        .ant-table-title {
+            justify-content: flex-start;
+        }
+    }
+}
+
 // 底栏响应式布局
 @media (max-width:832px) {
     .footer {
@@ -279,8 +296,13 @@
 }
 
 .switchBox {
-    display: flex;
-    height: 54px;
+    // display: flex;
+    // justify-content: space-around;
+
+    .switchButtons {
+        display: flex;
+        height: 54px;
+    }
 
     .switch,
     .pagination {
@@ -288,16 +310,21 @@
         background-color: rgba(0, 0, 0, 0);
         border: none;
         font-size: 14px;
-        color: #fff;
+        color: rgba(255, 255, 255, 0.75);
         text-align: center;
         line-height: 53px;
         cursor: pointer;
 
         &:hover {
             font-size: 18px;
+            color: rgba(255, 255, 255, 1);
             transition: all 0.1s;
         }
     }
+
+    // .pagination {
+    //     width: 100px;
+    // }
 }
 
 .footer {
@@ -343,6 +370,7 @@
 
         &:hover {
             background-color: #4405f7;
+            transition: all 0.5s;
         }
     }
 }
