@@ -23,7 +23,7 @@ const App = () => {
   const handleData = (data) => {
     return data
       // 排序，防止源数据顺序错误
-      .sort((a, b) => a.speed * 100 - b.speed * 100)
+      .sort((a, b) => a.speed * 1000 - b.speed * 1000)
       .map((item, index) => {
         // 添加key值，直接+1并设置为排名
         if (!item.key) {
@@ -252,7 +252,7 @@ const SwitchBox = (
               className={styles.switch}
               onClick={() => setTable('original')}
             >
-              <span>原厂榜</span>
+              原厂榜
             </div>
           )
         }
@@ -263,7 +263,7 @@ const SwitchBox = (
               className={styles.switch}
               onClick={() => setTable('mod')}
             >
-              <span>改装榜</span>
+              改装榜
             </div>
           )
         }
@@ -276,7 +276,7 @@ const SwitchBox = (
               className={styles.switch}
               onClick={() => setTable('vip')}
             >
-              <span>大V榜</span>
+              大V榜
             </div>
           )
         }

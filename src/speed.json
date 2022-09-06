@@ -1,6 +1,6 @@
 [
   {
-    "car": "M2C（19",
+    "car": "M2 雷霆（19",
     "BID": "BV14S4y1p74Y",
     "Btitle": "100W内天花板？",
     "hp_content": 411,
@@ -119,7 +119,7 @@
     "suv": false
   },
   {
-    "car": "X4M（21",
+    "car": "X4 M 雷霆（21",
     "BID": "BV1294y1Q7DV",
     "Btitle": "510马力+四驱，宝马X4 M圈速测试..",
     "hp_content": 510,
@@ -323,6 +323,23 @@
     "suv": true
   },
   {
+    "car": "03（22",
+    "BID": "BV1ZP4y1o7Bz",
+    "Btitle": "2.0T+DCT的领克03，必秒03+？",
+    "hp_content": 190,
+    "powertrain": "2.0T+7DCT",
+    "speed": 78.03,
+    "tyre_type_f": "固特异 御乘Ⅱ",
+    "tyre_type_r": "固特异 御乘Ⅱ",
+    "tyre_width_f": 215,
+    "tyre_width_r": 215,
+    "temperature": 29,
+    "accelerate": 7.83,
+    "limit": 146.22,
+    "drive": "F",
+    "suv": false
+  },
+  {
     "car": "型格（22",
     "BID": "BV1AY4y1x7kS",
     "Btitle": "本田内战，型格和思域性能PK～",
@@ -391,7 +408,7 @@
     "suv": false
   },
   {
-    "car": "MG5天蝎座（22",
+    "car": "MG5 天蝎座（22",
     "BID": "BV1c341137Qo",
     "Btitle": "MG5天蝎座，01加速9秒多…",
     "hp_content": 181,
@@ -510,6 +527,23 @@
     "suv": true
   },
   {
+    "car": "海豚 骑士版 （21",
+    "BID": "BV1Qt4y1E7oz",
+    "Btitle": "海豚王必秒飞度！",
+    "hp_content": 177,
+    "powertrain": "E",
+    "speed": 81.56,
+    "tyre_type_f": "朝阳 RRP76",
+    "tyre_type_r": "朝阳 RRP76",
+    "tyre_width_f": 205,
+    "tyre_width_r": 205,
+    "temperature": 25,
+    "accelerate": 7.34,
+    "limit": 143.4,
+    "drive": "F",
+    "suv": false
+  },
+  {
     "car": "飞度（21",
     "BID": "BV1UF411V7Gb",
     "Btitle": "飞度GR9，还是“超跑”么？",
@@ -523,6 +557,23 @@
     "temperature": 28,
     "accelerate": 9.95,
     "limit": 136.53,
+    "drive": "F",
+    "suv": false
+  },
+  {
+    "car": "奥德赛（22",
+    "BID": "BV1ZP4y1f7cf",
+    "Btitle": "土屋圭市座驾，赛道级MPV！",
+    "hp_content": 215,
+    "powertrain": "2.0L Hybrid+ECVT",
+    "speed": 86.8,
+    "tyre_type_f": "优科豪马 ADVAN db",
+    "tyre_type_r": "优科豪马 ADVAN db",
+    "tyre_width_f": 225,
+    "tyre_width_r": 225,
+    "temperature": 30,
+    "accelerate": 9.36,
+    "limit": 131.62,
     "drive": "F",
     "suv": false
   },

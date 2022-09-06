@@ -23,7 +23,7 @@ const Table = (
     const handleSpeed = (speed) => {
         let time = '';
         let minute = Math.floor(speed / 60);
-        let second = Math.round((speed - minute * 60) * 100) / 100;
+        let second = Math.round((speed - minute * 60) * 1000) / 1000;
 
         if (speed < 100) {
             speed % 1 === 0
@@ -31,17 +31,26 @@ const Table = (
                     ? time = `${minute}:0${second}.00`
                     : time = `${minute}:${second}.00`
                 : second < 10
-                    ? second * 100 % 10 === 0
+                    ? second * 1000 % 100 === 0
                         ? time = `${minute}:0${second}0`
                         : time = `${minute}:0${second}`
-                    : second * 100 % 10 === 0
+                    : second * 1000 % 100 === 0
                         ? time = `${minute}:${second}0`
                         : time = `${minute}:${second}`;
         } else {
-            time = '时间太长，教主的身体吃不消了!';
+            time = `${minute}:${second}！时间太长，教主身体吃不消了！`;
         }
 
         return time;
+    };
+
+    // 处理数字显示
+    const handleNumber = (item) => {
+        if (item * 1000 % 100 === 0) {
+            return `${item}0`
+        }
+
+        return item;
     };
 
     return (
@@ -98,7 +107,7 @@ const Table = (
                 key="speed"
                 align="center"
                 width="8%"
-                render={(text) => handleSpeed(text)}
+                render={(item) => handleSpeed(item)}
             />
             {
                 driver &&
@@ -123,6 +132,7 @@ const Table = (
                 key="limit"
                 align="center"
                 width="5%"
+                render={(item) => handleNumber(item)}
             />
             <Column
                 title="0-100(s)"
@@ -130,6 +140,7 @@ const Table = (
                 key="accelerate"
                 align="center"
                 width="5%"
+                render={(item) => handleNumber(item)}
             />
             <Column
                 title="马力 (Ps)"

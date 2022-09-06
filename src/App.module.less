@@ -82,17 +82,20 @@
         display: flex;
         align-items: center;
         flex-wrap: nowrap;
-        padding: 0 !important;
-        min-width: 305px;
+        // min-width: 270px;
         background-image: linear-gradient(200deg, #2c3e50, #2980b9);
         color: #fff;
         font-size: 22px;
 
         span {
-            padding: 8px 18px;
-            width: 105px;
-            height: 54px;
+            padding: 0 10px;
+            width: 90px;
+            height: 45px;
+            line-height: 45px;
             text-align: center;
+            // border: 1px solid #fff;
+            text-decoration: underline;
+            text-underline-offset: 10px;
         }
     }
 }
@@ -106,6 +109,7 @@
 
         &:hover {
             text-decoration: underline;
+            text-underline-offset: 3px;
         }
     }
 }
@@ -301,19 +305,20 @@
 
     .switchButtons {
         display: flex;
-        height: 54px;
+        height: 45px;
+        line-height: 45px;
     }
 
     .switch,
     .pagination {
-        width: 105px;
+        width: 90px;
         background-color: rgba(0, 0, 0, 0);
         border: none;
         font-size: 14px;
         color: rgba(255, 255, 255, 0.75);
         text-align: center;
-        line-height: 53px;
         cursor: pointer;
+        // border: 1px solid #fff;
 
         &:hover {
             font-size: 18px;
