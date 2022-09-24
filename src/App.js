@@ -61,11 +61,11 @@ const App = () => {
   });
 
   useEffect(() => {
-    let tempData = {};
+    const tempData = {};
 
     // 筛选数据函数
     const dataFilter = (data) => {
-      for (let k in data) {
+      for (const k in data) {
         tempData[k] = data[k].filter((item) => {
           const reg = new RegExp(filter.name, 'i');
           return reg.test(item.car);
@@ -99,6 +99,20 @@ const App = () => {
   // 分页状态
   const [pagination, setPagination] = useState(false);
 
+  // 根据state选择传递的数据
+  const rankDataSelector = () => {
+    switch (table) {
+      case 'original':
+        return rankData.speed;
+      case 'mod':
+        return rankData.speedMod;
+      case 'vip':
+        return rankData.speedV;
+      default:
+        throw new Error('没有数据被传递');
+    }
+  };
+
   return (
     <>
       <div className={styles.main}>
@@ -109,74 +123,23 @@ const App = () => {
           />
         </Title>
 
-        {table === 'original'
-          ? (
-            <Table
-              styles={styles}
-              rankData={rankData.speed}
-              pagination={pagination}
-              title={
-                <>
-                  <span>原厂榜</span>
-                  <SwitchBox
-                    table={table}
-                    setTable={setTable}
-                    pagination={pagination}
-                    setPagination={setPagination}
-                  />
-                </>
-              }
-              driver={false}
-            >
-
-            </Table>
-          )
-          : table === 'mod'
-            ? (
-              <Table
-                styles={styles}
-                rankData={rankData.speedMod}
+        <Table
+          styles={styles}
+          rankData={rankDataSelector()}
+          pagination={pagination}
+          title={
+            <>
+              <SwitchBox
+                table={table}
+                setTable={setTable}
                 pagination={pagination}
-                title={
-                  <>
-                    <SwitchBox
-                      table={table}
-                      setTable={setTable}
-                      pagination={pagination}
-                      setPagination={setPagination}
-                    >
-                      <span>改装榜</span>
-                    </SwitchBox>
-                  </>
-                }
-                driver={false}
-              >
-
-              </Table>
-            )
-            : table === 'vip'
-              ? (
-                <Table
-                  styles={styles}
-                  rankData={rankData.speedV}
-                  pagination={pagination}
-                  title={
-                    <>
-                      <SwitchBox
-                        table={table}
-                        setTable={setTable}
-                        pagination={pagination}
-                        setPagination={setPagination}
-                      />
-                      <span>大V榜</span>
-                    </>
-                  }
-                  driver={true}
-                >
-
-                </Table>
-              )
-              : <></>}
+                setPagination={setPagination}
+              />
+            </>
+          }
+          driver={false}
+        >
+        </Table>
 
         <Description
           descStatus={descStatus}
@@ -239,47 +202,77 @@ const SwitchBox = (
     table,
     setTable,
     pagination,
-    setPagination,
-    children
+    setPagination
   }
 ) => {
-  return (
-    <div className={styles.switchBox}>
-      <div className={styles.switchButtons}>
-        {
-          table !== 'original' && (
-            <div
-              className={styles.switch}
-              onClick={() => setTable('original')}
-            >
-              原厂榜
-            </div>
-          )
-        }
-
-        {
-          table !== 'mod' && (
+  const renderBox = () => {
+    switch (table) {
+      case 'original':
+        return (
+          <>
+            <span>原厂榜</span>
             <div
               className={styles.switch}
               onClick={() => setTable('mod')}
             >
               改装榜
             </div>
-          )
-        }
-
-        {children ? children : <></>}
-
-        {
-          table !== 'vip' && (
             <div
               className={styles.switch}
               onClick={() => setTable('vip')}
             >
               大V榜
             </div>
-          )
-        }
+          </>
+        );
+
+      case 'mod':
+        return (
+          <>
+            <div
+              className={styles.switch}
+              onClick={() => setTable('original')}
+            >
+              原厂榜
+            </div>
+            <span>改装榜</span>
+            <div
+              className={styles.switch}
+              onClick={() => setTable('vip')}
+            >
+              大V榜
+            </div>
+          </>
+        );
+
+      case 'vip':
+        return (
+          <>
+            <div
+              className={styles.switch}
+              onClick={() => setTable('original')}
+            >
+              原厂榜
+            </div>
+            <div
+              className={styles.switch}
+              onClick={() => setTable('mod')}
+            >
+              改装榜
+            </div>
+            <span>大V榜</span>
+          </>
+        );
+
+      default:
+        return <></>;
+    }
+  };
+
+  return (
+    <div className={styles.switchBox}>
+      <div className={styles.switchButtons}>
+        {renderBox()}
       </div>
 
       {/* <div
@@ -377,7 +370,7 @@ const Description = (
     <div className={styles.buttonBox}>
       <button
         className={styles.descButton}
-        onClick={() => setDescStatus((prevState) => !prevState)}
+        onClick={() => setDescStatus(true)}
       >
         <span>圈 速 榜 说 明 书</span>
       </button>
@@ -398,7 +391,7 @@ const Description = (
           }
         }
         twoToneColor="#aaa"
-        onClick={() => setDescStatus((prevState) => !prevState)}
+        onClick={() => setDescStatus(false)}
       />
       <div className={styles.manual}>
         <h3>1.改装</h3>

@@ -10,8 +10,7 @@ const Table = (
         rankData,
         pagination,
         title,
-        driver,
-        children
+        driver
     }
 ) => {
 
@@ -22,24 +21,20 @@ const Table = (
     // 处理圈速显示格式
     const handleSpeed = (speed) => {
         let time = '';
-        let minute = Math.floor(speed / 60);
-        let second = Math.round((speed - minute * 60) * 1000) / 1000;
+        const minute = Math.floor(speed / 60);
+        const second = Math.round((speed - minute * 60) * 1000) / 1000;
 
-        if (speed < 100) {
-            speed % 1 === 0
-                ? second < 10
-                    ? time = `${minute}:0${second}.00`
-                    : time = `${minute}:${second}.00`
-                : second < 10
-                    ? second * 1000 % 100 === 0
-                        ? time = `${minute}:0${second}0`
-                        : time = `${minute}:0${second}`
-                    : second * 1000 % 100 === 0
-                        ? time = `${minute}:${second}0`
-                        : time = `${minute}:${second}`;
-        } else {
-            time = `${minute}:${second}！时间太长，教主身体吃不消了！`;
-        }
+        speed % 1 === 0
+            ? second < 10
+                ? time = `${minute}:0${second}.00`
+                : time = `${minute}:${second}.00`
+            : second < 10
+                ? second * 1000 % 100 === 0
+                    ? time = `${minute}:0${second}0`
+                    : time = `${minute}:0${second}`
+                : second * 1000 % 100 === 0
+                    ? time = `${minute}:${second}0`
+                    : time = `${minute}:${second}`;
 
         return time;
     };
