@@ -137,7 +137,6 @@ const App = () => {
               />
             </>
           }
-          driver={false}
         >
         </Table>
 
