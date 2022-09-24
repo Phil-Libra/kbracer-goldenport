@@ -47,20 +47,6 @@ const Table = (
         return item;
     };
 
-    // 搜索属性函数
-    const keyFinder = (data, key) => {
-        let flag = false;
-
-        data.forEach((item) => {
-            if (item[key]) {
-                flag = true;
-                return;
-            }
-        });
-
-        return flag;
-    };
-
     return (
         <ATable
             title={() => title}
@@ -118,7 +104,7 @@ const Table = (
                 render={(item) => handleSpeed(item)}
             />
             {
-                keyFinder(rankData, 'driver') &&
+                rankData.some((item) => item.driver) &&
                 <Column
                     title="车手"
                     dataIndex="driver"
