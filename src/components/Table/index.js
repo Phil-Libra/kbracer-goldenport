@@ -104,8 +104,8 @@ const Table = (
                 render={(item) => handleSpeed(item)}
             />
             {
-                rankData.some((item) => item.driver) &&
-                <Column
+                rankData.some((item) => item.driver)
+                && <Column
                     title="车手"
                     dataIndex="driver"
                     key="driver"
