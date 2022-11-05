@@ -114,13 +114,13 @@ const App = () => {
     const [highlight, setHighlight] = useState('all');
 
     // 高亮主题的BID
-    const highlightTopics = {};
+    // const highlightTopics = {};
 
     // 新老BRZ进化部分BID
-    highlightTopics.brz = ['BV1nZ4y1q79U', 'BV1ia41157dM', 'BV1rP4y1m7hJ'];
+    // highlightTopics.brz = ['BV1nZ4y1q79U', 'BV1ia41157dM', 'BV1rP4y1m7hJ'];
 
     // 四车进化部分BID
-    highlightTopics.fourCars = ['BV1kB4y167xf', 'BV1cD4y1k7ru', 'BV1Ge4y117y9'];
+    // highlightTopics.fourCars = ['BV1kB4y167xf', 'BV1cD4y1k7ru', 'BV1Ge4y117y9'];
 
     // 分页状态
     const [pagination, setPagination] = useState(false);
@@ -163,7 +163,7 @@ const App = () => {
                     rankData={rankDataSelector()}
                     pagination={pagination}
                     highlight={highlight}
-                    highlightTopics={highlightTopics}
+                    // highlightTopics={highlightTopics}
                     title={
                         <SwitchBox
                             styles={styles}
@@ -245,7 +245,7 @@ const Search = (
                 >
                     <Radio.Button value={'all'}>全部</Radio.Button>
                     <Radio.Button value={'brz'}>新老BRZ进化</Radio.Button>
-                    <Radio.Button value={'fourCars'}>四车进化</Radio.Button>
+                    <Radio.Button value={'fourCars'}>4车进化</Radio.Button>
                 </Radio.Group>
             }
         </div >

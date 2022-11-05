@@ -13,7 +13,7 @@ const Table = (
         pagination,
         title,
         highlight,
-        highlightTopics
+        // highlightTopics
     }
 ) => {
 
@@ -70,11 +70,13 @@ const Table = (
     const highlightChooser = () => {
         switch (highlight) {
             case 'brz':
-                return highlightTopics.brz;
+                // return highlightTopics.brz;
+                return '新老BRZ进化';
             case 'fourCars':
-                return highlightTopics.fourCars;
+                // return highlightTopics.fourCars;
+                return '4车进化';
             case 'all':
-                return [];
+                return null;
             default:
                 throw new Error('高亮错误');
         }
@@ -104,7 +106,8 @@ const Table = (
                         `
                         ${speedChooser(val)}
                         ${table !== 'vip'
-                            && highlightChooser().includes(val.BID) ? `${styles.highlight}` : ''}
+                            // && highlightChooser().includes(val.BID) ? styles.highlight : ''}
+                            && val.Btitle.includes(highlightChooser()) ? styles.highlight : ''}
                         `
                 }
             }}
@@ -127,7 +130,7 @@ const Table = (
                 dataIndex="speed"
                 key="speed"
                 align="center"
-                width="8%"
+                width="5%"
                 render={(item) => handleSpeed(item)}
             />
             {
