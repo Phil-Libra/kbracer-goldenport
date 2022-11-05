@@ -33,7 +33,7 @@
 
     .ant-table-wrapper {
         max-width: 1820px;
-        min-width: 317px;
+        min-width: 320px;
     }
 
     .ant-table-thead {
@@ -49,7 +49,7 @@
 
     .ant-table-tbody>tr.ant-table-row:hover>td,
     .ant-table-tbody>tr>td.ant-table-cell-row-hover {
-        background: unset;
+        background: rgba(255, 255, 255, 0.25);
     }
 
     .ant-table.ant-table-small {
@@ -82,7 +82,6 @@
         display: flex;
         align-items: center;
         flex-wrap: nowrap;
-        // min-width: 270px;
         background-image: linear-gradient(200deg, #2c3e50, #2980b9);
         color: #fff;
         font-size: 22px;
@@ -93,7 +92,6 @@
             height: 45px;
             line-height: 45px;
             text-align: center;
-            // border: 1px solid #fff;
             text-decoration: underline;
             text-underline-offset: 10px;
         }
@@ -116,51 +114,50 @@
 
 .kbracer1 {
     background-image: linear-gradient(230deg, hsl(335, 58%, 48%), hsl(335, 47%, 60%));
-
-    &:hover {
-        background-image: linear-gradient(230deg, hsl(335, 58%, 60%), hsl(335, 47%, 72%));
-    }
 }
 
 .kbracer2 {
     background-image: linear-gradient(230deg, hsl(282, 38%, 28%), hsl(282, 27%, 56%));
-
-    &:hover {
-        background-image: linear-gradient(230deg, hsl(282, 38%, 40%), hsl(282, 27%, 68%));
-    }
 }
 
 .kbracer3 {
     background-image: linear-gradient(230deg, hsl(238, 38%, 28%), hsl(206, 53%, 56%));
-
-    &:hover {
-        background-image: linear-gradient(230deg, hsl(238, 38%, 40%), hsl(206, 53%, 68%));
-    }
 }
 
 .kbracer4 {
     background-image: linear-gradient(230deg, hsl(186, 38%, 28%), hsl(186, 27%, 56%));
-
-    &:hover {
-        background-image: linear-gradient(230deg, hsl(186, 38%, 40%), hsl(186, 27%, 68%));
-    }
 }
 
 .kbracer5 {
     background-image: linear-gradient(230deg, hsl(30, 83%, 38%), hsl(30, 49%, 56%));
-
-    &:hover {
-        background-image: linear-gradient(230deg, hsl(30, 83%, 50%), hsl(30, 49%, 68%));
-    }
 }
 
 .kbracer6 {
     background-image: linear-gradient(230deg, hsl(0, 54%, 38%), hsl(10, 49%, 56%));
-
-    &:hover {
-        background-image: linear-gradient(230deg, hsl(0, 54%, 50%), hsl(10, 49%, 68%));
-    }
 }
+
+// 高亮样式
+.highlight {
+    position: relative;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: all 0.25s;
+    border-left: 5px solid #fff;
+}
+
+// 高亮遮罩,和苹果设备有兼容问题，暂不使用
+// .highlight::after {
+// content: "";
+// position: absolute;
+// bottom: 0;
+// left: 0;
+// right: 0;
+// background: rgba(0, 0, 0, 0.15);
+// height: 100%;
+// z-index: -1;
+// }
 
 // 其他样式
 
@@ -179,7 +176,7 @@
 @media (min-width: 768px)and (max-width:1920px) {
     .title {
         margin: 50px 50px 0;
-        padding: 30px;
+        padding: 10px 30px;
     }
 
     .descButton {
@@ -190,7 +187,7 @@
 @media (min-width: 1921px) {
     .title {
         margin: 50px auto 0;
-        padding: 30px;
+        padding: 10px 30px;
     }
 
     .descButton {
@@ -199,17 +196,7 @@
 }
 
 // 标题区域响应式布局
-@media (max-width:1046px) {
-    .title {
-        flex-direction: column;
-
-        .search {
-            margin: 20px;
-        }
-    }
-}
-
-@media (min-width: 1047px) {
+@media (min-width: 1101px) {
     .title {
         flex-direction: row;
         justify-content: space-between;
@@ -220,8 +207,60 @@
     }
 }
 
+@media (max-width:1100px) {
+    .title {
+        flex-direction: column;
+
+
+        .header {
+            img {
+                scale: 0.5;
+            }
+
+            .desc {
+                margin: 5px
+            }
+        }
+
+        .search {
+            margin: 20px;
+        }
+    }
+}
+
+@media (max-width:641px)and(min-width:586px) {
+    .title {
+        .header {
+            .desc {
+                h1 {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:585px) {
+    .title {
+        .header {
+            img {
+                display: none;
+            }
+
+            .desc {
+                margin: 0;
+                text-align: center;
+
+                h1 {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
 // 按钮区域响应式布局
-@media (max-width:479px) {
+@media (max-width:539px) {
     :global {
         .ant-table-title {
             justify-content: center;
@@ -229,13 +268,31 @@
     }
 }
 
-@media (min-width:480px) {
+@media (min-width:540px) {
     :global {
         .ant-table-title {
             justify-content: flex-start;
         }
     }
 }
+
+@media (max-width:517px) {
+    .switchBox {
+        flex-direction: column;
+        align-items: center;
+
+        .pagination {
+            display: none;
+        }
+    }
+}
+
+@media (max-width:374) {
+    .switchButtons {
+        flex-wrap: wrap;
+    }
+}
+
 
 // 底栏响应式布局
 @media (max-width:832px) {
@@ -270,6 +327,7 @@
     flex-wrap: wrap;
     align-content: center;
     max-width: 1820px;
+    min-width: 320px;
     border-radius: 10px;
     box-shadow: #333 1px 1px 10px;
     background-image: linear-gradient(200deg, #2980b9, #2c3e50);
@@ -288,6 +346,7 @@
 
         h1 {
             margin: 0;
+            min-width: 368px;
             font-size: 32px;
             color: #fff;
         }
@@ -295,13 +354,19 @@
 
     .search {
         display: flex;
+        flex-direction: column;
+
+        .searchGroup {
+            display: flex;
+        }
     }
 
 }
 
 .switchBox {
-    // display: flex;
-    // justify-content: space-around;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 
     .switchButtons {
         display: flex;
@@ -318,18 +383,29 @@
         color: rgba(255, 255, 255, 0.75);
         text-align: center;
         cursor: pointer;
-        // border: 1px solid #fff;
 
         &:hover {
-            font-size: 18px;
             color: rgba(255, 255, 255, 1);
             transition: all 0.1s;
         }
     }
 
-    // .pagination {
-    //     width: 100px;
-    // }
+    .switch:hover {
+        font-size: 18px;
+    }
+
+    .pagination {
+        min-width: 100px;
+
+        span {
+            text-decoration: none;
+        }
+
+        &:hover {
+            text-decoration: underline;
+            text-underline-offset: 5px;
+        }
+    }
 }
 
 .footer {

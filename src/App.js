@@ -1,8 +1,9 @@
 import { useState, useEffect, useMemo } from 'react';
-import { Input, Select } from 'antd';
+import { Input, Select, Radio } from 'antd';
 import { CloseCircleTwoTone } from '@ant-design/icons';
 
 import Table from './components/Table';
+import SwitchBox from './components/SwitchBox';
 
 import speed from './speed.json';
 import speed_mod from './speed_mod.json';
@@ -19,7 +20,7 @@ import styles from './App.module.css';
 
 const App = () => {
     // 兼容原榜单数据格式，处理圈速数据
-    const handleData = (data) => {
+    const dataFormat = (data, modStatus) => {
         return data
             // 排序，防止源数据顺序错误
             .sort((a, b) => a.speed * 1000 - b.speed * 1000)
@@ -34,24 +35,44 @@ const App = () => {
                     item.BURL = `https://www.bilibili.com/video/${item.BID}`;
                 }
 
+                // 根据参数添加改装信息
+                if (!item.mod) {
+                    item.mod = modStatus;
+                }
+
                 return item;
             });
     };
 
-    const speedData = useMemo(() => handleData(speed), []);
-    const speedDataMod = useMemo(() => handleData(speed_mod), []);
-    const speedDataV = useMemo(() => handleData(speed_v), []);
+    const speedData = useMemo(() => dataFormat(speed, false), []);
+    const speedDataMod = useMemo(() => dataFormat(speed_mod, true), []);
+    const speedDataV = useMemo(() => dataFormat(speed_v), []);
 
+    // 根据榜单数据生成总榜数据
+    const totalSpeedData = useMemo(() => speedData.concat(speedDataMod).concat(speedDataV)
+        .sort((a, b) => a.speed * 1000 - b.speed * 1000)
+        .map((item, index) => (
+            {
+                ...item,
+                key: index + 1
+            }
+        )), [speedData, speedDataMod, speedDataV]);
+
+    // 合并为默认数据
     const defaultData = useMemo(() => (
         {
             speed: speedData,
             speedMod: speedDataMod,
-            speedV: speedDataV
+            speedV: speedDataV,
+            total: totalSpeedData
         }
-    ), [speedData, speedDataMod, speedDataV]);
+    ), [speedData, speedDataMod, speedDataV, totalSpeedData]);
 
     // 展示数据源state
     const [rankData, setRankData] = useState(defaultData);
+
+    // 展示哪个榜单的state
+    const [table, setTable] = useState('total');
 
     // 数据筛选条件
     const [filter, setFilter] = useState({
@@ -89,18 +110,29 @@ const App = () => {
 
     }, [defaultData, filter]);
 
-    // 展示哪个榜单的state
-    const [table, setTable] = useState('original');
+    // 高亮榜单state
+    const [highlight, setHighlight] = useState('all');
 
-    // 说明书显示状态
-    const [descStatus, setDescStatus] = useState(false);
+    // 高亮主题的BID
+    const highlightTopics = {};
+
+    // 新老BRZ进化部分BID
+    highlightTopics.brz = ['BV1nZ4y1q79U', 'BV1ia41157dM', 'BV1rP4y1m7hJ'];
+
+    // 四车进化部分BID
+    highlightTopics.fourCars = ['BV1kB4y167xf', 'BV1cD4y1k7ru', 'BV1Ge4y117y9'];
 
     // 分页状态
     const [pagination, setPagination] = useState(false);
 
+    // 说明书显示状态
+    const [descStatus, setDescStatus] = useState(false);
+
     // 根据state选择传递的数据
     const rankDataSelector = () => {
         switch (table) {
+            case 'total':
+                return rankData.total;
             case 'original':
                 return rankData.speed;
             case 'mod':
@@ -108,7 +140,7 @@ const App = () => {
             case 'vip':
                 return rankData.speedV;
             default:
-                throw new Error('没有数据被传递');
+                throw new Error('没有榜单数据被传递');
         }
     };
 
@@ -119,15 +151,22 @@ const App = () => {
                     <Search
                         filter={filter}
                         setFilter={setFilter}
+                        highlight={highlight}
+                        setHighlight={setHighlight}
+                        table={table}
                     />
                 </Title>
 
                 <Table
                     styles={styles}
+                    table={table}
                     rankData={rankDataSelector()}
                     pagination={pagination}
+                    highlight={highlight}
+                    highlightTopics={highlightTopics}
                     title={
                         <SwitchBox
+                            styles={styles}
                             table={table}
                             setTable={setTable}
                             pagination={pagination}
@@ -151,135 +190,69 @@ const App = () => {
 const Search = (
     {
         filter,
-        setFilter
+        setFilter,
+        highlight,
+        setHighlight,
+        table
     }
 ) => {
     const { Option } = Select;
 
     return (
         <div className={styles.search}>
-            <Input
-                addonBefore="搜索："
-                placeholder="车型关键字"
-                style={{
-                    minWidth: '175px'
-                }}
-                onChange={(e) => setFilter(() => (
-                    {
-                        ...filter,
-                        name: e.target.value
-                    }
-                ))}
-                allowClear
-            />
-            <Select
-                defaultValue={'all'}
-                style={{
-                    paddingLeft: '10px',
-                    minWidth: '115px'
-                }}
-                onChange={(val) => setFilter(() => (
-                    {
-                        ...filter,
-                        key: val
-                    }
-                ))}
-            >
-                <Option value="all">全部车型</Option>
-                <Option value="suv">只看SUV</Option>
-                <Option value="ev">只看电车</Option>
-            </Select>
-        </div>
+            <div className={styles.searchGroup}>
+                <Input
+                    addonBefore="搜索："
+                    placeholder="车型关键字"
+                    style={{
+                        minWidth: '175px'
+                    }}
+                    onChange={(e) => setFilter(() => (
+                        {
+                            ...filter,
+                            name: e.target.value
+                        }
+                    ))}
+                    allowClear
+                />
+                <Select
+                    defaultValue={'all'}
+                    style={{
+                        paddingLeft: '10px',
+                        minWidth: '115px'
+                    }}
+                    onChange={(val) => setFilter(() => (
+                        {
+                            ...filter,
+                            key: val
+                        }
+                    ))}
+                >
+                    <Option value="all">全部车型</Option>
+                    <Option value="suv">只看SUV</Option>
+                    <Option value="ev">只看电车</Option>
+                </Select>
+            </div>
+            {
+                table !== 'vip'
+                && <Radio.Group
+                    style={{
+                        marginTop: '20px'
+                    }}
+                    buttonStyle='solid'
+                    value={highlight}
+                    onChange={(e) => setHighlight(e.target.value)}
+                >
+                    <Radio.Button value={'all'}>全部</Radio.Button>
+                    <Radio.Button value={'brz'}>新老BRZ进化</Radio.Button>
+                    <Radio.Button value={'fourCars'}>四车进化</Radio.Button>
+                </Radio.Group>
+            }
+        </div >
     )
 };
 
-const SwitchBox = (
-    {
-        table,
-        setTable,
-        pagination,
-        setPagination
-    }
-) => {
-    const renderBox = () => {
-        switch (table) {
-            case 'original':
-                return (
-                    <>
-                        <span>原厂榜</span>
-                        <div
-                            className={styles.switch}
-                            onClick={() => setTable('mod')}
-                        >
-                            改装榜
-                        </div>
-                        <div
-                            className={styles.switch}
-                            onClick={() => setTable('vip')}
-                        >
-                            大V榜
-                        </div>
-                    </>
-                );
 
-            case 'mod':
-                return (
-                    <>
-                        <div
-                            className={styles.switch}
-                            onClick={() => setTable('original')}
-                        >
-                            原厂榜
-                        </div>
-                        <span>改装榜</span>
-                        <div
-                            className={styles.switch}
-                            onClick={() => setTable('vip')}
-                        >
-                            大V榜
-                        </div>
-                    </>
-                );
-
-            case 'vip':
-                return (
-                    <>
-                        <div
-                            className={styles.switch}
-                            onClick={() => setTable('original')}
-                        >
-                            原厂榜
-                        </div>
-                        <div
-                            className={styles.switch}
-                            onClick={() => setTable('mod')}
-                        >
-                            改装榜
-                        </div>
-                        <span>大V榜</span>
-                    </>
-                );
-
-            default:
-                throw new Error('没有表格切换选项被渲染');
-        }
-    };
-
-    return (
-        <div className={styles.switchBox}>
-            <div className={styles.switchButtons}>
-                {renderBox()}
-            </div>
-
-            {/* <div
-        className={styles.pagination}
-        onClick={() => setPagination((prevState) => !prevState)}
-      >
-        <span>{pagination ? '关闭分页' : '开启分页'}</span>
-      </div> */}
-        </div>
-    )
-}
 
 const Title = (
     {

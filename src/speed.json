@@ -68,7 +68,7 @@
     "suv": false
   },
   {
-    "car": "Z4（22",
+    "car": "Z4 M40i（22",
     "BID": "BV1wW4y1C7Zn",
     "Btitle": "丰田SUPRA和宝马Z4，性能差距有多大？",
     "hp_content": 340,
@@ -99,6 +99,23 @@
     "accelerate": 4.09,
     "limit": 175.32,
     "drive": "4",
+    "suv": false
+  },
+  {
+    "car": "718 Cayman（22",
+    "BID": "BV15P411P7hu",
+    "Btitle": "保时捷718能战胜同价位丰田SUPRA？",
+    "hp_content": 250,
+    "powertrain": "2.0T+7DCT",
+    "speed": 71.33,
+    "tyre_type_f": "米其林 PS4S",
+    "tyre_type_r": "米其林 PS4S",
+    "tyre_width_f": 235,
+    "tyre_width_r": 265,
+    "temperature": 17,
+    "accelerate": 5.13,
+    "limit": 164.44,
+    "drive": "R",
     "suv": false
   },
   {
@@ -201,6 +218,23 @@
     "accelerate": 6.35,
     "limit": 160.03,
     "drive": "R",
+    "suv": false
+  },
+  {
+    "car": "A35（20",
+    "BID": "BV14T411K7pi",
+    "Btitle": "A35能赢李松桥100W的EVO 9么？",
+    "hp_content": 306,
+    "powertrain": "2.0T+7DCT",
+    "speed": 73.08,
+    "tyre_type_f": "倍耐力 P0",
+    "tyre_type_r": "倍耐力 P0",
+    "tyre_width_f": 235,
+    "tyre_width_r": 235,
+    "temperature": 28,
+    "accelerate": 4.84,
+    "limit": 163.98,
+    "drive": "4",
     "suv": false
   },
   {
@@ -323,6 +357,23 @@
     "suv": false
   },
   {
+    "car": "i3 35L（22",
+    "BID": "BV1Lg411Y7Wb",
+    "Btitle": "比3系还3系？i3赛道测试",
+    "hp_content": 286,
+    "powertrain": "E",
+    "speed": 76.05,
+    "tyre_type_f": "固特异 御乘II",
+    "tyre_type_r": "固特异 御乘II",
+    "tyre_width_f": 225,
+    "tyre_width_r": 245,
+    "temperature": 28,
+    "accelerate": 5.53,
+    "limit": 155.18,
+    "drive": "R",
+    "suv": false
+  },
+  {
     "car": "05+（22",
     "BID": "BV13N4y137Ha",
     "Btitle": "开完赛道SUV，再开领克05+是什么体验？",
@@ -354,6 +405,23 @@
     "accelerate": 7.83,
     "limit": 146.22,
     "drive": "F",
+    "suv": false
+  },
+  {
+    "car": "325i（22",
+    "BID": "BV1qW4y1j7Eo",
+    "Btitle": "40万184马力，宝马325i值么？",
+    "hp_content": 184,
+    "powertrain": "2.0T+8AT",
+    "speed": 78.47,
+    "tyre_type_f": "普利司通 泰然者",
+    "tyre_type_r": "普利司通 泰然者",
+    "tyre_width_f": 225,
+    "tyre_width_r": 255,
+    "temperature": 17,
+    "accelerate": 7.65,
+    "limit": 142.78,
+    "drive": "R",
     "suv": false
   },
   {
@@ -527,6 +595,23 @@
     "suv": false
   },
   {
+    "car": "ID.4 CROZZ（22",
+    "BID": "BV1114y1L72H",
+    "Btitle": "ID.4 vs ID.3，圈速测试",
+    "hp_content": 204,
+    "powertrain": "E",
+    "speed": 80.6,
+    "tyre_type_f": "固特异 御乘II",
+    "tyre_type_r": "固特异 御乘II",
+    "tyre_width_f": 235,
+    "tyre_width_r": 255,
+    "temperature": 28,
+    "accelerate": 8.23,
+    "limit": 138.28,
+    "drive": "R",
+    "suv": true
+  },
+  {
     "car": "ID.3（22",
     "BID": "BV1oN4y1G7Gf",
     "Btitle": "18W买后置后驱超跑？大众ID.3赛道测试！",
@@ -559,6 +644,23 @@
     "limit": 138.6,
     "drive": "F",
     "suv": false
+  },
+  {
+    "car": "X3 25i（22",
+    "BID": "BV1rt4y1c7aa",
+    "Btitle": "又是一个赛道级？宝马X3赛道测试",
+    "hp_content": 184,
+    "powertrain": "2.0T+8AT",
+    "speed": 81.1,
+    "tyre_type_f": "倍耐力 P7",
+    "tyre_type_r": "倍耐力 P7",
+    "tyre_width_f": 245,
+    "tyre_width_r": 245,
+    "temperature": 26,
+    "accelerate": 8.07,
+    "limit": 133.8,
+    "drive": "4",
+    "suv": true
   },
   {
     "car": "奇骏 （21",

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Table as ATable } from 'antd';
+import { StarFilled, StarOutlined } from '@ant-design/icons';
 import PropTypes from 'prop-types';
 
 import 'antd/dist/antd.min.css';
@@ -7,9 +8,12 @@ import 'antd/dist/antd.min.css';
 const Table = (
     {
         styles,
+        table,
         rankData,
         pagination,
-        title
+        title,
+        highlight,
+        highlightTopics
     }
 ) => {
 
@@ -47,6 +51,35 @@ const Table = (
         return item;
     };
 
+    // 处理不同圈速背景色
+    const speedChooser = (value) => {
+        return value.speed <= 71
+            ? `${styles.kbracer} ${styles.kbracer1}`
+            : value.speed <= 74
+                ? `${styles.kbracer} ${styles.kbracer2}`
+                : value.speed <= 77
+                    ? `${styles.kbracer} ${styles.kbracer3}`
+                    : value.speed <= 80
+                        ? `${styles.kbracer} ${styles.kbracer4}`
+                        : value.speed <= 82
+                            ? `${styles.kbracer} ${styles.kbracer5}`
+                            : `${styles.kbracer} ${styles.kbracer6}`;
+    };
+
+    // 处理高亮的专题名称
+    const highlightChooser = () => {
+        switch (highlight) {
+            case 'brz':
+                return highlightTopics.brz;
+            case 'fourCars':
+                return highlightTopics.fourCars;
+            case 'all':
+                return [];
+            default:
+                throw new Error('高亮错误');
+        }
+    };
+
     return (
         <ATable
             title={() => title}
@@ -68,17 +101,11 @@ const Table = (
             onRow={(val) => {
                 return {
                     className:
-                        val.speed <= 71
-                            ? `${styles.kbracer} ${styles.kbracer1}`
-                            : val.speed <= 74
-                                ? `${styles.kbracer} ${styles.kbracer2}`
-                                : val.speed <= 77
-                                    ? `${styles.kbracer} ${styles.kbracer3}`
-                                    : val.speed <= 80
-                                        ? `${styles.kbracer} ${styles.kbracer4}`
-                                        : val.speed <= 82
-                                            ? `${styles.kbracer} ${styles.kbracer5}`
-                                            : `${styles.kbracer} ${styles.kbracer6}`
+                        `
+                        ${speedChooser(val)}
+                        ${table !== 'vip'
+                            && highlightChooser().includes(val.BID) ? `${styles.highlight}` : ''}
+                        `
                 }
             }}
         >
@@ -103,6 +130,18 @@ const Table = (
                 width="8%"
                 render={(item) => handleSpeed(item)}
             />
+            {
+                rankData.some((item) => item.mod)
+                && table !== `mod`
+                && <Column
+                    title="改装"
+                    dataIndex="mod"
+                    key="mod"
+                    align="center"
+                    width="5%"
+                    render={(text) => text ? <StarFilled /> : <StarOutlined />}
+                />
+            }
             {
                 rankData.some((item) => item.driver)
                 && <Column
