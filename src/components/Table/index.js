@@ -44,7 +44,9 @@ const Table = (
 
     // 处理数字显示
     const handleNumber = (item) => {
-        if (item * 1000 % 100 === 0) {
+        if (!item) {
+            return '--';
+        } else if (item * 1000 % 100 === 0) {
             return `${item}0`
         }
 
@@ -107,7 +109,7 @@ const Table = (
                         ${speedChooser(val)}
                         ${table !== 'vip'
                             // && highlightChooser().includes(val.BID) ? styles.highlight : ''}
-                            && val.Btitle.includes(highlightChooser()) ? styles.highlight : ''}
+                            && val.Btitle?.includes(highlightChooser()) ? styles.highlight : ''}
                         `
                 }
             }}

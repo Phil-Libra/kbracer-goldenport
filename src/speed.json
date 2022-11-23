@@ -136,6 +136,23 @@
     "suv": false
   },
   {
+    "car": "极氪 001（22",
+    "BID": "BV1bD4y1s7WC",
+    "Btitle": "极氪001赛道版来了？",
+    "hp_content": 544,
+    "powertrain": "E",
+    "speed": 71.96,
+    "tyre_type_f": "马牌 PC6",
+    "tyre_type_r": "马牌 PC6",
+    "tyre_width_f": 265,
+    "tyre_width_r": 265,
+    "temperature": 15,
+    "accelerate": 3.88,
+    "limit": 179.37,
+    "drive": "4",
+    "suv": false
+  },
+  {
     "car": "X4 M 雷霆（21",
     "BID": "BV1294y1Q7DV",
     "Btitle": "510马力+四驱，宝马X4 M圈速测试..",
@@ -255,6 +272,23 @@
     "suv": false
   },
   {
+    "car": "海豹（22",
+    "BID": "BV1LP4y1272r",
+    "Btitle": "四驱海豹，真性能么？",
+    "hp_content": 530,
+    "powertrain": "E",
+    "speed": 73.97,
+    "tyre_type_f": "马牌 SC7",
+    "tyre_type_r": "马牌 SC7",
+    "tyre_width_f": 235,
+    "tyre_width_r": 235,
+    "temperature": 15,
+    "accelerate": 3.89,
+    "limit": 168.71,
+    "drive": "4",
+    "suv": false
+  },
+  {
     "car": "BRZ（17",
     "BID": "BV1ia41157dM",
     "Btitle": "【新老BRZ进化】换山东胎，刹车秒杀保时捷？",
@@ -285,6 +319,23 @@
     "temperature": 34,
     "accelerate": 3.88,
     "limit": 181.07,
+    "drive": "4",
+    "suv": false
+  },
+  {
+    "car": "A5（22",
+    "BID": "BV1uG4y1o71X",
+    "Btitle": "无敌的四驱A5，把宝马粉开哭了",
+    "hp_content": 252,
+    "powertrain": "2.0T+7DCT",
+    "speed": 74.86,
+    "tyre_type_f": "普利司通 S001",
+    "tyre_type_r": "普利司通 S001",
+    "tyre_width_f": 255,
+    "tyre_width_r": 255,
+    "temperature": 15,
+    "accelerate": 5.81,
+    "limit": 157.45,
     "drive": "4",
     "suv": false
   },
