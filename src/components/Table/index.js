@@ -47,7 +47,11 @@ const Table = (
         if (!item) {
             return '--';
         } else if (item * 1000 % 100 === 0) {
-            return `${item}0`
+            if (item % 1 === 0) {
+                return `${item}.00`
+            } else {
+                return `${item}0`
+            }
         }
 
         return item;

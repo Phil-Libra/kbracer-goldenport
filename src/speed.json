@@ -323,6 +323,23 @@
     "suv": false
   },
   {
+    "car": "福特电马（21",
+    "BID": "BV1Ae4y1g7M6",
+    "Btitle": "电野马和油野马，谁更强？",
+    "hp_content": 488,
+    "powertrain": "E",
+    "speed": 74.66,
+    "tyre_type_f": "倍耐力 P0",
+    "tyre_type_r": "倍耐力 P0",
+    "tyre_width_f": 245,
+    "tyre_width_r": 245,
+    "temperature": 14,
+    "accelerate": 4,
+    "limit": 165.1,
+    "drive": "4",
+    "suv": true
+  },
+  {
     "car": "A5（22",
     "BID": "BV1uG4y1o71X",
     "Btitle": "无敌的四驱A5，把宝马粉开哭了",
