@@ -50,6 +50,22 @@
     "suv": false
   },
   {
+    "car": "BRZ-避震（22",
+    "BID": "BV16G4y1g7G8",
+    "Btitle": "【新老BRZ进化】避震篇",
+    "hp_content": 234,
+    "powertrain": "2.4L+6MT",
+    "speed": 69.48,
+    "tyre_type_f": "卫途 01",
+    "tyre_type_r": "卫途 01",
+    "tyre_width_f": 255,
+    "tyre_width_r": 255,
+    "temperature": 17,
+    "limit": 161.37,
+    "drive": "R",
+    "suv": false
+  },
+  {
     "car": "718（18",
     "BID": "BV14S4y1p74Y",
     "Btitle": "100W内天花板？",
@@ -67,7 +83,75 @@
     "suv": false
   },
   {
-    "car": "BRZ（22",
+    "car": "C43（21",
+    "BID": "BV1jM411b7W6",
+    "Btitle": "CUP2C VS AD09，谁能助力AMG C 43登顶榜首？",
+    "hp_content": 390,
+    "powertrain": "3.0T+9AT",
+    "speed": 70.05,
+    "tyre_type_f": "米其林 Cup2C",
+    "tyre_type_r": "米其林 Cup2C",
+    "tyre_width_f": 255,
+    "tyre_width_r": 255,
+    "temperature": 12,
+    "accelerate": 4.11,
+    "limit": 177.03,
+    "drive": "4",
+    "suv": false
+  },
+  {
+    "car": "C43（21",
+    "BID": "BV1jM411b7W6",
+    "Btitle": "CUP2C VS AD09，谁能助力AMG C 43登顶榜首？",
+    "hp_content": 390,
+    "powertrain": "3.0T+9AT",
+    "speed": 70.05,
+    "tyre_type_f": "优科豪马 AD09",
+    "tyre_type_r": "优科豪马 AD09",
+    "tyre_width_f": 255,
+    "tyre_width_r": 255,
+    "temperature": 12,
+    "accelerate": 4.11,
+    "limit": 176,
+    "drive": "4",
+    "suv": false
+  },
+  {
+    "car": "BRZ-动力（17",
+    "BID": "BV1JR4y167Uu",
+    "Btitle": "【新老BRZ进化】轮上马力相差多少？",
+    "hp_content": 217,
+    "powertrain": "2.0L+6MT",
+    "speed": 70.26,
+    "tyre_type_f": "卫途 01",
+    "tyre_type_r": "卫途 01",
+    "tyre_width_f": 255,
+    "tyre_width_r": 255,
+    "temperature": 4,
+    "accelerate": 6.98,
+    "limit": 158.78,
+    "drive": "R",
+    "suv": false
+  },
+  {
+    "car": "C43 旅行（19",
+    "BID": "BV1ST411f7sT",
+    "Btitle": "改装C 43能战胜奥迪RS 5？",
+    "hp_content": "397（轮上）",
+    "powertrain": "3.0T+9AT",
+    "speed": 70.8,
+    "tyre_type_f": "米其林 PS4S",
+    "tyre_type_r": "米其林 PS4S",
+    "tyre_width_f": 225,
+    "tyre_width_r": 255,
+    "temperature": 12,
+    "accelerate": 3.69,
+    "limit": 181.61,
+    "drive": "4",
+    "suv": false
+  },
+  {
+    "car": "BRZ-刹车（22",
     "BID": "BV1rP4y1m7hJ",
     "Btitle": "【新老BRZ进化】刹车失灵？",
     "hp_content": 234,
@@ -84,7 +168,23 @@
     "suv": false
   },
   {
-    "car": "BRZ（17",
+    "car": "BRZ-避震（17",
+    "BID": "BV16G4y1g7G8",
+    "Btitle": "【新老BRZ进化】避震篇",
+    "hp_content": 200,
+    "powertrain": "2.0L+6MT",
+    "speed": 70.95,
+    "tyre_type_f": "卫途 01",
+    "tyre_type_r": "卫途 01",
+    "tyre_width_f": 255,
+    "tyre_width_r": 255,
+    "temperature": 14,
+    "limit": 154.51,
+    "drive": "R",
+    "suv": false
+  },
+  {
+    "car": "BRZ-刹车（17",
     "BID": "BV1rP4y1m7hJ",
     "Btitle": "【新老BRZ进化】刹车失灵？",
     "hp_content": 200,
@@ -101,7 +201,7 @@
     "suv": false
   },
   {
-    "car": "03+ Cyan（22",
+    "car": "03+ Cyan-避震（22",
     "BID": "BV1He4y1s7wS",
     "Btitle": "【4车进化】GTI和03+火星组地位不保，手动思域和后驱CT4的逆袭成功？",
     "hp_content": 265,
@@ -117,7 +217,7 @@
     "suv": false
   },
   {
-    "car": "高尔夫 GTI（21",
+    "car": "高尔夫 GTI-避震（21",
     "BID": "BV1He4y1s7wS",
     "Btitle": "【4车进化】GTI和03+火星组地位不保，手动思域和后驱CT4的逆袭成功？",
     "hp_content": 220,
@@ -133,7 +233,7 @@
     "suv": false
   },
   {
-    "car": "03+ Cyan（22",
+    "car": "03+ Cyan-轮胎（22",
     "BID": "BV1cD4y1k7ru",
     "Btitle": "【4车进化】中美日德大战，家乡的樱花凋零~",
     "hp_content": 265,
@@ -150,7 +250,7 @@
     "suv": false
   },
   {
-    "car": "高尔夫 GTI（21",
+    "car": "高尔夫 GTI-轮胎（21",
     "BID": "BV1cD4y1k7ru",
     "Btitle": "【4车进化】中美日德大战，家乡的樱花凋零~",
     "hp_content": 220,
@@ -184,7 +284,7 @@
     "suv": false
   },
   {
-    "car": "CT4（21",
+    "car": "CT4-避震（21",
     "BID": "BV1He4y1s7wS",
     "Btitle": "【4车进化】GTI和03+火星组地位不保，手动思域和后驱CT4的逆袭成功？",
     "hp_content": 237,
@@ -200,7 +300,7 @@
     "suv": false
   },
   {
-    "car": "高尔夫 GTI（21",
+    "car": "高尔夫 GTI-刹车（21",
     "BID": "BV1Ge4y117y9",
     "Btitle": "【4车进化】GTI变成了最难开的车..",
     "hp_content": 220,
@@ -216,7 +316,7 @@
     "suv": false
   },
   {
-    "car": "03+ Cyan（22",
+    "car": "03+ Cyan-刹车（22",
     "BID": "BV1Ge4y117y9",
     "Btitle": "【4车进化】GTI变成了最难开的车..",
     "hp_content": 265,
@@ -232,7 +332,7 @@
     "suv": false
   },
   {
-    "car": "思域 HB（21",
+    "car": "思域 HB-避震（21",
     "BID": "BV1He4y1s7wS",
     "Btitle": "【4车进化】GTI和03+火星组地位不保，手动思域和后驱CT4的逆袭成功？",
     "hp_content": 177,
@@ -248,7 +348,7 @@
     "suv": false
   },
   {
-    "car": "CT4（21",
+    "car": "CT4-轮胎（21",
     "BID": "BV1cD4y1k7ru",
     "Btitle": "【4车进化】中美日德大战，家乡的樱花凋零~",
     "hp_content": 237,
@@ -265,7 +365,7 @@
     "suv": false
   },
   {
-    "car": "CT4（21",
+    "car": "CT4-刹车（21",
     "BID": "BV1Ge4y117y9",
     "Btitle": "【4车进化】GTI变成了最难开的车..",
     "hp_content": 237,
@@ -281,7 +381,7 @@
     "suv": false
   },
   {
-    "car": "思域 HB（21",
+    "car": "思域 HB-轮胎（21",
     "BID": "BV1cD4y1k7ru",
     "Btitle": "【4车进化】中美日德大战，家乡的樱花凋零~",
     "hp_content": 177,
@@ -298,7 +398,7 @@
     "suv": false
   },
   {
-    "car": "思域 HB（21",
+    "car": "思域 HB-刹车（21",
     "BID": "BV1Ge4y117y9",
     "Btitle": "【4车进化】GTI变成了最难开的车..",
     "hp_content": 177,

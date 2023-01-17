@@ -1,6 +1,6 @@
 # 键盘车神教易车金港圈速榜
 
-参考教主的[锐思榜单](https://kbracer.github.io/)样式，使用[React](https://github.com/facebook/react/)和[Ant Design 组件](https://github.com/ant-design/ant-design/)实现。
+参考教主的[锐思榜单](https://kbracer.github.io/)样式，使用[React](https://github.com/facebook/react/)和[Ant Design 组件 v4](https://github.com/ant-design/ant-design/)实现。
 
 ### 实现功能
 
@@ -18,7 +18,7 @@
 
 ### 待实现功能
 
-1. Safari 对 table-row 元素背景渐变渲染有 bug，待寻找更好的方法来兼容。
+1. Safari 对 table-row 元素渲染有 bug，待寻找更好的方法来兼容。
 
 ### 不再考虑实现的功能
 
