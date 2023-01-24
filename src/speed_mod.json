@@ -463,20 +463,5 @@
     "limit": 146.13,
     "drive": "F",
     "suv": false
-  },
-  {
-    "car": "思域 HB-动力（21",
-    "BID": "BV1U84y1j7L5",
-    "Btitle": "【4车进化】领克03+，大众GTI，凯迪拉克CT4，本田思域，谁的轮上马力最大？",
-    "hp_content": 232,
-    "powertrain": "1.5T+6MT",
-    "tyre_type_f": "米其林 Cup2C",
-    "tyre_type_r": "米其林 Cup2C",
-    "tyre_width_f": 245,
-    "tyre_width_r": 245,
-    "temperature": 5,
-    "accelerate": 6.27,
-    "drive": "F",
-    "suv": false
   }
 ]

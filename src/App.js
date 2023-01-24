@@ -113,15 +113,6 @@ const App = () => {
     // 高亮榜单state
     const [highlight, setHighlight] = useState('all');
 
-    // 高亮主题的BID
-    // const highlightTopics = {};
-
-    // 新老BRZ进化部分BID
-    // highlightTopics.brz = ['BV1nZ4y1q79U', 'BV1ia41157dM', 'BV1rP4y1m7hJ'];
-
-    // 四车进化部分BID
-    // highlightTopics.fourCars = ['BV1kB4y167xf', 'BV1cD4y1k7ru', 'BV1Ge4y117y9'];
-
     // 分页状态
     const [pagination, setPagination] = useState(false);
 
@@ -163,7 +154,6 @@ const App = () => {
                     rankData={rankDataSelector()}
                     pagination={pagination}
                     highlight={highlight}
-                    // highlightTopics={highlightTopics}
                     title={
                         <SwitchBox
                             styles={styles}

@@ -12,8 +12,7 @@ const Table = (
         rankData,
         pagination,
         title,
-        highlight,
-        // highlightTopics
+        highlight
     }
 ) => {
 
@@ -23,10 +22,6 @@ const Table = (
 
     // 处理圈速显示格式
     const handleSpeed = (speed) => {
-        if (!speed) {
-            return '--';
-        }
-
         let time = '';
         const minute = Math.floor(speed / 60);
         const second = Math.round((speed - minute * 60) * 1000) / 1000;
@@ -80,10 +75,8 @@ const Table = (
     const highlightChooser = () => {
         switch (highlight) {
             case 'brz':
-                // return highlightTopics.brz;
                 return '新老BRZ进化';
             case 'fourCars':
-                // return highlightTopics.fourCars;
                 return '4车进化';
             case 'all':
                 return null;
@@ -116,7 +109,6 @@ const Table = (
                         `
                         ${speedChooser(val)}
                         ${table !== 'vip'
-                            // && highlightChooser().includes(val.BID) ? styles.highlight : ''}
                             && val.Btitle?.includes(highlightChooser()) ? styles.highlight : ''}
                         `
                 }
