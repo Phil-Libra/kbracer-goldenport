@@ -23,6 +23,10 @@ const Table = (
 
     // 处理圈速显示格式
     const handleSpeed = (speed) => {
+        if (!speed) {
+            return '--';
+        }
+
         let time = '';
         const minute = Math.floor(speed / 60);
         const second = Math.round((speed - minute * 60) * 1000) / 1000;

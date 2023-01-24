@@ -1,5 +1,22 @@
 [
   {
+    "car": "M4 雷霆（22",
+    "BID": "BV1jG4y1c7j8",
+    "Btitle": "比保时捷还快的宝马？G82四驱赛道测试！",
+    "hp_content": 510,
+    "powertrain": "3.0T+8AT",
+    "speed": 66.4,
+    "tyre_type_f": "米其林 PS4S",
+    "tyre_type_r": "米其林 PS4S",
+    "tyre_width_f": 275,
+    "tyre_width_r": 285,
+    "temperature": 6,
+    "accelerate": 3.35,
+    "limit": 192.18,
+    "drive": "4",
+    "suv": false
+  },
+  {
     "car": "911 Carrera S（22",
     "BID": "BV1ZG4y1j77t",
     "Btitle": "保时捷992S VS 马丁Vantage F1，谁快？",
