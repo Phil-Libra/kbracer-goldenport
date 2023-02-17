@@ -15,7 +15,6 @@ const Table = (
         highlight
     }
 ) => {
-
     const { Column, ColumnGroup } = ATable;
 
     const [pageSize, setPageSize] = useState(50);
@@ -272,8 +271,9 @@ export default Table;
 
 Table.propTypes = {
     styles: PropTypes.object,
+    table: PropTypes.string,
     rankData: PropTypes.array.isRequired,
     pagination: PropTypes.bool,
-    title: PropTypes.node,
-    mod: PropTypes.bool
+    highlight: PropTypes.string,
+    title: PropTypes.node
 };
