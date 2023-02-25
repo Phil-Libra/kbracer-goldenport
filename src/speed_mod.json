@@ -548,5 +548,22 @@
     "limit": 146.13,
     "drive": "F",
     "suv": false
+  },
+  {
+    "car": "思域 Si（14",
+    "BID": "BV1Rj411G7Wu",
+    "Btitle": "2.4+手动+LSD，思域Si赛道能赢GTI？",
+    "hp_content": 217,
+    "powertrain": "2.4L+6MT",
+    "speed": 75.83,
+    "tyre_type_f": "米其林 PS5",
+    "tyre_type_r": "米其林 PS5",
+    "tyre_width_f": 215,
+    "tyre_width_r": 215,
+    "temperature": 6,
+    "accelerate": 6.59,
+    "limit": 154.65,
+    "drive": "F",
+    "suv": false
   }
 ]

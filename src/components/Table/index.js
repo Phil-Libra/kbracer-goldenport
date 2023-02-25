@@ -164,6 +164,26 @@ const Table = (
                 width="5%"
             />
             <Column
+                title="动力总成"
+                dataIndex="powertrain"
+                key="powertrain"
+                width="8%"
+            />
+            <Column
+                title="马力 (Ps)"
+                dataIndex="hp_content"
+                key="hp_content"
+                align="center"
+                width="5%"
+            />
+            <Column
+                title="驱动"
+                dataIndex="drive"
+                key="drive"
+                align="center"
+                width="3%"
+            />
+            <Column
                 title="尾速(km/h)"
                 dataIndex="limit"
                 key="limit"
@@ -178,26 +198,6 @@ const Table = (
                 align="center"
                 width="5%"
                 render={(item) => handleNumber(item)}
-            />
-            <Column
-                title="马力 (Ps)"
-                dataIndex="hp_content"
-                key="hp_content"
-                align="center"
-                width="5%"
-            />
-            <Column
-                title="动力总成"
-                dataIndex="powertrain"
-                key="powertrain"
-                width="8%"
-            />
-            <Column
-                title="驱动"
-                dataIndex="drive"
-                key="drive"
-                align="center"
-                width="3%"
             />
             <ColumnGroup title={() => '轮胎'}>
                 <Column

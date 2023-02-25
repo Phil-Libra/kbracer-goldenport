@@ -748,6 +748,23 @@
     "suv": false
   },
   {
+    "car": "凯泽西（11",
+    "BID": "BV1Xx4y1F7tp",
+    "Btitle": "2.4手动凯泽西，纽北调校研发的铃木王！",
+    "hp_content": 178,
+    "powertrain": "2.4L+6MT",
+    "speed": 78.6,
+    "tyre_type_f": "米其林 PS5",
+    "tyre_type_r": "米其林 PS5",
+    "tyre_width_f": 215,
+    "tyre_width_r": 215,
+    "temperature": 6,
+    "accelerate": 8.54,
+    "limit": 141.95,
+    "drive": "F",
+    "suv": false
+  },
+  {
     "car": "型格（22",
     "BID": "BV1AY4y1x7kS",
     "Btitle": "本田内战，型格和思域性能PK～",
