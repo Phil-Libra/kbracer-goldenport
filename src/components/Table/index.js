@@ -184,17 +184,17 @@ const Table = (
                 width="3%"
             />
             <Column
-                title="尾速(km/h)"
-                dataIndex="limit"
-                key="limit"
+                title="0-100(s)"
+                dataIndex="accelerate"
+                key="accelerate"
                 align="center"
                 width="5%"
                 render={(item) => handleNumber(item)}
             />
             <Column
-                title="0-100(s)"
-                dataIndex="accelerate"
-                key="accelerate"
+                title="尾速(km/h)"
+                dataIndex="limit"
+                key="limit"
                 align="center"
                 width="5%"
                 render={(item) => handleNumber(item)}

@@ -119,6 +119,23 @@
     "suv": false
   },
   {
+    "car": "911 Carrera S（12",
+    "BID": "BV1Gx4y1T7He",
+    "Btitle": "老保时捷，能拿捏宝马M吗？",
+    "hp_content": 400,
+    "powertrain": "3.8L+7DCT",
+    "speed": 69.2,
+    "tyre_type_f": "倍耐力 P0",
+    "tyre_type_r": "倍耐力 P0",
+    "tyre_width_f": 245,
+    "tyre_width_r": 295,
+    "temperature": 2,
+    "accelerate": 4.34,
+    "limit": 181.8,
+    "drive": "R",
+    "suv": false
+  },
+  {
     "car": "AMG GT（21",
     "BID": "BV1114y1g7tE",
     "Btitle": "V8即正义，AMG GT能干掉911么？",
@@ -711,6 +728,23 @@
     "accelerate": 7.26,
     "limit": 150.04,
     "drive": "F",
+    "suv": false
+  },
+  {
+    "car": "星越L（21",
+    "BID": "BV1dA411C7nh",
+    "Btitle": "星越L才是真正的赛道级？",
+    "hp_content": 239,
+    "powertrain": "2.0T+8AT",
+    "speed": 77.83,
+    "tyre_type_f": "固特异 Eagle F1 A3",
+    "tyre_type_r": "固特异 Eagle F1 A3",
+    "tyre_width_f": 245,
+    "tyre_width_r": 245,
+    "temperature": 2,
+    "accelerate": 6.84,
+    "limit": 148.52,
+    "drive": "4",
     "suv": true
   },
   {

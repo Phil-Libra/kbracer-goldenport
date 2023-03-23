@@ -50,6 +50,23 @@
     "suv": false
   },
   {
+    "car": "GT-R（15",
+    "BID": "BV1Bc411j7vu",
+    "Btitle": "日产GTR，打得过宝马M4？",
+    "hp_content": 600,
+    "powertrain": "3.8T+6DCT",
+    "speed": 66.76,
+    "tyre_type_f": "米其林 Cup2C",
+    "tyre_type_r": "米其林 Cup2R",
+    "tyre_width_f": 285,
+    "tyre_width_r": 315,
+    "temperature": 7,
+    "accelerate": 3.55,
+    "limit": 195.35,
+    "drive": "4",
+    "suv": false
+  },
+  {
     "car": "高尔夫 GTI-魔王（21",
     "BID": "BV113411X7WB",
     "Btitle": "改装GTI vs 原厂奥迪RS 3",
@@ -299,6 +316,23 @@
     "temperature": 4,
     "accelerate": 6.18,
     "limit": 159.45,
+    "drive": "R",
+    "suv": false
+  },
+  {
+    "car": "劳恩斯-酷派（12",
+    "BID": "BV1R54y1K7sP",
+    "Btitle": "EVO的跑车版本:劳恩斯-酷派",
+    "hp_content": 330,
+    "powertrain": "2.0T+6MT",
+    "speed": 72.16,
+    "tyre_type_f": "米其林 Cup2C",
+    "tyre_type_r": "米其林 Cup2C",
+    "tyre_width_f": 245,
+    "tyre_width_r": 245,
+    "temperature": 13,
+    "accelerate": 5.86,
+    "limit": 166.97,
     "drive": "R",
     "suv": false
   },

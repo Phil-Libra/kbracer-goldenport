@@ -5,9 +5,9 @@ import { CloseCircleTwoTone } from '@ant-design/icons';
 import Table from './components/Table';
 import SwitchBox from './components/SwitchBox';
 
-import speed from './speed.json';
-import speed_mod from './speed_mod.json';
-import speed_v from './speed_v.json';
+import speed from './data/speed.json';
+import speed_mod from './data/speed_mod.json';
+import speed_v from './data/speed_v.json';
 
 import bilibili from './img/bilibili.png';
 import weibo from './img/weibo.png';
