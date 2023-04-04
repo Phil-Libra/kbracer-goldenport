@@ -102,6 +102,23 @@
     "suv": false
   },
   {
+    "car": "Giulia QV （22",
+    "BID": "BV1Bk4y1477X",
+    "Btitle": "大家别骂键盘打工人了，Giulia QV二番战！",
+    "hp_content": 510,
+    "powertrain": "2.9T+8AT",
+    "speed": 69.08,
+    "tyre_type_f": "米其林 Cup2C *",
+    "tyre_type_r": "米其林 Cup2C *",
+    "tyre_width_f": 245,
+    "tyre_width_r": 285,
+    "temperature": 6,
+    "accelerate": 4.29,
+    "limit": 189.08,
+    "drive": "R",
+    "suv": false
+  },
+  {
     "car": "RS5 Sportback（21",
     "BID": "BV1ye411P7F6",
     "Btitle": "奥迪RS 5拿下第一？",
