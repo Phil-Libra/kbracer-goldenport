@@ -254,7 +254,7 @@ const Title = (
             <img src={logo} alt="logo" />
             <div className={styles.desc}>
                 <h1>键盘车神教易车金港圈速榜</h1>
-                <p>传说中的偶像派车评人教主的真实圈速榜单</p>
+                <p>传说中的偶像派车评人教主的真实圈速榜单（本项目停止更新）</p>
             </div>
         </div>
         {children}

@@ -17,6 +17,23 @@
     "suv": false
   },
   {
+    "car": "AMG GT R（19",
+    "BID": "BV1VX4y1k7rR",
+    "Btitle": "日产GT-R，AMG GT R，谁是真战神？",
+    "hp_content": 585,
+    "powertrain": "4.0T+7DCT",
+    "speed": 64.64,
+    "tyre_type_f": "米其林 Cup2R",
+    "tyre_type_r": "米其林 Cup2R",
+    "tyre_width_f": 285,
+    "tyre_width_r": 335,
+    "temperature": 13,
+    "accelerate": 3.76,
+    "limit": 202.62,
+    "drive": "R",
+    "suv": false
+  },
+  {
     "car": "M4 雷霆（22",
     "BID": "BV1jG4y1c7j8",
     "Btitle": "比保时捷还快的宝马？G82四驱赛道测试！",
