@@ -254,7 +254,7 @@ const Title = (
             <img src={logo} alt="logo" />
             <div className={styles.desc}>
                 <h1>键盘车神教易车金港圈速榜</h1>
-                <p>传说中的偶像派车评人教主的真实圈速榜单（本项目停止更新）</p>
+                <p>传说中的偶像派车评人教主的真实圈速榜单</p>
             </div>
         </div>
         {children}
@@ -269,12 +269,6 @@ const Footer = () => (
                 <a href="https://space.bilibili.com/49576477">
                     <img src={bilibili} alt="bilibili" />
                     @键盘车神教
-                </a>
-                &nbsp;
-                &nbsp;
-                <a href="https://space.bilibili.com/1772592840">
-                    <img src={bilibili} alt="bilibili" />
-                    @易车圈速榜
                 </a>
                 &nbsp;
                 &nbsp;
@@ -354,7 +348,7 @@ const Description = (
             />
             <div className={styles.manual}>
                 <h3>1.改装</h3>
-                <p>不同于锐思榜单，易车金港榜单中，单独轮胎的改装仍然计入原厂榜单（尽量选择改装街胎车型）。</p>
+                <p>不同于锐思榜单，易车金港榜单中，单独街胎的改装仍然计入原厂榜单。</p>
 
                 <h3>2.驱动形式</h3>
                 <p>"F"=前驱，"R"=后驱，"4"=四驱。</p>
