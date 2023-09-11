@@ -253,7 +253,7 @@ const Title = (
         <div className={styles.header}>
             <img src={logo} alt="logo" />
             <div className={styles.desc}>
-                <h1>键盘车神教易车金港圈速榜</h1>
+                <h1>键盘车神教新金港圈速榜</h1>
                 <p>传说中的偶像派车评人教主的真实圈速榜单</p>
             </div>
         </div>
@@ -348,7 +348,7 @@ const Description = (
             />
             <div className={styles.manual}>
                 <h3>1.改装</h3>
-                <p>不同于锐思榜单，易车金港榜单中，单独街胎的改装仍然计入原厂榜单。</p>
+                <p>不同于锐思榜单，新金港榜单中，单独街胎的改装仍然计入原厂榜单。</p>
 
                 <h3>2.驱动形式</h3>
                 <p>"F"=前驱，"R"=后驱，"4"=四驱。</p>

@@ -67,6 +67,22 @@
     "suv": false
   },
   {
+    "car": "思域 FK8赛车",
+    "BID": "BV1Lz4y1M7NL",
+    "Btitle": "50W手搓本田FK8 TCR，居然能到9300转？",
+    "hp_content": 300,
+    "powertrain": "2.4+序列式",
+    "speed": 67.72,
+    "tyre_type_f": "韩泰 F200",
+    "tyre_type_r": "韩泰 F200",
+    "tyre_width_f": 250,
+    "tyre_width_r": 250,
+    "temperature": 37,
+    "limit": 168.03,
+    "drive": "F",
+    "suv": false
+  },
+  {
     "car": "高尔夫 GTI-魔王（21",
     "BID": "BV113411X7WB",
     "Btitle": "改装GTI vs 原厂奥迪RS 3",
@@ -334,6 +350,22 @@
     "accelerate": 5.86,
     "limit": 166.97,
     "drive": "R",
+    "suv": false
+  },
+  {
+    "car": "影豹R（23",
+    "BID": "BV14N411p7uU",
+    "Btitle": "国产车 X 国产改件，出征小纽北~",
+    "hp_content": 265,
+    "powertrain": "2.0T+8AT",
+    "speed": 72.27,
+    "tyre_type_f": "优科豪马 A052",
+    "tyre_type_r": "优科豪马 A052",
+    "tyre_width_f": 255,
+    "tyre_width_r": 255,
+    "temperature": 26,
+    "limit": 163.28,
+    "drive": "F",
     "suv": false
   },
   {

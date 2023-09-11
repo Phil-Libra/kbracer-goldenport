@@ -1,4 +1,4 @@
-# 键盘车神教易车金港圈速榜
+# 键盘车神教新金港圈速榜
 
 参考教主的[锐思榜单](https://kbracer.github.io/)样式，使用[React](https://github.com/facebook/react/)和[Ant Design 组件 v4](https://github.com/ant-design/ant-design/)实现。
 

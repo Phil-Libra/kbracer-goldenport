@@ -374,23 +374,6 @@
     "suv": false
   },
   {
-    "car": "X4 M 雷霆（21",
-    "BID": "BV1294y1Q7DV",
-    "Btitle": "510马力+四驱，宝马X4 M圈速测试..",
-    "hp_content": 510,
-    "powertrain": "3.0T+8AT",
-    "speed": 72.06,
-    "tyre_type_f": "固特异 Eagle F1 A3",
-    "tyre_type_r": "固特异 Eagle F1 SC",
-    "tyre_width_f": 265,
-    "tyre_width_r": 285,
-    "temperature": 33,
-    "accelerate": 4.41,
-    "limit": 180.3,
-    "drive": "4",
-    "suv": true
-  },
-  {
     "car": "BRZ-刹车（17",
     "BID": "BV1rP4y1m7hJ",
     "Btitle": "【新老BRZ进化】刹车失灵？",
