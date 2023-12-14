@@ -14,7 +14,7 @@
     "accelerate": 2.61,
     "limit": 216.7,
     "drive": "4",
-    "suv": false
+    "class": "S"
   },
   {
     "car": "AMG GT R（19",
@@ -31,7 +31,7 @@
     "accelerate": 3.76,
     "limit": 202.62,
     "drive": "R",
-    "suv": false
+    "class": "S"
   },
   {
     "car": "M4 雷霆（22",
@@ -48,7 +48,7 @@
     "accelerate": 3.35,
     "limit": 192.18,
     "drive": "4",
-    "suv": false
+    "class": "B"
   },
   {
     "car": "911 Carrera S（22",
@@ -65,7 +65,7 @@
     "accelerate": 3.48,
     "limit": 192.98,
     "drive": "R",
-    "suv": false
+    "class": "S"
   },
   {
     "car": "718 GTS（20",
@@ -82,7 +82,7 @@
     "accelerate": 3.85,
     "limit": 185.93,
     "drive": "R",
-    "suv": false
+    "class": "S"
   },
   {
     "car": "Vantage F1（22",
@@ -99,7 +99,7 @@
     "accelerate": 3.91,
     "limit": 188.8,
     "drive": "R",
-    "suv": false
+    "class": "S"
   },
   {
     "car": "M2 雷霆（19",
@@ -116,7 +116,7 @@
     "accelerate": 4.54,
     "limit": 183.59,
     "drive": "R",
-    "suv": false
+    "class": "A"
   },
   {
     "car": "Giulia QV （22",
@@ -133,7 +133,7 @@
     "accelerate": 4.29,
     "limit": 189.08,
     "drive": "R",
-    "suv": false
+    "class": "B"
   },
   {
     "car": "RS5 Sportback（21",
@@ -150,7 +150,7 @@
     "accelerate": 3.78,
     "limit": 181.43,
     "drive": "4",
-    "suv": false
+    "class": "B"
   },
   {
     "car": "911 Carrera S（12",
@@ -167,7 +167,7 @@
     "accelerate": 4.34,
     "limit": 181.8,
     "drive": "R",
-    "suv": false
+    "class": "S"
   },
   {
     "car": "AMG GT（21",
@@ -184,7 +184,7 @@
     "accelerate": 4.37,
     "limit": 183.74,
     "drive": "R",
-    "suv": false
+    "class": "S"
   },
   {
     "car": "Supra（22",
@@ -201,7 +201,7 @@
     "accelerate": 4.7,
     "limit": 177.95,
     "drive": "R",
-    "suv": false
+    "class": "S"
   },
   {
     "car": "RS3（17",
@@ -218,7 +218,7 @@
     "accelerate": 3.89,
     "limit": 180.8,
     "drive": "4",
-    "suv": false
+    "class": "A"
   },
   {
     "car": "Giulia QV （22",
@@ -235,7 +235,7 @@
     "accelerate": 4.33,
     "limit": 187.35,
     "drive": "R",
-    "suv": false
+    "class": "B"
   },
   {
     "car": "TT RS（17",
@@ -252,7 +252,7 @@
     "accelerate": 3.94,
     "limit": 181.65,
     "drive": "4",
-    "suv": false
+    "class": "S"
   },
   {
     "car": "Z4 M40i（22",
@@ -269,7 +269,7 @@
     "accelerate": 4.74,
     "limit": 174.9,
     "drive": "R",
-    "suv": false
+    "class": "S"
   },
   {
     "car": "BRZ-刹车（22",
@@ -286,7 +286,7 @@
     "accelerate": 6.26,
     "limit": 163.72,
     "drive": "R",
-    "suv": false
+    "class": "S"
   },
   {
     "car": "Panamera 4S（18",
@@ -303,7 +303,7 @@
     "accelerate": 4.09,
     "limit": 175.32,
     "drive": "4",
-    "suv": false
+    "class": "D"
   },
   {
     "car": "718 Cayman（22",
@@ -320,7 +320,7 @@
     "accelerate": 5.13,
     "limit": 164.44,
     "drive": "R",
-    "suv": false
+    "class": "S"
   },
   {
     "car": "360 Modena（03",
@@ -337,7 +337,24 @@
     "accelerate": 5.25,
     "limit": 176.26,
     "drive": "R",
-    "suv": false
+    "class": "S"
+  },
+  {
+    "car": "Elantra N（23",
+    "BID": "BV1Dc411278A",
+    "Btitle": "中规伊兰特N，依然是前驱的王？",
+    "hp_content": 276,
+    "powertrain": "2.0T+8DCT",
+    "speed": 71.56,
+    "tyre_type_f": "米其林 PS4S HN",
+    "tyre_type_r": "米其林 PS4S HN",
+    "tyre_width_f": 245,
+    "tyre_width_r": 245,
+    "temperature": 6,
+    "accelerate": 5.35,
+    "limit": 170.89,
+    "drive": "F",
+    "class": "A"
   },
   {
     "car": "S4（21",
@@ -354,7 +371,7 @@
     "accelerate": 4.56,
     "limit": 171.54,
     "drive": "4",
-    "suv": false
+    "class": "B"
   },
   {
     "car": "极氪 001（22",
@@ -371,7 +388,7 @@
     "accelerate": 3.88,
     "limit": 179.37,
     "drive": "4",
-    "suv": false
+    "class": "C"
   },
   {
     "car": "BRZ-刹车（17",
@@ -388,7 +405,7 @@
     "accelerate": 7.18,
     "limit": 159.44,
     "drive": "R",
-    "suv": false
+    "class": "S"
   },
   {
     "car": "BRZ-轮胎（22",
@@ -405,7 +422,7 @@
     "accelerate": 7.49,
     "limit": 154.02,
     "drive": "R",
-    "suv": false
+    "class": "S"
   },
   {
     "car": "极星 2 （21",
@@ -422,7 +439,7 @@
     "accelerate": 4.66,
     "limit": 169.68,
     "drive": "4",
-    "suv": false
+    "class": "A"
   },
   {
     "car": "Macan GTS（20",
@@ -439,7 +456,7 @@
     "accelerate": 4.68,
     "limit": 169.55,
     "drive": "4",
-    "suv": true
+    "class": "SUV"
   },
   {
     "car": "BRZ（22",
@@ -456,7 +473,7 @@
     "accelerate": 6.35,
     "limit": 160.03,
     "drive": "R",
-    "suv": false
+    "class": "S"
   },
   {
     "car": "A35（20",
@@ -473,7 +490,7 @@
     "accelerate": 4.84,
     "limit": 163.98,
     "drive": "4",
-    "suv": false
+    "class": "A"
   },
   {
     "car": "BRZ（17",
@@ -490,7 +507,7 @@
     "accelerate": 7.77,
     "limit": 153.99,
     "drive": "R",
-    "suv": false
+    "class": "S"
   },
   {
     "car": "海豹（22",
@@ -507,7 +524,7 @@
     "accelerate": 3.89,
     "limit": 168.71,
     "drive": "4",
-    "suv": false
+    "class": "B"
   },
   {
     "car": "Mustang（20",
@@ -524,7 +541,7 @@
     "accelerate": 5.64,
     "limit": 161.07,
     "drive": "R",
-    "suv": false
+    "class": "S"
   },
   {
     "car": "BRZ-轮胎（17",
@@ -541,7 +558,7 @@
     "accelerate": 8.32,
     "limit": 149.51,
     "drive": "R",
-    "suv": false
+    "class": "S"
   },
   {
     "car": "540i（22",
@@ -558,7 +575,7 @@
     "accelerate": 5.22,
     "limit": 167.74,
     "drive": "R",
-    "suv": false
+    "class": "C"
   },
   {
     "car": "极氪 001（22",
@@ -575,7 +592,7 @@
     "accelerate": 3.88,
     "limit": 181.07,
     "drive": "4",
-    "suv": false
+    "class": "C"
   },
   {
     "car": "福特电马（21",
@@ -592,7 +609,7 @@
     "accelerate": 4,
     "limit": 165.1,
     "drive": "4",
-    "suv": true
+    "class": "SUV"
   },
   {
     "car": "A5（22",
@@ -609,7 +626,7 @@
     "accelerate": 5.81,
     "limit": 157.45,
     "drive": "4",
-    "suv": false
+    "class": "B"
   },
   {
     "car": "迈锐宝XL（22",
@@ -626,7 +643,7 @@
     "accelerate": 6.78,
     "limit": 154.97,
     "drive": "F",
-    "suv": false
+    "class": "B"
   },
   {
     "car": "S3（19",
@@ -643,7 +660,7 @@
     "accelerate": 5.42,
     "limit": 162.36,
     "drive": "4",
-    "suv": false
+    "class": "A"
   },
   {
     "car": "高尔夫 GTI（21",
@@ -660,7 +677,7 @@
     "accelerate": 6.73,
     "limit": 158.84,
     "drive": "F",
-    "suv": false
+    "class": "A"
   },
   {
     "car": "ET7（22",
@@ -677,7 +694,7 @@
     "accelerate": 3.75,
     "limit": 175.76,
     "drive": "4",
-    "suv": false
+    "class": "C"
   },
   {
     "car": "03+ Cyan（22",
@@ -694,7 +711,7 @@
     "accelerate": 6.88,
     "limit": 155.07,
     "drive": "4",
-    "suv": false
+    "class": "A"
   },
   {
     "car": "i3 35L（22",
@@ -711,7 +728,7 @@
     "accelerate": 5.53,
     "limit": 155.18,
     "drive": "R",
-    "suv": false
+    "class": "B"
   },
   {
     "car": "05+（22",
@@ -728,7 +745,7 @@
     "accelerate": 7.07,
     "limit": 143.99,
     "drive": "4",
-    "suv": true
+    "class": "SUV"
   },
   {
     "car": "CC 猎装（21",
@@ -745,7 +762,7 @@
     "accelerate": 7.26,
     "limit": 150.04,
     "drive": "F",
-    "suv": false
+    "class": "B"
   },
   {
     "car": "星越L（21",
@@ -762,7 +779,7 @@
     "accelerate": 6.84,
     "limit": 148.52,
     "drive": "4",
-    "suv": true
+    "class": "SUV"
   },
   {
     "car": "03（22",
@@ -779,7 +796,7 @@
     "accelerate": 7.83,
     "limit": 146.22,
     "drive": "F",
-    "suv": false
+    "class": "A"
   },
   {
     "car": "325i（22",
@@ -796,7 +813,7 @@
     "accelerate": 7.65,
     "limit": 142.78,
     "drive": "R",
-    "suv": false
+    "class": "B"
   },
   {
     "car": "凯泽西（11",
@@ -813,7 +830,7 @@
     "accelerate": 8.54,
     "limit": 141.95,
     "drive": "F",
-    "suv": false
+    "class": "B"
   },
   {
     "car": "型格（22",
@@ -830,7 +847,7 @@
     "accelerate": 8.46,
     "limit": 147.32,
     "drive": "F",
-    "suv": false
+    "class": "A"
   },
   {
     "car": "CT4（21",
@@ -847,7 +864,7 @@
     "accelerate": 7.72,
     "limit": 145.19,
     "drive": "R",
-    "suv": false
+    "class": "A"
   },
   {
     "car": "UNI-V（22",
@@ -864,7 +881,7 @@
     "accelerate": 7.01,
     "limit": 142.15,
     "drive": "F",
-    "suv": false
+    "class": "A"
   },
   {
     "car": "福克斯（20",
@@ -881,7 +898,7 @@
     "accelerate": 9.24,
     "limit": 134.59,
     "drive": "F",
-    "suv": false
+    "class": "A"
   },
   {
     "car": "思域 HB（21",
@@ -898,7 +915,7 @@
     "accelerate": 8.65,
     "limit": 145.81,
     "drive": "F",
-    "suv": false
+    "class": "A"
   },
   {
     "car": "MG5 天蝎座（22",
@@ -915,7 +932,7 @@
     "accelerate": 9.13,
     "limit": 145.22,
     "drive": "F",
-    "suv": false
+    "class": "A"
   },
   {
     "car": "思域（22",
@@ -932,7 +949,7 @@
     "accelerate": 8.27,
     "limit": 147.42,
     "drive": "F",
-    "suv": false
+    "class": "A"
   },
   {
     "car": "凌云S（22",
@@ -949,7 +966,7 @@
     "accelerate": 7.46,
     "limit": 146.99,
     "drive": "4",
-    "suv": true
+    "class": "SUV"
   },
   {
     "car": "星骋（12",
@@ -966,7 +983,7 @@
     "accelerate": 9.54,
     "limit": 137.7,
     "drive": "F",
-    "suv": false
+    "class": "A"
   },
   {
     "car": "福克斯（22",
@@ -983,7 +1000,7 @@
     "accelerate": 8.5,
     "limit": 133.61,
     "drive": "F",
-    "suv": false
+    "class": "A"
   },
   {
     "car": "ID.4 CROZZ（22",
@@ -1000,7 +1017,7 @@
     "accelerate": 8.23,
     "limit": 138.28,
     "drive": "R",
-    "suv": true
+    "class": "SUV"
   },
   {
     "car": "ID.3（22",
@@ -1017,7 +1034,7 @@
     "accelerate": 8.06,
     "limit": 144.34,
     "drive": "R",
-    "suv": false
+    "class": "A"
   },
   {
     "car": "昂克塞拉（21",
@@ -1034,7 +1051,7 @@
     "accelerate": 9.53,
     "limit": 138.6,
     "drive": "F",
-    "suv": false
+    "class": "A"
   },
   {
     "car": "X3 25i（22",
@@ -1051,7 +1068,7 @@
     "accelerate": 8.07,
     "limit": 133.8,
     "drive": "4",
-    "suv": true
+    "class": "SUV"
   },
   {
     "car": "奇骏 （21",
@@ -1068,7 +1085,7 @@
     "accelerate": 9.75,
     "limit": 138.49,
     "drive": "4",
-    "suv": true
+    "class": "SUV"
   },
   {
     "car": "海豚 骑士版 （21",
@@ -1085,7 +1102,7 @@
     "accelerate": 7.34,
     "limit": 143.4,
     "drive": "F",
-    "suv": false
+    "class": "A0"
   },
   {
     "car": "飞度（21",
@@ -1102,7 +1119,7 @@
     "accelerate": 9.95,
     "limit": 136.53,
     "drive": "F",
-    "suv": false
+    "class": "A0"
   },
   {
     "car": "锐际（20",
@@ -1119,7 +1136,7 @@
     "accelerate": 7.38,
     "limit": 140.22,
     "drive": "4",
-    "suv": true
+    "class": "SUV"
   },
   {
     "car": "奥德赛（22",
@@ -1136,7 +1153,7 @@
     "accelerate": 9.36,
     "limit": 131.62,
     "drive": "F",
-    "suv": false
+    "class": "MPV"
   },
   {
     "car": "海豚 （21",
@@ -1153,6 +1170,6 @@
     "accelerate": 11.29,
     "limit": 124.93,
     "drive": "F",
-    "suv": false
+    "class": "A0"
   }
 ]

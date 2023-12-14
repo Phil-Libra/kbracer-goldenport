@@ -14,7 +14,7 @@
     "accelerate": "3.38",
     "limit": "202.54",
     "drive": "4",
-    "suv": false,
+    "class": "S",
     "driver": "阿飞",
     "mod": true
   },
@@ -33,7 +33,7 @@
     "accelerate": "3.24",
     "limit": "189.07",
     "drive": "R",
-    "suv": false,
+    "class": "S",
     "driver": "Jerry杨浩宇",
     "mod": true
   },
@@ -52,7 +52,7 @@
     "accelerate": 6.21,
     "limit": 159.83,
     "drive": "R",
-    "suv": false,
+    "class": "S",
     "driver": "键盘打工人",
     "mod": true
   },
@@ -71,7 +71,7 @@
     "accelerate": "6.18",
     "limit": "156.12",
     "drive": "4",
-    "suv": false,
+    "class": "A",
     "driver": "李松桥",
     "mod": true
   },
@@ -90,7 +90,7 @@
     "accelerate": 6.62,
     "limit": 138.4,
     "drive": "R",
-    "suv": false,
+    "class": "B",
     "driver": "亢岳",
     "mod": true
   }

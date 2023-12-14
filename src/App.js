@@ -1,8 +1,8 @@
 import { useState, useEffect, useMemo } from 'react';
-import { Input, Select, Radio } from 'antd';
 import { CloseCircleTwoTone } from '@ant-design/icons';
 
 import Table from './components/Table';
+import Search from './components/Search';
 import SwitchBox from './components/SwitchBox';
 
 import speed from './data/speed.json';
@@ -13,8 +13,6 @@ import bilibili from './img/bilibili.png';
 import weibo from './img/weibo.png';
 import github from './img/github.png';
 import logo from './img/logo.png';
-
-import 'antd/dist/antd.min.css';
 
 import styles from './App.module.css';
 
@@ -77,14 +75,16 @@ const App = () => {
     // 数据筛选条件
     const [filter, setFilter] = useState({
         name: '',
-        key: 'all'
+        key: 'all',
+        class: 'all',
+        drive: 'all'
     });
 
     useEffect(() => {
         const tempData = {};
 
         // 筛选数据函数
-        const dataFilter = (data) => {
+        const dataFilter = (data, filter) => {
             for (const k in data) {
                 tempData[k] = data[k].filter((item) => {
                     const reg = new RegExp(filter.name, 'i');
@@ -93,20 +93,30 @@ const App = () => {
                     switch (filter.key) {
                         case 'all':
                             return item;
-                        case 'suv':
-                            return item[filter.key] === true;
+                        case 'fuel':
+                            return item.powertrain !== 'E';
                         case 'ev':
                             return item.powertrain === 'E';
                         default:
                             throw new Error('Error!');
-                    }
+                    };
+                }).filter((item) => {
+                    if (filter.class === 'all') {
+                        return item;
+                    };
+                    return item.class === filter.class;
+                }).filter((item) => {
+                    if (filter.drive === 'all') {
+                        return item;
+                    };
+                    return item.drive === filter.drive;
                 });
-            }
+            };
 
             return tempData;
         };
 
-        setRankData(dataFilter(defaultData));
+        setRankData(dataFilter(defaultData, filter));
 
     }, [defaultData, filter]);
 
@@ -177,73 +187,6 @@ const App = () => {
     );
 };
 
-const Search = (
-    {
-        filter,
-        setFilter,
-        highlight,
-        setHighlight,
-        table
-    }
-) => {
-    const { Option } = Select;
-
-    return (
-        <div className={styles.search}>
-            <div className={styles.searchGroup}>
-                <Input
-                    addonBefore="搜索："
-                    placeholder="车型关键字"
-                    style={{
-                        minWidth: '175px'
-                    }}
-                    onChange={(e) => setFilter(() => (
-                        {
-                            ...filter,
-                            name: e.target.value
-                        }
-                    ))}
-                    allowClear
-                />
-                <Select
-                    defaultValue={'all'}
-                    style={{
-                        paddingLeft: '10px',
-                        minWidth: '115px'
-                    }}
-                    onChange={(val) => setFilter(() => (
-                        {
-                            ...filter,
-                            key: val
-                        }
-                    ))}
-                >
-                    <Option value="all">全部车型</Option>
-                    <Option value="suv">只看SUV</Option>
-                    <Option value="ev">只看电车</Option>
-                </Select>
-            </div>
-            {
-                table !== 'vip'
-                && <Radio.Group
-                    style={{
-                        marginTop: '20px'
-                    }}
-                    buttonStyle='solid'
-                    value={highlight}
-                    onChange={(e) => setHighlight(e.target.value)}
-                >
-                    <Radio.Button value={'all'}>全部</Radio.Button>
-                    <Radio.Button value={'brz'}>新老BRZ进化</Radio.Button>
-                    <Radio.Button value={'fourCars'}>4车进化</Radio.Button>
-                </Radio.Group>
-            }
-        </div >
-    )
-};
-
-
-
 const Title = (
     {
         children
@@ -289,7 +232,7 @@ const Footer = () => (
 
         <div className={styles.right}>
             <div>
-                本页面模仿教主原锐思榜单样式，基于
+                本页面基于教主原锐思榜单样式，基于
                 &nbsp;<a href="https://github.com/facebook/react/">React</a>&nbsp;
                 和
                 &nbsp;<a href="https://github.com/ant-design/ant-design/">Ant-Design</a>&nbsp;
@@ -350,8 +293,9 @@ const Description = (
                 <h3>1.改装</h3>
                 <p>不同于锐思榜单，新金港榜单中，单独街胎的改装仍然计入原厂榜单。</p>
 
-                <h3>2.驱动形式</h3>
+                <h3>2.驱动形式和车辆级别</h3>
                 <p>"F"=前驱，"R"=后驱，"4"=四驱。</p>
+                <p>车辆级别参考汽车之家分类和教主锐思榜单，如M2、M4非跑车，CT4为A级车。</p>
 
                 <h3>3.气温</h3>
                 <p>最出圈速的气温是轮胎能够起温，且进气温度低。会尽量选在10-25℃进行测试。</p>

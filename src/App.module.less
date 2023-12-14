@@ -139,7 +139,7 @@
 // 高亮样式
 .highlight {
     position: relative;
-    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
     font-weight: 500;
     text-decoration: underline;
     text-underline-offset: 3px;
@@ -358,6 +358,13 @@
 
         .searchGroup {
             display: flex;
+            flex-direction: column;
+
+            .selectBox{
+                display: flex;
+                flex-direction: row;
+                margin-top: 15px;
+            }
         }
     }
 
