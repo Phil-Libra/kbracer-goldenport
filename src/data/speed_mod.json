@@ -134,6 +134,23 @@
     "class": "S"
   },
   {
+    "car": "东南菱帅（20帅",
+    "BID": "BV1Bb4y13771",
+    "Btitle": "200马力菱帅王，比思域TR快？",
+    "hp_content": 200,
+    "powertrain": "1.6L+5MT",
+    "speed": 68.96,
+    "tyre_type_f": "路博 RC001",
+    "tyre_type_r": "路博 RC001",
+    "tyre_width_f": 240,
+    "tyre_width_r": 240,
+    "temperature": 23,
+    "accelerate": 5.99,
+    "limit": 159.27,
+    "drive": "F",
+    "class": "A"
+  },
+  {
     "car": "BRZ-避震（22",
     "BID": "BV16G4y1g7G8",
     "Btitle": "【新老BRZ进化】避震篇",

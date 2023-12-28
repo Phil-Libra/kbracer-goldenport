@@ -57,17 +57,19 @@ const Table = (
 
     // 处理不同圈速背景色
     const speedChooser = (value) => {
-        return value.speed <= 71
-            ? `${styles.kbracer} ${styles.kbracer1}`
-            : value.speed <= 74
-                ? `${styles.kbracer} ${styles.kbracer2}`
-                : value.speed <= 77
-                    ? `${styles.kbracer} ${styles.kbracer3}`
-                    : value.speed <= 80
-                        ? `${styles.kbracer} ${styles.kbracer4}`
-                        : value.speed <= 82
-                            ? `${styles.kbracer} ${styles.kbracer5}`
-                            : `${styles.kbracer} ${styles.kbracer6}`;
+        return value.speed < 69
+            ? `${styles.kbracer} ${styles.kbracer0}`
+            : value.speed <= 72
+                ? `${styles.kbracer} ${styles.kbracer1}`
+                : value.speed <= 74
+                    ? `${styles.kbracer} ${styles.kbracer2}`
+                    : value.speed <= 77
+                        ? `${styles.kbracer} ${styles.kbracer3}`
+                        : value.speed <= 80
+                            ? `${styles.kbracer} ${styles.kbracer4}`
+                            : value.speed <= 83
+                                ? `${styles.kbracer} ${styles.kbracer5}`
+                                : `${styles.kbracer} ${styles.kbracer6}`;
     };
 
     // 处理高亮的专题名称

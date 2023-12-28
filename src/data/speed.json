@@ -289,6 +289,23 @@
     "class": "S"
   },
   {
+    "car": "思域 Type-R（23",
+    "BID": "BV18e411C7bH",
+    "Btitle": "本田，现代，谁是前驱王。",
+    "hp_content": 300,
+    "powertrain": "2.0T+6MT",
+    "speed": 71.03,
+    "tyre_type_f": "米其林 PS4S",
+    "tyre_type_r": "米其林 PS4S",
+    "tyre_width_f": 265,
+    "tyre_width_r": 265,
+    "temperature": 6,
+    "accelerate": 5.66,
+    "limit": 169.98,
+    "drive": "F",
+    "class": "A"
+  },
+  {
     "car": "Panamera 4S（18",
     "BID": "BV1qr4y1j7Wd",
     "Btitle": "Panamera跑赛道和911差多少？",
@@ -440,6 +457,23 @@
     "limit": 169.68,
     "drive": "4",
     "class": "A"
+  },
+  {
+    "car": "smart精灵#3（23",
+    "BID": "BV1Qt4y1f7Lj",
+    "Btitle": "20W+，买百奔之王！！！",
+    "hp_content": 428,
+    "powertrain": "E",
+    "speed": 72.96,
+    "tyre_type_f": "马牌 EC6Q",
+    "tyre_type_r": "马牌 EC6Q",
+    "tyre_width_f": 245,
+    "tyre_width_r": 245,
+    "temperature": 40,
+    "accelerate": 3.8,
+    "limit": 176.84,
+    "drive": "4",
+    "class": "SUV"
   },
   {
     "car": "Macan GTS（20",
