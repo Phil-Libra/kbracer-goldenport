@@ -59,15 +59,15 @@ const Table = (
     const speedChooser = (value) => {
         return value.speed < 69
             ? `${styles.kbracer} ${styles.kbracer0}`
-            : value.speed <= 72
+            : value.speed < 72
                 ? `${styles.kbracer} ${styles.kbracer1}`
-                : value.speed <= 74
+                : value.speed < 74
                     ? `${styles.kbracer} ${styles.kbracer2}`
-                    : value.speed <= 77
+                    : value.speed < 77
                         ? `${styles.kbracer} ${styles.kbracer3}`
-                        : value.speed <= 80
+                        : value.speed < 80
                             ? `${styles.kbracer} ${styles.kbracer4}`
-                            : value.speed <= 83
+                            : value.speed < 83
                                 ? `${styles.kbracer} ${styles.kbracer5}`
                                 : `${styles.kbracer} ${styles.kbracer6}`;
     };

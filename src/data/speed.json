@@ -119,6 +119,23 @@
     "class": "A"
   },
   {
+    "car": "M2（23",
+    "BID": "BV1V64y1w7KR",
+    "Btitle": "宝马M2很丑，但S58",
+    "hp_content": 460,
+    "powertrain": "3.0T+8AT",
+    "speed": 69.05,
+    "tyre_type_f": "倍耐力 P0 *",
+    "tyre_type_r": "倍耐力 P0 *",
+    "tyre_width_f": 275,
+    "tyre_width_r": 285,
+    "temperature": 27,
+    "accelerate": 4.34,
+    "limit": 188.41,
+    "drive": "R",
+    "class": "A"
+  },
+  {
     "car": "Giulia QV （22",
     "BID": "BV1Bk4y1477X",
     "Btitle": "大家别骂键盘打工人了，Giulia QV二番战！",
@@ -524,6 +541,23 @@
     "accelerate": 4.84,
     "limit": 163.98,
     "drive": "4",
+    "class": "A"
+  },
+  {
+    "car": "M240i（23",
+    "BID": "BV1XV411X7GJ",
+    "Btitle": "最便宜的B58，宝马240i真香！",
+    "hp_content": 333,
+    "powertrain": "3.0T+8AT",
+    "speed": 73.71,
+    "tyre_type_f": "倍耐力 P0 PZ4防爆",
+    "tyre_type_r": "倍耐力 P0 PZ4防爆",
+    "tyre_width_f": 225,
+    "tyre_width_r": 255,
+    "temperature": 25,
+    "accelerate": 5.1,
+    "limit": 168.84,
+    "drive": "R",
     "class": "A"
   },
   {
