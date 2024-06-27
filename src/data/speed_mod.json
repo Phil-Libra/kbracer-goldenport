@@ -11,7 +11,7 @@
     "tyre_width_f": 265,
     "tyre_width_r": 325,
     "temperature": 18,
-    "accelerate": 3.29,
+    "accelerate01": 3.29,
     "limit": 201.34,
     "drive": "R",
     "class": "S"
@@ -44,7 +44,7 @@
     "tyre_width_f": 245,
     "tyre_width_r": 305,
     "temperature": 28,
-    "accelerate": 3.05,
+    "accelerate01": 3.05,
     "limit": 197.19,
     "drive": "4",
     "class": "S"
@@ -61,7 +61,7 @@
     "tyre_width_f": 285,
     "tyre_width_r": 315,
     "temperature": 7,
-    "accelerate": 3.55,
+    "accelerate01": 3.55,
     "limit": 195.35,
     "drive": "4",
     "class": "S"
@@ -94,7 +94,7 @@
     "tyre_width_f": 245,
     "tyre_width_r": 245,
     "temperature": 4,
-    "accelerate": 5.59,
+    "accelerate01": 5.59,
     "limit": 181.31,
     "drive": "F",
     "class": "A"
@@ -111,7 +111,7 @@
     "tyre_width_f": 245,
     "tyre_width_r": 245,
     "temperature": 1,
-    "accelerate": 5.38,
+    "accelerate01": 5.38,
     "limit": 175.02,
     "drive": "R",
     "class": "S"
@@ -128,10 +128,28 @@
     "tyre_width_f": 245,
     "tyre_width_r": 245,
     "temperature": 1,
-    "accelerate": 6.21,
+    "accelerate01": 6.21,
     "limit": 164.15,
     "drive": "R",
     "class": "S"
+  },
+  {
+    "car": "思域 Type-R（23",
+    "BID": "BV15p421R7rD",
+    "Btitle": "330马力的思域TYPE R，能有多快？",
+    "hp_content": 330,
+    "powertrain": "2.0T+6MT",
+    "speed": 68.85,
+    "tyre_type_f": "米其林 Cup2C",
+    "tyre_type_r": "米其林 Cup2C",
+    "tyre_width_f": 295,
+    "tyre_width_r": 295,
+    "temperature": 16,
+    "accelerate01": 5.29,
+    "accelerate616": 8.84,
+    "limit": "177.08",
+    "drive": "F",
+    "class": "A"
   },
   {
     "car": "东南菱帅（20帅",
@@ -145,7 +163,7 @@
     "tyre_width_f": 240,
     "tyre_width_r": 240,
     "temperature": 23,
-    "accelerate": 5.99,
+    "accelerate01": 5.99,
     "limit": 159.27,
     "drive": "F",
     "class": "A"
@@ -178,7 +196,7 @@
     "tyre_width_f": 245,
     "tyre_width_r": 245,
     "temperature": 4,
-    "accelerate": 6.03,
+    "accelerate01": 6.03,
     "limit": 178.37,
     "drive": "F",
     "class": "A"
@@ -195,7 +213,7 @@
     "tyre_width_f": 235,
     "tyre_width_r": 265,
     "temperature": 33,
-    "accelerate": 4.5,
+    "accelerate01": 4.5,
     "limit": 176.81,
     "drive": "R",
     "class": "S"
@@ -212,7 +230,7 @@
     "tyre_width_f": 255,
     "tyre_width_r": 255,
     "temperature": 12,
-    "accelerate": 4.11,
+    "accelerate01": 4.11,
     "limit": 177.03,
     "drive": "4",
     "class": "B"
@@ -229,7 +247,7 @@
     "tyre_width_f": 255,
     "tyre_width_r": 255,
     "temperature": 12,
-    "accelerate": 4.11,
+    "accelerate01": 4.11,
     "limit": 176,
     "drive": "4",
     "class": "B"
@@ -246,7 +264,7 @@
     "tyre_width_f": 255,
     "tyre_width_r": 255,
     "temperature": 4,
-    "accelerate": 6.98,
+    "accelerate01": 6.98,
     "limit": 158.78,
     "drive": "R",
     "class": "S"
@@ -263,9 +281,26 @@
     "tyre_width_f": 245,
     "tyre_width_r": 245,
     "temperature": 4,
-    "accelerate": 6.27,
+    "accelerate01": 6.27,
     "limit": 165.21,
     "drive": "F",
+    "class": "A"
+  },
+  {
+    "car": "斯巴鲁 翼豹 WRX STI（14",
+    "BID": "BV1XC41177oq",
+    "Btitle": "斯巴鲁最后荣光，11代STI能打赢原厂TR么？~",
+    "hp_content": 300,
+    "powertrain": "2.5T+6MT",
+    "speed": 70.55,
+    "tyre_type_f": "优科豪马 A052",
+    "tyre_type_r": "优科豪马 A052",
+    "tyre_width_f": 245,
+    "tyre_width_r": 245,
+    "temperature": 13,
+    "accelerate616": 8.99,
+    "limit": 164.68,
+    "drive": "4",
     "class": "A"
   },
   {
@@ -280,7 +315,7 @@
     "tyre_width_f": 225,
     "tyre_width_r": 255,
     "temperature": 12,
-    "accelerate": 3.69,
+    "accelerate01": 3.69,
     "limit": 181.61,
     "drive": "4",
     "class": "B"
@@ -302,6 +337,23 @@
     "class": "S"
   },
   {
+    "car": "斯巴鲁 翼豹 WRX STI",
+    "BID": "BV1Fu4m1u75P",
+    "Btitle": "不到20W的斯巴鲁STI，能赢42W的本田TR么？",
+    "hp_content": 350,
+    "powertrain": "2.5T+6MT",
+    "speed": 71,
+    "tyre_type_f": "优科豪马 AD09",
+    "tyre_type_r": "优科豪马 AD09",
+    "tyre_width_f": 245,
+    "tyre_width_r": 245,
+    "temperature": 13,
+    "accelerate616": 10.5,
+    "limit": 165.26,
+    "drive": "4",
+    "class": "A"
+  },
+  {
     "car": "03+ Cyan-传动（22",
     "BID": "BV1fA411k7WG",
     "Btitle": "【4车进化】领克全车拆空，大战思域、GTI、CT4！",
@@ -313,7 +365,7 @@
     "tyre_width_f": 245,
     "tyre_width_r": 245,
     "temperature": 5,
-    "accelerate": 5.5,
+    "accelerate01": 5.5,
     "limit": 157.68,
     "drive": "4",
     "class": "A"
@@ -330,7 +382,7 @@
     "tyre_width_f": 245,
     "tyre_width_r": 245,
     "temperature": 5,
-    "accelerate": 5.66,
+    "accelerate01": 5.66,
     "limit": 178.5,
     "drive": "F",
     "class": "A"
@@ -347,7 +399,7 @@
     "tyre_width_f": 245,
     "tyre_width_r": 245,
     "temperature": 4,
-    "accelerate": 6.18,
+    "accelerate01": 6.18,
     "limit": 159.45,
     "drive": "R",
     "class": "A"
@@ -364,7 +416,7 @@
     "tyre_width_f": 245,
     "tyre_width_r": 245,
     "temperature": 13,
-    "accelerate": 5.86,
+    "accelerate01": 5.86,
     "limit": 166.97,
     "drive": "R",
     "class": "S"
@@ -381,6 +433,7 @@
     "tyre_width_f": 255,
     "tyre_width_r": 255,
     "temperature": 26,
+    "accelerate616": 10.62,
     "limit": 163.28,
     "drive": "F",
     "class": "A"
@@ -413,7 +466,7 @@
     "tyre_width_f": 245,
     "tyre_width_r": 245,
     "temperature": 5,
-    "accelerate": 6.76,
+    "accelerate01": 6.76,
     "limit": 158.39,
     "drive": "R",
     "class": "A"
@@ -430,7 +483,7 @@
     "tyre_width_f": 245,
     "tyre_width_r": 245,
     "temperature": 5,
-    "accelerate": 5.76,
+    "accelerate01": 5.76,
     "limit": 156.83,
     "drive": "4",
     "class": "A"
@@ -463,7 +516,7 @@
     "tyre_width_f": 245,
     "tyre_width_r": 245,
     "temperature": 15,
-    "accelerate": 6.15,
+    "accelerate01": 6.15,
     "limit": 155.91,
     "drive": "4",
     "class": "A"
@@ -480,7 +533,7 @@
     "tyre_width_f": 245,
     "tyre_width_r": 245,
     "temperature": 15,
-    "accelerate": 6.75,
+    "accelerate01": 6.75,
     "limit": 156.96,
     "drive": "F",
     "class": "A"
@@ -497,7 +550,7 @@
     "tyre_width_f": 235,
     "tyre_width_r": 235,
     "temperature": 16,
-    "accelerate": 5.97,
+    "accelerate01": 5.97,
     "limit": 163.25,
     "drive": "F",
     "class": "A"
@@ -578,7 +631,7 @@
     "tyre_width_f": 245,
     "tyre_width_r": 245,
     "temperature": 15,
-    "accelerate": 7.35,
+    "accelerate01": 7.35,
     "limit": 152.73,
     "drive": "R",
     "class": "A"
@@ -611,7 +664,7 @@
     "tyre_width_f": 245,
     "tyre_width_r": 245,
     "temperature": 15,
-    "accelerate": 8.24,
+    "accelerate01": 8.24,
     "limit": 149.12,
     "drive": "F",
     "class": "A"
@@ -644,7 +697,7 @@
     "tyre_width_f": 215,
     "tyre_width_r": 215,
     "temperature": 6,
-    "accelerate": 6.59,
+    "accelerate01": 6.59,
     "limit": 154.65,
     "drive": "F",
     "class": "A"

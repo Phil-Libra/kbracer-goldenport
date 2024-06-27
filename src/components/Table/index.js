@@ -187,8 +187,16 @@ const Table = (
             />
             <Column
                 title="0-100(s)"
-                dataIndex="accelerate"
-                key="accelerate"
+                dataIndex="accelerate01"
+                key="accelerate01"
+                align="center"
+                width="5%"
+                render={(item) => handleNumber(item)}
+            />
+            <Column
+                title="60-160(s)"
+                dataIndex="accelerate616"
+                key="accelerate616"
                 align="center"
                 width="5%"
                 render={(item) => handleNumber(item)}
