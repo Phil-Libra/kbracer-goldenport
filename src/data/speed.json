@@ -1,5 +1,21 @@
 [
   {
+    "car": "SU7 Ultra（25",
+    "BID": "BV1HSZ1YJE2U",
+    "Btitle": "SU7U两天破三次纪录，人麻了...",
+    "hp_content": 1548,
+    "powertrain": "E",
+    "speed": 63.86,
+    "tyre_type_f": "赛轮 PT01",
+    "tyre_type_r": "赛轮 PT01",
+    "tyre_width_f": 265,
+    "tyre_width_r": 305,
+    "temperature": 15,
+    "limit": 231.58,
+    "drive": "4",
+    "class": "C"
+  },
+  {
     "car": "911 GT3（18",
     "BID": "BV1BZ42127z9",
     "Btitle": "新老GT3，凭啥差80万？",
@@ -307,6 +323,24 @@
     "class": "A"
   },
   {
+    "car": "03+ TCR Cyan（23",
+    "BID": "BV1tw4m1a7UN",
+    "Btitle": "42万领克王，降维打击“本田王和现代王”？",
+    "hp_content": 350,
+    "powertrain": "2.0T&SC+8AT",
+    "speed": 69.96,
+    "tyre_type_f": "雷登 R31红标",
+    "tyre_type_r": "雷登 R31红标",
+    "tyre_width_f": 265,
+    "tyre_width_r": 265,
+    "temperature": 32,
+    "accelerate01": 5.42,
+    "accelerate616": 8.98,
+    "limit": 171.76,
+    "drive": "F",
+    "class": "A"
+  },
+  {
     "car": "Giulia QV （22",
     "BID": "BV1or4y1V7rX",
     "Btitle": "100W的Giulia四叶草，虚假的赛道机器？",
@@ -340,6 +374,22 @@
     "limit": 189.66,
     "drive": "4",
     "class": "C"
+  },
+  {
+    "car": "03+ TCR Cyan（23",
+    "BID": "BV1tr421M7ze",
+    "Btitle": "领克王去纽北，用韩国胎还是中国胎？",
+    "hp_content": 350,
+    "powertrain": "2.0T&SC+8AT",
+    "speed": 70.15,
+    "tyre_type_f": "韩泰 TD",
+    "tyre_type_r": "韩泰 TD",
+    "tyre_width_f": 265,
+    "tyre_width_r": 265,
+    "temperature": 32,
+    "limit": 169.88,
+    "drive": "F",
+    "class": "A"
   },
   {
     "car": "TT RS（17",
@@ -391,6 +441,22 @@
     "limit": 163.72,
     "drive": "R",
     "class": "S"
+  },
+  {
+    "car": "03+ TCR Cyan（23",
+    "BID": "BV1tr421M7ze",
+    "Btitle": "领克王去纽北，用韩国胎还是中国胎？",
+    "hp_content": 350,
+    "powertrain": "2.0T&SC+8AT",
+    "speed": 71.01,
+    "tyre_type_f": "卫途 地煞",
+    "tyre_type_r": "卫途 地煞",
+    "tyre_width_f": 265,
+    "tyre_width_r": 265,
+    "temperature": 36,
+    "limit": 173.03,
+    "drive": "F",
+    "class": "A"
   },
   {
     "car": "思域 Type-R（23",
@@ -803,6 +869,24 @@
     "limit": 157.45,
     "drive": "4",
     "class": "B"
+  },
+  {
+    "car": "影豹R（24",
+    "BID": "BV1Fx4y147mm",
+    "Btitle": "2024款影豹R，更快了？",
+    "hp_content": 265,
+    "powertrain": "2.0T+8AT",
+    "speed": 75.28,
+    "tyre_type_f": "米其林 PS5",
+    "tyre_type_r": "米其林 PS5",
+    "tyre_width_f": 245,
+    "tyre_width_r": 245,
+    "temperature": 28,
+    "accelerate01": 5.92,
+    "accelerate616": 11.01,
+    "limit": 159.46,
+    "drive": "2",
+    "class": "A"
   },
   {
     "car": "迈锐宝XL（22",
