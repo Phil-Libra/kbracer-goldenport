@@ -1,6 +1,22 @@
 [
   {
     "car": "SU7 Ultra（25",
+    "BID": "BV1GegizAETD",
+    "Btitle": "小米SU7U，打不过日产轩逸？！",
+    "hp_content": 1548,
+    "powertrain": "E",
+    "speed": 63.58,
+    "tyre_type_f": "赛轮 PT01",
+    "tyre_type_r": "赛轮 PT01",
+    "tyre_width_f": 265,
+    "tyre_width_r": 305,
+    "temperature": 15,
+    "limit": 227.99,
+    "drive": "4",
+    "class": "C"
+  },
+  {
+    "car": "SU7 Ultra（25",
     "BID": "BV1HSZ1YJE2U",
     "Btitle": "SU7U两天破三次纪录，人麻了...",
     "hp_content": 1548,
@@ -116,6 +132,23 @@
     "limit": 192.98,
     "drive": "R",
     "class": "S"
+  },
+  {
+    "car": "IONIQ 5 N（24",
+    "BID": "BV1XHR1YoEQw",
+    "Btitle": "金港最速量产SUV？",
+    "hp_content": 650,
+    "powertrain": "E",
+    "speed": 67.45,
+    "tyre_type_f": "米其林 Cup2C",
+    "tyre_type_r": "米其林 Cup2C",
+    "tyre_width_f": 275,
+    "tyre_width_r": 275,
+    "temperature": 20,
+    "accelerate01": 3.51,
+    "limit": 189.03,
+    "drive": "4",
+    "class": "SUV"
   },
   {
     "car": "718 GTS（20",
