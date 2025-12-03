@@ -79,6 +79,8 @@ const Table = (
                 return '新老BRZ进化';
             case 'fourCars':
                 return '4车进化';
+            case 'fa1':
+                return '八代思域';
             case 'all':
                 return null;
             default:

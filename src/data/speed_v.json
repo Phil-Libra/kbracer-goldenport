@@ -38,6 +38,24 @@
     "mod": true
   },
   {
+    "car": "AMG GT C（18",
+    "BID": "BV1W7HczjEen",
+    "Btitle": "【大V榜】小米工程师开AMG GTC",
+    "hp_content": "557",
+    "powertrain": "4.0T+7DCT",
+    "speed": "66.10",
+    "tyre_type_f": "赛轮 PT01",
+    "tyre_type_r": "赛轮 PT01",
+    "tyre_width_f": "265",
+    "tyre_width_r": "305",
+    "temperature": "12",
+    "limit": "193.34",
+    "drive": "R",
+    "class": "S",
+    "driver": "Frank",
+    "mod": false
+  },
+  {
     "car": "86（14",
     "BID": "BV1PA41167u8",
     "Btitle": "北方一台快的86都没有？",

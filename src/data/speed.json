@@ -1347,6 +1347,23 @@
     "class": "A"
   },
   {
+    "car": "思域 8代",
+    "BID": "BV1wjShB2ETR",
+    "Btitle": "八代思域进化，遇事不决米其林~！",
+    "hp_content": 140,
+    "powertrain": "1.8L+5MT",
+    "speed": 80.86,
+    "tyre_type_f": "米其林 浩悦 5",
+    "tyre_type_r": "米其林 浩悦 5",
+    "tyre_width_f": 205,
+    "tyre_width_r": 205,
+    "temperature": 9,
+    "accelerate01": 8.52,
+    "limit": 135.64,
+    "drive": "F",
+    "class": "A"
+  },
+  {
     "car": "X3 25i（22",
     "BID": "BV1rt4y1c7aa",
     "Btitle": "又是一个赛道级？宝马X3赛道测试",
@@ -1447,6 +1464,23 @@
     "limit": 140.22,
     "drive": "4",
     "class": "SUV"
+  },
+  {
+    "car": "思域 8代",
+    "BID": "BV1uYSiB3Edf",
+    "Btitle": "八代思域，万元烂仔王！",
+    "hp_content": 140,
+    "powertrain": "1.8L+5MT",
+    "speed": 82.65,
+    "tyre_type_f": "路远",
+    "tyre_type_r": "路远",
+    "tyre_width_f": 205,
+    "tyre_width_r": 205,
+    "temperature": 9,
+    "accelerate01": 8.71,
+    "limit": 136.66,
+    "drive": "F",
+    "class": "A"
   },
   {
     "car": "奥德赛（22",

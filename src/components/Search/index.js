@@ -43,16 +43,6 @@ const Search = (
                                 key: val
                             }
                         ))}
-                    // options={[
-                    //     {
-                    //         label: '全部车型',
-                    //         value: 'all'
-                    //     },
-                    //     {
-                    //         label: '只看电车',
-                    //         value: 'ev'
-                    //     }
-                    // ]}
                     >
                         <Option value="all">全部车型</Option>
                         <Option value="fuel">只看油车</Option>
@@ -70,45 +60,6 @@ const Search = (
                                 class: val
                             }
                         ))}
-                    // options={[
-                    //     {
-                    //         label: '车辆级别',
-                    //         value: 'all'
-                    //     },
-                    //     {
-                    //         label: '跑车',
-                    //         value: 'S'
-                    //     },
-                    //     {
-                    //         label: '轿车',
-                    //         options: [
-                    //             {
-                    //                 label: 'A0',
-                    //                 value: 'A0'
-                    //             }, {
-                    //                 label: 'A',
-                    //                 value: 'A'
-                    //             }, {
-                    //                 label: 'B',
-                    //                 value: 'B'
-                    //             }, {
-                    //                 label: 'C',
-                    //                 value: 'C'
-                    //             }, {
-                    //                 label: 'D',
-                    //                 value: 'D'
-                    //             },
-                    //         ]
-                    //     },
-                    //     {
-                    //         label: 'SUV',
-                    //         value: 'SUV'
-                    //     },
-                    //     {
-                    //         label: 'MPV',
-                    //         value: 'MPV'
-                    //     }
-                    // ]}
                     >
                         <Option value="all">车辆级别</Option>
                         <Option value="S">跑车</Option>
@@ -132,24 +83,6 @@ const Search = (
                                 drive: val
                             }
                         ))}
-                    // options={[
-                    //     {
-                    //         label: '驱动形式',
-                    //         value: 'all'
-                    //     },
-                    //     {
-                    //         label: '前驱',
-                    //         value: 'F'
-                    //     },
-                    //     {
-                    //         label: '后驱',
-                    //         value: 'R'
-                    //     },
-                    //     {
-                    //         label: '四驱',
-                    //         value: '4'
-                    //     }
-                    // ]}
                     >
                         <Option value="all">驱动形式</Option>
                         <Option value="F">前驱</Option>
@@ -171,6 +104,7 @@ const Search = (
                     <Radio.Button value={'all'}>全部</Radio.Button>
                     <Radio.Button value={'brz'}>新老BRZ进化</Radio.Button>
                     <Radio.Button value={'fourCars'}>4车进化</Radio.Button>
+                    {/* <Radio.Button value={'fa1'}>八代思域进化</Radio.Button> */}
                 </Radio.Group>
             }
         </div >
