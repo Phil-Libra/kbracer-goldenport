@@ -391,7 +391,7 @@
     "class": "B"
   },
   {
-    "car": "小米 SU7（24",
+    "car": "SU7（24",
     "BID": "BV1J1421m791",
     "Btitle": "真 · 保时捷平替，小米SU7~！",
     "hp_content": 673,
@@ -596,7 +596,25 @@
     "class": "B"
   },
   {
-    "car": "极氪 001（22",
+    "car": "Elantra N TCR（26",
+    "BID": "BV196kYBpEKL",
+    "Btitle": "我其实是亿万富翁，买了全球限量200台的车！",
+    "hp_content": 276,
+    "powertrain": "2.0T+8DCT",
+    "speed": 71.83,
+    "tyre_type_f": "米其林 PS4S HN",
+    "tyre_type_r": "米其林 PS4S HN",
+    "tyre_width_f": 245,
+    "tyre_width_r": 245,
+    "temperature": "-1",
+    "accelerate01": 5.56,
+    "accelerate616": 9.93,
+    "limit": 166.56,
+    "drive": "F",
+    "class": "A"
+  },
+  {
+    "car": "001（22",
     "BID": "BV1bD4y1s7WC",
     "Btitle": "极氪001赛道版来了？",
     "hp_content": 544,
@@ -682,7 +700,7 @@
     "class": "A"
   },
   {
-    "car": "smart精灵#3（23",
+    "car": "精灵#3（23",
     "BID": "BV1Qt4y1f7Lj",
     "Btitle": "20W+，买百奔之王！！！",
     "hp_content": 428,
@@ -700,12 +718,31 @@
     "class": "SUV"
   },
   {
+    "car": "03+（25",
+    "BID": "BV177r8BmEcv",
+    "Btitle": "309马力4驱的领克03+，只要23W~！！",
+    "hp_content": "309",
+    "powertrain": "2.0T+8AT",
+    "speed": "73.00",
+    "tyre_type_f": "马牌 MC6",
+    "tyre_type_r": "马牌 MC6",
+    "tyre_width_f": 245,
+    "tyre_width_r": 245,
+    "temperature": "3",
+    "accelerate01": "5.61",
+    "accelerate616": "10.64",
+    "brake": 32.44,
+    "limit": "162.27",
+    "drive": "4",
+    "class": "A"
+  },
+  {
     "car": "Macan GTS（20",
     "BID": "BV1kB4y1873e",
     "Btitle": "不是山东胎的MACAN GTS，反杀榜首X4M？",
     "hp_content": 381,
     "powertrain": "2.9T+7DCT",
-    "speed": 73,
+    "speed": "73.00",
     "tyre_type_f": "倍耐力 P0",
     "tyre_type_r": "倍耐力 P0",
     "tyre_width_f": 265,
@@ -715,6 +752,24 @@
     "limit": 169.55,
     "drive": "4",
     "class": "SUV"
+  },
+  {
+    "car": "A5L Sportback（26",
+    "BID": "BV1HufDBxExQ",
+    "Btitle": "无敌的底盘，上汽奥迪A5L~",
+    "hp_content": "272",
+    "powertrain": "2.0T 48V+7DCT",
+    "speed": 73.01,
+    "tyre_type_f": "倍耐力 P0",
+    "tyre_type_r": "倍耐力 P0",
+    "tyre_width_f": "245",
+    "tyre_width_r": "245",
+    "temperature": "-2",
+    "accelerate01": 5.34,
+    "brake": 32.56,
+    "limit": 159.02,
+    "drive": "4",
+    "class": "B"
   },
   {
     "car": "BRZ（22",
@@ -853,7 +908,7 @@
     "class": "C"
   },
   {
-    "car": "极氪 001（22",
+    "car": "001（22",
     "BID": "BV1zF411c7Qd",
     "Btitle": "谁是国产之王？极氪 001挑战蔚来ET7榜首！",
     "hp_content": 544,
@@ -904,6 +959,25 @@
     "class": "B"
   },
   {
+    "car": "03 （26",
+    "BID": "BV1pHzxBrEon",
+    "Btitle": "272马力新领克03，只要13万！",
+    "hp_content": "272",
+    "powertrain": "2.0T+8AT",
+    "speed": 75,
+    "tyre_type_f": "马牌 MC6",
+    "tyre_type_r": "马牌 MC6",
+    "tyre_width_f": "245",
+    "tyre_width_r": "245",
+    "temperature": "-2",
+    "accelerate01": 6.27,
+    "accelerate616": 12.64,
+    "brake": 31.57,
+    "limit": 155.21,
+    "drive": "F",
+    "class": "A"
+  },
+  {
     "car": "影豹R（24",
     "BID": "BV1Fx4y147mm",
     "Btitle": "2024款影豹R，更快了？",
@@ -920,6 +994,23 @@
     "limit": 159.46,
     "drive": "2",
     "class": "A"
+  },
+  {
+    "car": "C200 Coupe（17改",
+    "BID": "BV16o2kBTE2p",
+    "Btitle": "【同事的车】小锤的奔驰 vs 钊博的宝马！！！",
+    "hp_content": "？？",
+    "powertrain": "2.0T+9AT",
+    "speed": 75.28,
+    "tyre_type_f": "米其林 PS4",
+    "tyre_type_r": "米其林 PS4",
+    "tyre_width_f": 225,
+    "tyre_width_r": 225,
+    "temperature": 10,
+    "accelerate01": 6.52,
+    "limit": 151.32,
+    "drive": "F",
+    "class": "B"
   },
   {
     "car": "迈锐宝XL（22",
@@ -1022,6 +1113,23 @@
     "limit": 155.18,
     "drive": "R",
     "class": "B"
+  },
+  {
+    "car": "220i（14",
+    "BID": "BV16o2kBTE2p",
+    "Btitle": "【同事的车】小锤的奔驰 vs 钊博的宝马！！！",
+    "hp_content": 184,
+    "powertrain": "2.0T+8AT",
+    "speed": 77.21,
+    "tyre_type_f": "韩泰 K117",
+    "tyre_type_r": "韩泰 K117",
+    "tyre_width_f": 225,
+    "tyre_width_r": 225,
+    "temperature": 10,
+    "accelerate01": 7.05,
+    "limit": 148.17,
+    "drive": "F",
+    "class": "A"
   },
   {
     "car": "05+（22",

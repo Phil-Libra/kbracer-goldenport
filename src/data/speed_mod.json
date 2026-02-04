@@ -83,6 +83,24 @@
     "class": "S"
   },
   {
+    "car": "03++赛车",
+    "BID": "BV1JgmyB3EHw",
+    "Btitle": "140万领克TCR的青春版，能打保时捷911～？",
+    "hp_content": 350,
+    "powertrain": "2.0T&SC+8AT",
+    "speed": 66.76,
+    "tyre_type_f": "赛轮 光头",
+    "tyre_type_r": "赛轮 光头",
+    "tyre_width_f": 260,
+    "tyre_width_r": 260,
+    "temperature": 5,
+    "accelerate01": 4.96,
+    "accelerate616": 7.99,
+    "limit": 175.28,
+    "drive": "F",
+    "class": "A"
+  },
+  {
     "car": "思域（FK8赛车",
     "BID": "BV1Lz4y1M7NL",
     "Btitle": "50W手搓本田FK8 TCR，居然能到9300转？",
@@ -185,7 +203,7 @@
     "class": "A"
   },
   {
-    "car": "东南菱帅（20帅",
+    "car": "菱帅（20帅",
     "BID": "BV1Bb4y13771",
     "Btitle": "200马力菱帅王，比思域TR快？",
     "hp_content": 200,
@@ -320,7 +338,7 @@
     "class": "A"
   },
   {
-    "car": "斯巴鲁 翼豹 WRX STI（14",
+    "car": "翼豹 WRX STI（14",
     "BID": "BV1XC41177oq",
     "Btitle": "斯巴鲁最后荣光，11代STI能打赢原厂TR么？~",
     "hp_content": 300,
@@ -370,7 +388,7 @@
     "class": "S"
   },
   {
-    "car": "斯巴鲁 翼豹 WRX STI",
+    "car": "翼豹 WRX STI",
     "BID": "BV1Fu4m1u75P",
     "Btitle": "不到20W的斯巴鲁STI，能赢42W的本田TR么？",
     "hp_content": 350,

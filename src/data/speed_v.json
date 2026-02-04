@@ -56,6 +56,26 @@
     "mod": false
   },
   {
+    "car": "M3",
+    "BID": "BV1AuvmBxEJr",
+    "Btitle": "【大V榜】100万的宝马M4 vs 10万的宝马M4~！！（E92M3）",
+    "hp_content": "420",
+    "powertrain": "4.0+7DCT",
+    "speed": "66.31",
+    "tyre_type_f": "南港 CR-S",
+    "tyre_type_r": "南港 CR-S",
+    "tyre_width_f": "265",
+    "tyre_width_r": "295",
+    "temperature": "6",
+    "accelerate01": "4.64",
+    "accelerate616": "7",
+    "limit": "175.51",
+    "drive": "R",
+    "class": "B",
+    "driver": "约翰",
+    "mod": true
+  },
+  {
     "car": "86（14",
     "BID": "BV1PA41167u8",
     "Btitle": "北方一台快的86都没有？",

@@ -128,7 +128,7 @@ const Table = (
                 title="车型"
                 dataIndex="car"
                 key="car"
-                width="10%"
+                width="8%"
             />
             <Column
                 title="圈速"
@@ -146,7 +146,7 @@ const Table = (
                     dataIndex="mod"
                     key="mod"
                     align="center"
-                    width="5%"
+                    width="3%"
                     render={(text) => text ? <StarFilled /> : <StarOutlined />}
                 />
             }
@@ -203,6 +203,17 @@ const Table = (
                 width="5%"
                 render={(item) => handleNumber(item)}
             />
+            {
+                rankData.some((item) => item.brake)
+                && <Column
+                    title="100-0(m)"
+                    dataIndex="brake"
+                    key="brake"
+                    align="center"
+                    width="5%"
+                    render={(item) => handleNumber(item)}
+                />
+            }
             <Column
                 title="尾速(km/h)"
                 dataIndex="limit"
