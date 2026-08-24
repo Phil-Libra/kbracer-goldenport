@@ -222,7 +222,7 @@ const Footer = () => (
             </div>
 
             <div>
-                教主的锐思榜单：
+                教主自己的榜单：
                 <a href="https://kbracer.github.io/">
                     <img src={logo} alt="kbracer" />
                     键盘车神教圈速榜

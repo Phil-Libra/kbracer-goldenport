@@ -1,5 +1,19 @@
 [
   {
+    "car": "Supra",
+    "BID": "BV1sychzmE1b",
+    "Btitle": "开Mujica痛车，比藤原拓海更快？",
+    "hp_content": "800",
+    "powertrain": "3.0T+8AT",
+    "speed": 62.7,
+    "tyre_type_f": "倍耐力 DHF",
+    "tyre_type_r": "倍耐力 DHF",
+    "temperature": "4",
+    "limit": 210.95,
+    "drive": "R",
+    "class": "S"
+  },
+  {
     "car": "911 GT3 RS（18",
     "BID": "BV1W94y1X7JY",
     "Btitle": "GT3 RS刷新易车金港赛道纪录？",
@@ -766,6 +780,24 @@
     "temperature": 6,
     "accelerate01": 6.59,
     "limit": 154.65,
+    "drive": "F",
+    "class": "A"
+  },
+  {
+    "car": "思域 8代",
+    "BID": "BV1s18Y61E9L",
+    "Btitle": "【八代思域进化】LSD+大尾牙，烂仔神器！",
+    "hp_content": 140,
+    "powertrain": "1.8L+5MT",
+    "speed": 79.65,
+    "tyre_type_f": "米其林 浩悦 5",
+    "tyre_type_r": "米其林 浩悦 5",
+    "tyre_width_f": 205,
+    "tyre_width_r": 205,
+    "temperature": "-1",
+    "accelerate01": 8.63,
+    "brake": 37.04,
+    "limit": 137.8,
     "drive": "F",
     "class": "A"
   }
